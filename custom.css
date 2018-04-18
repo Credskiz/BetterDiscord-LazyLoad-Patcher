@@ -1,0 +1,1163 @@
+
+#bd-customcss-detach-container {
+    /*
+    width: 30%;
+    */
+    width: 30%;
+}
+
+/* ----------- */
+/* -Variables- */
+/* ----------- */
+:root{
+    --left-sidebar-size: 200px;
+    --left-sidebar-button-size: 28px;
+    --left-sidebar-connection-font-size: 12px;
+    --left-sidebar-connection-users-font-size: 10px;
+    --left-sidebar-settings-height: 40px;
+    --left-sidebar-settings-name-font-size: 10px;
+    --left-sidebar-settings-avatar-size: 28px;
+
+    --channel-section-font-size: 0.8rem;
+    --channel-symbol-size: 12px;
+    --channel-line-height: 24px;
+    --channel-avatar-size: 16px;
+    --channel-user-name-font-size: 0.95rem;
+    --channel-voice-user-name-font-size: 0.9rem;
+    
+    --members-width: 150px;
+    --members-margin-left: 4px;
+    --members-section-font-size: 0.65rem;
+    --members-line-height: 32px;
+    --members-avatar-size: 24px;
+    --members-status-size: 8px;
+    --members-user-name-font-size: 0.9rem;
+    --members-user-name-line-height: 18px;
+    --members-user-activity-font-size: 0.6rem;
+    --members-user-activity-line-height: 14px;
+
+    --chat-avatar-size: 16px;
+    --chat-font-size: 0.9rem;
+    --chat-user-name-font-size: 0.85rem;
+    --chat-timestamp-size: 0.75rem;
+    --chat-reaction-emoji-size: 0.68rem;
+    --chat-reaction-font-size: 0.68rem;
+    --chat-reaction-line-height: 0.68rem;
+    --chat-divider-font-size: 10px;
+    --chat-divider-line-height: 10px;
+    --chat-p-line-size: 1rem;
+    --chat-system-line-height: 1rem;
+    
+    --conv-section-font-size: 0.65rem;
+    --conv-line-height: 28px;
+    --conv-avatar-size: 22px;
+    --conv-user-name-font-size: 0.8rem;
+    --conv-user-name-line-height: 14px;
+    --conv-user-activity-font-size: 0.6rem;
+    --conv-user-activity-line-height: 10px;
+    
+    --friends-header-line-height: 32px;
+    --friends-header-font-size: 14px;
+    --friends-font-size: 0.85rem;
+    --friends-line-height: 32px;
+    --friends-avatar-size: 16px;
+    --friends-user-name-line-height: 18px;
+    --friends-user-name-line-height: 14px;
+    --friends-user-tag-font-size: 12px;
+    --friends-user-tag-line-height: 10px;
+    --friends-user-tag-margin-bottom: 8px;
+    --friends-user-status-font-size: 0.6rem;
+    --friends-user-status-icon-size: 8px;
+    --friends-table-header-font-size: 12px;
+    --friends-table-header-line-height: 18px;
+    --friends-table-margin-left: 10px;
+    --friends-tablerow-name-width: 150px;
+    --friends-tablerow-status-width: 150px;
+    --friends-tablerow-guilds-width: 150px;
+    
+    --call-height: 200px;
+    --call-avatar-size: 80px;
+    --call-avatar-status-size: 18px;
+    --call-header-line-height: 28px;
+    --call-header-user-name-font-size: 1rem;
+    --call-header-button-size: 18px;
+    --call-actions-line-height: 24px;
+    --call-actions-font-size: 0.7rem;
+    --call-actions-button-size: 18px;
+}
+
+
+
+/* Members - Wrapper */
+.membersWrap-3wRngy {
+    /*
+    min-width: 240px;
+    */
+    min-width: 150px;
+}
+/* Members - Name, Wrapper */
+.memberInner-3XUq9K {
+    width: var(--members-width);
+}
+
+/* Call, Wrapper, Chat */
+.videoHeight-iWOJGF.minimum-Eac95h {
+    height: var(--call-height);
+}
+/* Call, Wrapper */
+.video-3lOWa6 {
+    /*
+    min-height: 275px;
+    */
+    min-height: var(--call-height);
+}
+/* Call, Header */
+.title-qAcLxz, .titleCall-3X0yGQ {
+    /*
+    height: 48px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+    padding-right: 8px;
+    */
+    height: var(--call-header-line-height);
+}
+/* Call, Header, Users, Wrapper2 */
+.titleText-2IfpkV.groupDM-3gzbyG {
+    /*
+    margin-left: -4px;
+    */
+    margin-left: 0px;
+}
+/* Call, Header, Users, Wrapper2 */
+.groupDM-3gzbyG .channelName-1G03vu {
+    /*
+    height: 30px;
+    margin-right: 4px;
+    */
+    height: var(--call-header-line-height);
+    margin-right: 0px;
+}
+/* Call, Header, Users, Names */
+.title-qAcLxz .input-autosize-input, .titleCall-3X0yGQ .input-autosize-input {
+    /*
+    font-size: 18px;
+    font-weight: 600;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    */
+    font-size: var(--call-header-user-name-font-size);
+    font-weight: 600;
+    height: var(--call-header-line-height);
+    line-height:  var(--call-header-line-height);
+    padding: 0 8px;
+}
+/* Call, Header, Wrapper */
+.horizontal-2BEEBe>.flex-lFgbSz, .horizontal-2BEEBe>.flexChild-1KGW5q {
+    /*
+    margin-left: 10px;
+    margin-right: 10px;
+    */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+/* Call, Header, Icons */
+.icon-mr9wAc {
+    /*
+    height: 24px;
+    width: 24px;
+    */
+    height: var(--call-header-button-size);
+    width: var(--call-header-button-size);
+}
+/* Call, Header, Search */
+.search-2--6aU {
+    /*
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    margin-right: 4px;
+    */
+    margin-left: 4px;
+    margin-right: 4px;
+}
+/* Call, Header, Divider */
+.divider-1GKkV3 {
+    /*
+    height: 22px;
+    margin: 0 4px;
+    width: 1px;
+    */
+    height: var(--call-header-line-height);
+    margin-right: 0;
+}
+/* Call, Flex, Wrapper */
+.private-channel-call.minimum .private-channel-call-info, .private-channel-call.normal .private-channel-call-info {
+    /*
+    padding-top: 60px;
+    */
+    padding-top: var(--call-header-line-height);
+}
+/* Call, Main, Wrapper */
+.wrapper-1hQOWh {
+    /*
+    margin: 0 20px;
+    */
+    margin: 0 0px;
+}
+/* Call, Main, Video */
+.videoHeight-iWOJGF.normal-3QpMz4 {
+    /*
+    height: 50%;
+    min-height: 275px;
+    */
+    height: var(--call-height);
+    min-height: var(--call-height);
+}
+/* Call, Main, Avatar, Wrapper */
+.avatarMargin-2sQKJz {
+    /*
+    margin: 4px 8px;
+    width: 100px;
+    */
+    margin: 0px 8px;
+    width: var(--call-avatar-size)!important;
+}
+/* Call, Main, Avatar */
+.callAvatarWrapper-u74Q16 {
+    height: var(--call-avatar-size)!important;
+    width: var(--call-avatar-size)!important;
+}
+/* Call, Main, Avatar, Video */
+.xxlarge-1arjqQ {
+    /*
+    height: 100px;
+    width: 100px;
+    */
+    height: var(--call-avatar-size)!important;
+    width: var(--call-avatar-size)!important;
+}
+/* Call, Main, Avatar, Status */
+.callAvatarStatus-2ybelh{
+    /*
+    width: 24;
+    height: 24;
+    */
+    width: var(--call-avatar-status-size);
+    height: var(--call-avatar-status-size);
+}
+/* Call, Actions, Wrapper */
+.private-channel-call .icons-wrapper {
+    /*
+    height: 32px;
+    */
+    height: var(--call-actions-line-height);
+}
+/* Call, Actions, Wrapper */
+.private-channel-call .private-channel-call-actions {
+    /*
+    padding-top: 16px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+/* Call, Actions, Wrapper2 */
+.private-channel-call .private-channel-call-actions .center {
+    /*
+    padding-left: 4px;
+    padding-right: 4px;
+    */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+/* Call, Actions, Buttons, Wrapper */
+.private-channel-call .action-button, .private-channel-call .static-button, .private-channel-call .toggle-button {
+    /*
+    margin: 4px;
+    padding: 0;
+    */
+    margin: 2px;
+    padding: 0;
+}
+/* Call, Actions, Buttons */
+.medium-C4dspv {
+    /*
+    height: 24px;
+    width: 24px;
+    */
+    height: var(--call-actions-button-size);
+    width: var(--call-actions-button-size);
+}
+/* Call, Actions, ExitButton, Wrapper */
+.private-channel-call .button-exit {
+    /*
+    margin-left: 12px;
+    margin-right: 12px;
+    */
+    margin-left: 2px;
+    margin-right: 2px;
+}
+/* Call, Actions, ExitButton, Wrapper2 */
+.sizeSmall-3g6RX8 {
+    /*
+    min-height: 32px;
+    min-width: 60px;
+    height: 32px;
+    width: auto;
+    */
+    min-height: 16px;
+    min-width: 40px;
+    height: var(--call-actions-line-height);
+    width: auto;
+}
+/* Call, Actions, ExitButton, Text */
+.button-2t3of8 {
+    /*
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 16px;
+    padding: 2px 16px;
+    */
+    font-size: var(--call-actions-font-size);
+    line-height: var(--call-actions-line-height);
+    padding: 0px 16px;
+}
+
+/* Left Sidebar - Wrapper */
+.channels-3g2vYe {
+    /*
+    width: 240px;
+    */
+    width: var(--left-sidebar-size);
+}
+/* Left Sidebar - Info, Server */
+.container-3lnMWU {
+    /*
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+    */
+    font-size: var(--left-sidebar-connection-font-size);
+    padding: 5px 10px;
+}
+.inner-ptMwR- .rtc-connection-status .ping {
+    /*
+    background-size: 11px 12px;
+    height: 12px;
+    width: 11px;
+    
+    margin-left: 1px;
+    margin-right: 5px;
+    */
+    background-repeat: no-repeat;
+    background-size: calc(0.9 * var(--left-sidebar-connection-font-size));
+    width: var(--left-sidebar-connection-font-size);
+    height: var(--left-sidebar-connection-font-size);
+    
+    margin-left: 0px;
+}
+/* Left Sidebar - Info, Server, Users */
+.inner-ptMwR- .channel-3YGMy1 {
+    /*
+    font-size: 10px;
+    font-weight: 400;
+    margin-right: 10px;
+    margin-top: 4px;
+    opacity: .4;
+    */
+    font-size: var(--left-sidebar-connection-users-font-size);
+    font-weight: 400;
+    margin-right: 10px;
+    margin-top: 4px;
+    opacity: .4;
+}
+/* Left Sidebar - Info, Settings */
+.container-iksrDt {
+    /*
+    font-size: 14px;
+    font-weight: 400;
+    height: 52px;
+    margin-bottom: 1px;
+    padding: 0 10px;
+    */
+    font-size: var(--left-sidebar-settings-name-font-size);
+    font-weight: 400;
+    height: var(--left-sidebar-settings-height);
+    margin-bottom: 1px;
+    padding: 0 10px;
+}
+/* Left Sidebar - Info, Settings, Avatar */
+.container-iksrDt .avatar-small {
+    background-repeat: no-repeat;
+    background-size: var(--left-sidebar-settings-avatar-size);
+    width: var(--left-sidebar-settings-avatar-size);
+    height: var(--left-sidebar-settings-avatar-size);
+    
+    margin: 0 10px 0 0;
+}
+/* Left Sidebar - Info, Settings, Tag */
+.accountDetails-15i-_e .discriminator {
+    /*
+    font-size: 10px;
+    margin-top: 4px;
+    opacity: .4;
+    */
+    font-size: var(--left-sidebar-settings-tag-font-size);
+    margin-top: 2px;
+    opacity: .4;
+}
+/* Left Sidebar - Buttons */
+.button-3WJ5FX, .button-1aU9q1 {
+    /*
+    border-radius: 3px;
+    background: transparent no-repeat 50% 50%;
+    background-size: 18px 18px;
+    height: 32px;
+    width: 32px;
+    opacity: .6;
+    padding: 0;
+    */
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: calc(0.6 * var(--left-sidebar-button-size));
+    width: var(--left-sidebar-button-size);
+    height: var(--left-sidebar-button-size);
+    
+    opacity: .6;
+    padding: 0;
+}
+
+/* ------------ */
+/* --- CHAT --- /*
+/* ------------ */
+
+/* Chat - Welcome, Wrapper */
+.base-2KDOo9 {
+    /*
+    background-size: 192px 80px,216px 64px;
+    height: 95px;
+    padding-bottom: 14px;
+    */
+    padding-bottom: 14px;
+}
+/* Chat - Welcome, Wrapper2 */
+.default-KP1fvY {
+    /*
+    margin-left: 20px;
+    margin-right: 20px;
+    */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* Chat - Messages, Wrapper */
+.message-group {
+    /*
+    margin-left: 20px;
+    margin-right: 6px;
+    padding: 20px 0;
+    */
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 10px 10px;
+}
+/* Chat - Avatar */
+.message-group .avatar-large {
+    /*
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    margin-top: 0px;
+    */
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: var(--chat-avatar-size);
+    height: var(--chat-avatar-size);
+    
+    margin-right: 5px;
+    margin-top: 0px;
+    opacity: 0.6;
+}
+/* Chat - Avatar:hover */
+.message-group:hover .avatar-large,
+.message-group:hover h2 strong
+{
+    opacity: 1;
+}
+/* Chat - User name */
+.message-group h2 strong {
+    /*
+    font-size: 0.95rem;
+    font-weight: 500;
+    */
+    font-size: var(--chat-user-name-font-size);
+    font-weight: 500;
+    opacity: 0.95;
+}
+/* Chat - Timestamp */
+.message-group h2 .timestamp {
+    /*
+    font-size: 0.75rem;
+    word-wrap: break-word;
+    */
+    font-size: var(--chat-timestamp-size);
+}
+/* Chat - Divider */
+.message-group .chat .divider {
+    opacity: 0.3;
+}/* Chat - Divider, Text */
+.chat .divider>span {
+    font-size: var(--chat-divider-font-size);
+    font-weight: 500;
+    line-height: var(--chat-divider-line-height);;
+    
+}
+/* Chat - Divider, Bottom */
+.theme-dark .message-group:not(.has-divider) {
+    border-bottom-color: hsla(0,0%,100%,.03);
+}
+/* Chat - Paragraphs Text */
+.message-group .comment .markup {
+    /*
+    margin-top: 6px;
+    font-size: 0.9375rem
+    line-height: 1.1em
+    */
+    margin-top: 0px;
+    font-size: var(--chat-font-size);
+    line-height: var(--chat-font-size);
+    padding: 2px 0;
+}
+/* Chat - First text message */
+.comment .message.first .message-text {
+    /*
+    margin-top: 6px;
+    */
+    margin-top: 0px;
+}
+/* Chat - All text messages */
+.comment .message .message-text {
+    /*
+    margin-top: 6px;
+    */
+    margin-top: 2px;
+    padding: 0px 5px;
+    margin-left: -5px;
+}
+/* Chat - SystemMessage, timestamp */
+.system-message {
+    /*
+    color: rgba(47,49,54,.6);
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    */
+    font-size: var(--chat-font-size);
+    line-height: var(--chat-system-line-height);
+    /*margin: 2px 0px;*/
+}
+
+/* Chat - SystemMessage, timestamp */
+.system-message .system-message-content .system-message-timestamp {
+    /*
+    color: #99aab5;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-left: 6px;
+    text-transform: none;
+    */
+    font-size: var(--chat-timestamp-size);
+}
+
+/*Chat - Mention, Command*/
+.theme-dark .message-group .comment .markup .mention {
+    /*
+        background-color: rgba(115,139,215,.1);
+    */
+    background-color: rgba(115,139,215,.07);
+}
+/*Chat - Mention:hover, Command*/
+.theme-dark .message-group .comment .markup .mention:hover {
+    background-color: rgba(115,139,215,.12);
+}
+/*Chat - Mention, Textgroup, Dark */
+.theme-dark .message-group .mentioned .message-text {
+    /*
+    background: rgba(250,166,26,.1);
+    */
+    background: rgba(250,166,26,.05);
+}
+/*Chat - Mention, Textgroup */
+.message-group .mentioned .message-text {
+    /*
+    background: rgba(250,166,26,.2);
+    */
+    background: rgba(250,166,26,.1);
+}
+/*Chat - Mention, Textgroup Sidebar */
+.message-group .mentioned .message-text:after {
+    /*
+    border-left-color: rgb(250, 166, 26);
+    */
+    border-left-color: rgba(250,166,26,.1);
+    margin-left: 0px;
+}
+/*Chat - Reactions, group*/
+.message-group .accessory .reactions{
+     /*
+    margin-top: 6px;
+    */
+    margin-top: 0px;
+}
+/*Chat - Reactions, Dark */
+.theme-dark .reaction {
+    /*
+    background: hsla(0,0%,100%,.04);
+    */
+    background: hsla(0,0%,100%,.03);
+}
+/*Chat - Reactions */
+.reaction {
+    /*
+    background: rgba(79,84,92,.06);
+    margin: 2px;
+    padding: 0 6px;
+    */
+    background: rgba(79,84,92,.03);
+    margin: 1px;
+    padding: 0 2px;
+}
+/*Chat - Reactions, Emoji */
+.reaction .emoji {
+    /*
+    height: 1rem;
+    margin: 3px 0!important;
+    min-height: auto;
+    min-width: auto;
+    width: 1rem;
+    */
+    min-height: 1rem;
+    min-width: 1rem;
+    height: var(--chat-reaction-emoji-size);
+    width: var(--chat-reaction-emoji-size);
+    margin: 2px 2px!important;
+    vertical-align: middle;
+}
+/*Chat - Reactions, Count, Dark */
+.theme-dark .reaction .reaction-count {
+    /*
+    color: rgba(255, 255, 255, 0.298039);
+    */
+}
+/*Chat - Reactions, Count */
+.reaction .reaction-count {
+    /*
+    color: rgba(79,84,92,.3)
+    font-size: 0.875rem;
+    font-weight: 500;
+    height: 21px;
+    line-height: 1.3125rem;
+    margin-left: 6px;
+    vertical-align: top;
+    */
+    font-size: var(--chat-reaction-font-size);
+    font-weight: 500;
+    height: var(--chat-reaction-line-height);
+    line-height: var(--chat-reaction-line-height);
+    margin-left: 1px;
+    vertical-align: middle;
+}
+
+
+
+/* ---------------- */
+/* --- CHANNELS --- */
+/* ---------------- */
+/* Section - Wrapper */
+.containerDefault-1bbItS {
+    /*
+    padding-top: 28px;
+    */
+    padding-top: 10px;
+}
+/* Section - Name */
+.containerDefault-1bbItS > * > .overflowEllipsis-2ynGQq{
+    /*
+    font-size: 12px;
+    font-weight: 600;
+    */
+    font-size: var(--channel-section-font-size);
+    font-weight: 700;
+    
+    
+}
+
+/* Channel - Wrapper*/
+.wrapper-fDmxzK {
+    /*
+    height: 34px;
+    */
+    height: var(--channel-line-height);
+}
+/* Channel - Wrapper2*/
+.wrapper-fDmxzK .content-2mSKOj {
+    /*
+    height: 32px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    */
+    height: var(--channel-line-height);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/* Channel - Symbol */
+.icon-3tVJnl {
+    /*
+    height: 16px;
+    width: 16px;
+    */
+    height: var(--channel-symbol-size);
+    width: var(--channel-symbol-size);
+}
+/* Channel - Name */
+.name-2SL4ev {
+    /*
+    font-size: 16px;
+    line-height: 32px;
+    */
+    font-size: var(--channel-user-name-font-size);
+    line-height: var(--channel-line-height);
+}
+
+/* VoiceChannel - Wrapper */
+.draggable-3SphXU > * {
+    /*
+    height: 28px;
+    */
+    height: var(--channel-line-height);
+}
+/* VoiceChannel - Avatar */
+.avatarContainer-303pFz > *{
+    /*
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    */
+    height: var(--channel-avatar-size);
+    width: var(--channel-avatar-size);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* VoiceChannel - Name */
+.nameDefault-1I0lx8, .nameHovered-28u_Fz, .nameSpeaking-3ROx9q {
+    /*
+    font-size: 14px;
+    line-height: 28px;
+    */
+    font-size: var(--channel-voice-user-name-font-size);
+    line-height: var(--channel-line-height);
+}
+/* Voice Channel - Bottom */
+.listDefault-3i7eWQ {
+    /*
+    padding-bottom: 8px;
+    */
+    padding-bottom: 5px;
+}
+/* VoiceChannel - Collapsed, Wrapper */
+.container-3IULEB {
+    /*
+    height: 34px;
+    */
+    height: var(--channel-line-height);
+}
+/* VoiceChannel - Collapsed, Symbol */
+.icon-1i6UVf {
+    /*
+    height: 16px;
+    width: 16px;
+    */
+    height: var(--channel-symbol-size);
+    width: var(--channel-symbol-size);
+}
+/* VoiceChannel - Collapsed, Avatar */
+.container-3IULEB > .avatar-1BXaQj {
+    /*
+    width: 20px;
+    height: 20px;
+    */
+    width: var(--channel-avatar-size);
+    height: var(--channel-avatar-size);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* --------------- */
+/* --- MEMBERS --- */
+/* --------------- */
+/* Members - Section */
+.membersWrap-3wRngy .membersGroup-3_dP5E {
+    /*
+    font-size: 12px;
+    height: 40px;
+    line-height: 20px;
+    padding-top: 20px;
+    padding-left: 16px;
+    padding-right: 8px;
+    */
+    font-size: var(--members-section-font-size);
+    height: var(--members-line-height);
+    line-height: var(--members-line-height);
+    padding-top: 8px;
+    padding-left: var(--members-margin-left);
+    padding-right: 0px;
+}
+
+/* Members - User, Wrapper */
+.membersWrap-3wRngy .member-2FrNV0 {
+    /*
+    height: 40px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 8px;
+    margin-right: 0px;
+    */
+    height: var(--members-line-height);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: var(--members-margin-left);
+    margin-right: var(--members-margin-left);
+}
+
+/* Members - User, Wrapper2 */
+.member-2FrNV0 .content-3JzEqq {
+    /*
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    */
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: var(--members-margin-left);
+    padding-right: var(--members-margin-left);
+}
+
+/* Members - Avatar Image */
+.membersWrap-3wRngy .avatar-1BXaQj {
+    /*
+    height: 30px;
+    width: 30px;
+    */
+    width: var(--members-avatar-size);
+    height: var(--members-avatar-size);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* Members - Status Icon */
+.membersWrap-3wRngy .status-2Devx1 {
+    /*
+    bottom: 4px;
+    right: 2px;
+    height: 10px;
+    width: 10px;
+    */
+    border: 1px solid #2f3136;
+    border-radius: 50%;
+    bottom: -4px!important;
+    right: -2px!important;
+    height: var(--members-status-size)!important;
+    width: var(--members-status-size)!important;
+}
+/* Members - Name, Wrapper */
+.memberInner-3XUq9K > .nameTag-3F0z_i {
+    /*
+    line-height: 17px;
+    */
+    line-height: var(--members-user-name-line-height);
+}
+/* Members - Name */
+.username-MwOsla {
+    /*
+    font-size: 16px;
+    */
+    font-size: var(--members-user-name-font-size);
+}
+/* Members - Activity Text */
+.activity-1PAe08 {
+    /*
+    font-size: 11px;
+    line-height: 13px;
+    */
+    font-size: var(--members-user-activity-font-size);
+    line-height: var(--members-user-activity-line-height);
+}
+/* Members - Activity Text */
+.activityIcon-3-h2jl {
+    /*
+    min-height: 16px;
+    min-width: 16px;
+    height: 16px;
+    width: 16px;
+    */
+    min-height: 14px;
+    min-width: 14px;
+    height: var(--members-user-activity-icon-size);
+    width: var(--members-user-activity-icon-size);
+}
+
+
+/* --------------------- */
+/* --- CONVERSATIONS --- */
+/* --------------------- */
+/* Conv - Header */
+.private-channels header {
+    /*
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 12px;
+    opacity: .3;
+    padding: 9px 20px;
+    */
+    font-size: var(--conv-section-font-size);
+    font-weight: 500;
+    margin-top: 12px;
+    opacity: .3;
+    padding-top: 9px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* Conv - User, Wrapper */
+.private-channels .channel {
+    /*
+    font-size: 14px;
+    line-height: 1.25em;
+    */
+    height: var(--conv-line-height)!important;
+    font-size: var(--conv-user-name-font-size);
+    line-height: var(--conv-user-name-line-height);
+}
+
+/* Conv - User, Wrapper2 */
+.private-channels .channel a {
+    /*
+    font-weight: 400;
+    height: 40px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 8px;
+    margin-right: 0px;
+    padding: 8px;
+    */
+    height: var(--conv-line-height);
+    margin-left: 8px;
+    padding: 0px 8px;
+    
+}
+/* Conv - Avatar */
+.private-channels .channel .avatar-small {
+    /*
+    background-size: 30px 30px;
+    float: left;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 6px;
+    width: 30px;
+    */
+    width: var(--conv-avatar-size);
+    height: var(--conv-avatar-size);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* Conv - Status Icon */
+.avatar-small .status {
+    /*
+    border: 2px solid #2f3136;
+    border-radius: 7px;
+    bottom: -3px;
+    right: -3px;
+    height: 10px;
+    width: 10px;
+    */
+    border: 1px solid #2f3136;
+    border-radius: 50%;
+    bottom: -2px!important;
+    right: -1px!important;
+    height: var(--conv-status-size)!important;
+    width: var(--conv-status-size)!important;
+}
+/* Conv - Name */
+.private-channels .channel .channel-name {
+    /*
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    opacity: .3;
+    padding-right: 5px;
+    */
+    font-size: var(--conv-user-name-font-size);
+    line-height: var(--conv-user-name-line-height);
+    padding-right: 5px;
+}
+/* Conv - Activity */
+.private-channels .channel .channel-activity {
+    /*
+    font-size: 10px;
+    line-height: 10px;
+    */
+    font-size: var(--conv-user-activity-font-size);
+    line-height: var(--conv-user-activity-line-height);
+}
+
+
+/* --------------- */
+/* --- FRIENDS --- */
+/* --------------- */
+/* Friends - Header, Wrapper */
+.headerBar-cxbhPD {
+    /*
+    height: 48px;
+    padding: 0 8px 0 12px;
+    */
+    height: var(--friends-header-line-height);
+    padding: 0 8px 0 12px;
+}
+
+/* Friends - Header, Buttons */
+#friends .tab-bar {
+    /*
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    */
+    font-size: var(--friends-header-font-size);
+    font-weight: 500;
+    letter-spacing: .4px;
+}
+/* Friends - Table, Wrapper */
+#friends .friends-table {
+    /*
+    margin-top: 8px;
+    */
+    margin-top: 4px;
+}
+/* Friends - TableHeader, Wrapper */
+#friends .friends-table .friends-table-header {
+    /*
+    border-bottom: 1px solid #e9e7e7;
+    padding: 8px 30px;
+    */
+    padding: 0 var(--friends-table-margin-left);
+}
+/* Friends - TableHeader, Text */
+#friends .friends-table .friends-table-header .friends-column {
+    /*
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .025em;
+    */
+    font-size: var(--friends-table-header-font-size);
+    font-weight: 600;
+    letter-spacing: .025em;
+}
+#friends .friends-table .friends-table-header .friends-column-separator {
+    /*
+    height: 18px;
+    margin: 0 20px;
+    width: 1px;
+    */
+    height: var(--friends-table-header-line-height);
+    margin: 0 calc(var(--friends-table-margin-left) / 2 + 1px);
+}
+/* Friends - TableRow, Wrapper */
+#friends .friends-table .friends-row {
+    /*
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: 30px;
+    margin-right: 12px;
+    */
+    font-size: var(--friends-font-size);
+    font-weight: 500;
+    line-height: var(--friends-line-height);
+    height: var(--friends-line-height)!important;
+    margin-left: var(--friends-table-margin-left);
+    margin-right: 0px;
+}
+/* Friends - TableRow, Wrapper, Name */
+#friends .friends-table .friends-column-name {
+    /*
+    width: 200px;
+    */
+    width: var(--friends-tablerow-name-width);
+}
+/* Friends - TableRow, Wrapper, Status */
+#friends .friends-table .friends-column-status {
+    /*
+    width: 250px;
+    */
+    width: var(--friends-tablerow-status-width);
+}
+/* Friends - TableRow, Wrapper, Guilds */
+#friends .friends-table .friends-column-guilds {
+    /*
+    width: 200px;
+    */
+    width: var(--friends-tablerow-guilds-width);
+}
+/* Friends - TableRow, Columns */
+#friends .friends-table .friends-row .friends-column+.friends-column {
+    /*
+    margin-left: 41px;
+    */
+    margin-left: var(--friends-table-margin-left);
+}
+
+/* Friends - TableRow, Avatars */
+.friends-column .avatar-small {
+    /*
+    background-size: contain;
+    margin-right: 10px;
+    margin-top: 6px;
+    height: 30px;
+    width: 30px;
+    */
+    background-size: contain;
+    margin-right: 10px;
+    margin-top: 6px;
+    height: var(--friends-avatar-size);
+    width: var(--friends-avatar-size);
+}
+/* Friends - TableRow, Tags */
+#friends .friends-table .friends-row .discord-tag .discriminator {
+    /*
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 1px;
+    opacity: .6;
+    */
+    font-size: var(--friends-user-tag-font-size);
+    line-height: var(--friends-user-tag-line-height);
+    margin-bottom: var(--friends-user-tag-margin-bottom);
+    opacity: .6;
+}
+/* Friends - TableRow, Status */
+.friends-column .status {
+    /*
+    border-radius: 7px;
+    height: 10px;
+    width: 10px;
+    */
+    border-radius: 50%;
+    height: var(--friends-user-status-icon-size);
+    width: var(--friends-user-status-icon-size);
+}
