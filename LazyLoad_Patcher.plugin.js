@@ -26,6 +26,7 @@ var lazyload_patcher = function() {
 	var newVoiceUserSize = 20;
 	var newVoiceBottomPaddingSize = 0;
 	
+	//
 	var originalGetRowHeight;
 	var originalGetSectionHeight;
 		
