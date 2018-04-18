@@ -1,0 +1,1 @@
+# BetterDiscord LazyLoad-Patcher
