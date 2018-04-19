@@ -5,12 +5,25 @@
     */
     width: 30%;
 }
+#bd-customcss-editor-detached{
+    font-size: 11px!important;
+}
 
 /* ----------- */
 /* -Variables- */
 /* ----------- */
 :root{
+
+    --guilds-size: 50px;
+    --guilds-avatar-size: 36px;
+    --guilds-avatar-font-size: 18px;
+    --guilds-font-size: 10px;
+    --guilds-hover-font-size: 14px;
+
     --left-sidebar-size: 200px;
+    --left-sidebar-server-font-size: 12px;
+    --left-sidebar-server-line-height: 28px;
+    --left-sidebar-server-button-size: 12px;
     --left-sidebar-button-size: 28px;
     --left-sidebar-connection-font-size: 12px;
     --left-sidebar-connection-users-font-size: 10px;
@@ -24,7 +37,7 @@
     --channel-avatar-size: 16px;
     --channel-user-name-font-size: 0.95rem;
     --channel-voice-user-name-font-size: 0.9rem;
-    
+
     --members-width: 150px;
     --members-margin-left: 4px;
     --members-section-font-size: 0.65rem;
@@ -38,6 +51,7 @@
 
     --chat-avatar-size: 16px;
     --chat-font-size: 0.9rem;
+    --chat-embeds-avatar-size: 16px;
     --chat-user-name-font-size: 0.85rem;
     --chat-timestamp-size: 0.75rem;
     --chat-reaction-emoji-size: 0.68rem;
@@ -47,15 +61,16 @@
     --chat-divider-line-height: 10px;
     --chat-p-line-size: 1rem;
     --chat-system-line-height: 1rem;
-    
+
     --conv-section-font-size: 0.65rem;
     --conv-line-height: 28px;
     --conv-avatar-size: 22px;
+    --conv-status-size: 8px;
     --conv-user-name-font-size: 0.8rem;
     --conv-user-name-line-height: 14px;
     --conv-user-activity-font-size: 0.6rem;
     --conv-user-activity-line-height: 10px;
-    
+
     --friends-header-line-height: 32px;
     --friends-header-font-size: 14px;
     --friends-font-size: 0.85rem;
@@ -74,7 +89,7 @@
     --friends-tablerow-name-width: 150px;
     --friends-tablerow-status-width: 150px;
     --friends-tablerow-guilds-width: 150px;
-    
+
     --call-height: 200px;
     --call-avatar-size: 80px;
     --call-avatar-status-size: 18px;
@@ -86,6 +101,203 @@
     --call-actions-button-size: 18px;
 }
 
+/* Guilds, Wrapper, Outer */
+.guilds-wrapper {
+    /*
+    width: 70px;
+    */
+    width: var(--guilds-size);
+}
+/* Guilds, Wrapper, Scroll */
+.guilds-wrapper .scroller-wrap {
+    /*
+    width: 88px;
+    */
+    width: calc(18px + var(--guilds-size));
+}
+/* Guilds, Wrapper, Inner */
+.guilds-wrapper .guilds {
+    /*
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 0px;
+    */
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    padding-right: 0px;
+}
+
+/* Guilds, Divider, Wrapper */
+.guilds-wrapper .dms {
+    /*
+    margin-bottom: 10px;
+    margin-top: 10px;
+    */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/* Guilds, Divider, Wrapper */
+.guilds-wrapper .guild-separator {
+    /*
+    height: 2px;
+    margin-bottom: 10px;
+    width: 50px;
+    */
+    height: 0px;
+    margin-bottom: 20px;
+    width: var(--guilds-size);
+
+}
+/* Guilds, Divider */
+.guilds-wrapper .guild-separator:after {
+    /*
+    height: 2px;
+    left: 20%;
+    position: absolute;
+    right: 20%;
+    top: 0;
+    */
+    height: 2px;
+    top: 2px;
+    left: 0;
+    right: 15%;
+}
+/* Guilds, Header, Icon */
+.guilds-wrapper .guilds .friends-icon {
+    /*
+    background-size: 32px 28px;
+    height: 50px;
+    width: 50px;
+    */
+    background-size: calc(0.8 * var(--guilds-avatar-size));
+    height: var(--guilds-avatar-size);
+    width: var(--guilds-avatar-size);
+}
+/* Guilds, Header, Text */
+.guilds-wrapper .guilds .friends-online {
+    /*
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+    width: 50px;
+    */
+    font-size: var(--guilds-font-size);
+    font-weight: 500;
+    line-height: 100%;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+    width: var(--guilds-font-size);
+}
+.guilds-wrapper .guilds .guild {
+    /*
+    height: 50px;
+    width: 50px;
+    margin-top: 4px;
+    */
+    height: var(--guilds-avatar-size);
+    width: var(--guilds-avatar-size);
+
+    margin-left: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*width: calc(var(--guilds-size) - 6px);*/
+}
+/* Guilds, Avatar, Wrapper, Specific */
+.guilds-wrapper .guilds .guild-separator + .guild,
+.guilds-wrapper .guilds .guild + .guild {
+    /*
+    margin-top: 4px;
+    */
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: var(--guilds-avatar-size);
+}
+
+/* Guilds, Avatar, Text */
+.guilds-wrapper .guilds .guild .guild-inner {
+    /*
+    background: #2f3136;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 50px;
+    overflow: hidden;
+    text-align: center;
+    */
+    border-radius: 50%!important;
+    font-size: var(--guilds-avatar-font-size);
+    line-height: var(--guilds-avatar-size);
+}
+.guilds-wrapper .guilds-add-inner {
+    /*
+    position: relative;
+    top: -1px;
+    */
+    position: relative;
+    top: 0px;
+}
+/* Guilds, Avatar */
+.guilds-wrapper .guilds .guild .guild-inner a:not(:empty) {
+    height: auto;
+}
+.guilds-wrapper .guilds .guild .guild-inner a {
+    /*
+    height: 50px;
+    width: 50px;
+    */
+    height: var(--guilds-avatar-size);
+    width: var(--guilds-avatar-size);
+    background-size: contain;
+}
+/* Guilds, Notifications, Unread */
+.unread-mentions-indicator-bottom,
+.unread-mentions-indicator-top {
+    /*
+    height: 20px;
+    padding: 6px;
+    */
+}
+/* Guilds, Indicator, Unread, Both */
+.guilds-wrapper .guilds .guild.selected:before,
+.guilds-wrapper .guilds .guild.unread:before {
+    /*
+    position: absolute;
+    border-radius: 20px;
+    top: 50%;
+    left: -15px;
+    width: 10px;
+    */
+    top: 50%;
+    left: calc(-10px / 2 - 4px - 4px);
+}
+/* Guilds, Indicator, Unread, notSelected */
+.guilds-wrapper .guilds .guild.unread:before {
+    /*
+    height: 10px;
+    margin-top: -5px;
+    */
+    height: 10px;
+    margin-top: -5px;
+}
+/* Guilds, Indicator, Unread, Selected */
+.guilds-wrapper .guilds .guild.selected:before {
+    /*
+    height: 40px;
+    margin-top: -20px;
+    */
+    height: var(--guilds-avatar-size);
+    margin-top: calc(-0.5 * var(--guilds-avatar-size));
+}
 
 
 /* Members - Wrapper */
@@ -112,7 +324,8 @@
     min-height: var(--call-height);
 }
 /* Call, Header */
-.title-qAcLxz, .titleCall-3X0yGQ {
+.title-qAcLxz,
+.titleCall-3X0yGQ {
     /*
     height: 48px;
     padding-top: 0px;
@@ -139,7 +352,8 @@
     margin-right: 0px;
 }
 /* Call, Header, Users, Names */
-.title-qAcLxz .input-autosize-input, .titleCall-3X0yGQ .input-autosize-input {
+.title-qAcLxz .input-autosize-input,
+.titleCall-3X0yGQ .input-autosize-input {
     /*
     font-size: 18px;
     font-weight: 600;
@@ -154,7 +368,8 @@
     padding: 0 8px;
 }
 /* Call, Header, Wrapper */
-.horizontal-2BEEBe>.flex-lFgbSz, .horizontal-2BEEBe>.flexChild-1KGW5q {
+.horizontal-2BEEBe>.flex-lFgbSz,
+.horizontal-2BEEBe>.flexChild-1KGW5q {
     /*
     margin-left: 10px;
     margin-right: 10px;
@@ -193,7 +408,8 @@
     margin-right: 0;
 }
 /* Call, Flex, Wrapper */
-.private-channel-call.minimum .private-channel-call-info, .private-channel-call.normal .private-channel-call-info {
+.private-channel-call.minimum .private-channel-call-info,
+.private-channel-call.normal .private-channel-call-info {
     /*
     padding-top: 60px;
     */
@@ -277,7 +493,9 @@
     padding-right: 0px;
 }
 /* Call, Actions, Buttons, Wrapper */
-.private-channel-call .action-button, .private-channel-call .static-button, .private-channel-call .toggle-button {
+.private-channel-call .action-button,
+.private-channel-call .static-button,
+.private-channel-call .toggle-button {
     /*
     margin: 4px;
     padding: 0;
@@ -337,6 +555,26 @@
     */
     width: var(--left-sidebar-size);
 }
+/* Left Sidebar - Server, Wrapper */
+.header-1tSljs {
+    /*
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    height: 48px;
+    padding: 0 12px 0 16px;
+    */
+    height: var(--left-sidebar-server-line-height);
+
+}
+/* Left Sidebar - Server, Text */
+.name-3gtcmp {
+    /*
+    font-size: 16px;
+    line-height: 48px;
+    */
+    font-size: var(--left-sidebar-server-font-size);
+    line-height: var(--left-sidebar-server-line-height);
+}
 /* Left Sidebar - Info, Server */
 .container-3lnMWU {
     /*
@@ -349,18 +587,18 @@
 }
 .inner-ptMwR- .rtc-connection-status .ping {
     /*
-    background-size: 11px 12px;
     height: 12px;
     width: 11px;
-    
+    background-size: 11px 12px;
+
     margin-left: 1px;
     margin-right: 5px;
     */
-    background-repeat: no-repeat;
-    background-size: calc(0.9 * var(--left-sidebar-connection-font-size));
     width: var(--left-sidebar-connection-font-size);
     height: var(--left-sidebar-connection-font-size);
-    
+    background-repeat: no-repeat;
+    background-size: calc(0.9 * var(--left-sidebar-connection-font-size));
+
     margin-left: 0px;
 }
 /* Left Sidebar - Info, Server, Users */
@@ -395,11 +633,11 @@
 }
 /* Left Sidebar - Info, Settings, Avatar */
 .container-iksrDt .avatar-small {
-    background-repeat: no-repeat;
-    background-size: var(--left-sidebar-settings-avatar-size);
     width: var(--left-sidebar-settings-avatar-size);
     height: var(--left-sidebar-settings-avatar-size);
-    
+    background-repeat: no-repeat;
+    background-size: contain;
+
     margin: 0 10px 0 0;
 }
 /* Left Sidebar - Info, Settings, Tag */
@@ -416,20 +654,20 @@
 /* Left Sidebar - Buttons */
 .button-3WJ5FX, .button-1aU9q1 {
     /*
+    height: 32px;
+    width: 32px;
     border-radius: 3px;
     background: transparent no-repeat 50% 50%;
     background-size: 18px 18px;
-    height: 32px;
-    width: 32px;
     opacity: .6;
     padding: 0;
     */
+    width: var(--left-sidebar-button-size);
+    height: var(--left-sidebar-button-size);
     border-radius: 3px;
     background-repeat: no-repeat;
     background-size: calc(0.6 * var(--left-sidebar-button-size));
-    width: var(--left-sidebar-button-size);
-    height: var(--left-sidebar-button-size);
-    
+
     opacity: .6;
     padding: 0;
 }
@@ -456,7 +694,7 @@
     margin-left: 10px;
     margin-right: 10px;
 }
-/* Chat - Messages, Wrapper */
+/* Chat - Message, Wrapper */
 .message-group {
     /*
     margin-left: 20px;
@@ -470,9 +708,9 @@
 /* Chat - Avatar */
 .message-group .avatar-large {
     /*
-    background-size: 40px 40px;
     width: 40px;
     height: 40px;
+    background-size: 40px 40px;
     margin-right: 5px;
     margin-top: 0px;
     */
@@ -480,7 +718,7 @@
     background-size: contain;
     width: var(--chat-avatar-size);
     height: var(--chat-avatar-size);
-    
+
     margin-right: 5px;
     margin-top: 0px;
     opacity: 0.6;
@@ -516,8 +754,8 @@
 .chat .divider>span {
     font-size: var(--chat-divider-font-size);
     font-weight: 500;
-    line-height: var(--chat-divider-line-height);;
-    
+    line-height: var(--chat-divider-line-height);
+
 }
 /* Chat - Divider, Bottom */
 .theme-dark .message-group:not(.has-divider) {
@@ -535,14 +773,14 @@
     line-height: var(--chat-font-size);
     padding: 2px 0;
 }
-/* Chat - First text message */
+/* Chat - Messages, Text, First */
 .comment .message.first .message-text {
     /*
     margin-top: 6px;
     */
     margin-top: 0px;
 }
-/* Chat - All text messages */
+/* Chat - Messages, Text */
 .comment .message .message-text {
     /*
     margin-top: 6px;
@@ -551,7 +789,15 @@
     padding: 0px 5px;
     margin-left: -5px;
 }
-/* Chat - SystemMessage, timestamp */
+
+/* Chat - Message, Link */
+.theme-dark .message-group a {
+    /*
+    color: #0096cf;
+    */
+    opacity: 0.9;
+}
+/* Chat - SystemMessage, Timestamp */
 .system-message {
     /*
     color: rgba(47,49,54,.6);
@@ -609,21 +855,113 @@
     border-left-color: rgba(250,166,26,.1);
     margin-left: 0px;
 }
-/*Chat - Reactions, group*/
-.message-group .accessory .reactions{
+/*Chat - Accessory, Wrapper */
+.message-group .accessory {
+    /*
+    padding-right: 4px;
+    */
+    padding-right: 0px;
+}
+/*Chat - Accessory, Wrapper2 */
+.message-group .accessory>* {
+    /*
+    margin-top: 8px;
+    */
+    margin-top: 2px;
+}
+/*Chat - Accessory, Embeds, Wrapper, Outer */
+.message-group .accessory > .embed {
+    /*
+    margin-top: 8px;
+    */
+    max-width: inherit!important;
+}
+/*Chat - Accessory, Embeds, Wrapper */
+.embedInner-t4ag7g {
+    /*
+    padding: 8px 10px;
+    */
+    padding: 4px 8px;
+}
+/*Chat - Accessory, Embeds, Header, Author, Wrapper */
+.embedAuthor-3fZd3B {
+    margin-bottom: 0px;
+}
+/*Chat - Accessory, Embeds, Header, Author, Avatar */
+.embedAuthorIcon-S7s7pw {
+    /*
+    margin-right: 8px;
+    height: 20px;
+    width: 20px;
+    */
+    margin-right: 4px;
+    height: var(--chat-embeds-avatar-size);
+    width: var(--chat-embeds-avatar-size);
+}
+/*Chat - Accessory, Embeds, Header, Outer */
+.marginTop4-2rEBfJ {
+    /*
+    margin-top: 4px;
+    */
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+/*Chat - Accessory, Embeds, Header, Inner */
+.embedFieldInline-3kGtKm {
+    /*
+    min-width: 150px;
+    */
+    min-width: inherit;
+
+}
+/*Chat - Accessory, Embeds, Header, Inner, Name */
+.embedFieldName-eYf-oY {
+    /*
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+    */
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+/*Chat - Accessory, Embeds, Header, Inner, Text */
+.embedFieldValue-1c1uz1 {
+    /*
+    padding: 2px 0;
+    */
+    padding: 0px 0!important;
+}
+
+/*Chat - Accessory, Embeds, Wrappers, Inner, Text */
+.embedFieldValue-1c1uz1 {
+    /*
+    padding: 2px 0;
+    */
+    padding: 0px 0!important;
+}
+.marginTop8-2gOa2N {
+    /*
+    margin-top: 8px;
+    */
+    margin-top: 0px;
+}
+
+/*Chat - Accessory, Reactions, group*/
+.message-group .accessory .reactions {
      /*
     margin-top: 6px;
     */
     margin-top: 0px;
 }
-/*Chat - Reactions, Dark */
+/*Chat - Accessory, Reactions, Dark */
 .theme-dark .reaction {
     /*
     background: hsla(0,0%,100%,.04);
     */
     background: hsla(0,0%,100%,.03);
 }
-/*Chat - Reactions */
+/*Chat - Accessory, Reactions */
 .reaction {
     /*
     background: rgba(79,84,92,.06);
@@ -634,7 +972,7 @@
     margin: 1px;
     padding: 0 2px;
 }
-/*Chat - Reactions, Emoji */
+/*Chat - Accessory, Reactions, Emoji */
 .reaction .emoji {
     /*
     height: 1rem;
@@ -650,13 +988,13 @@
     margin: 2px 2px!important;
     vertical-align: middle;
 }
-/*Chat - Reactions, Count, Dark */
+/*Chat - Accessory, Reactions, Count, Dark */
 .theme-dark .reaction .reaction-count {
     /*
     color: rgba(255, 255, 255, 0.298039);
     */
 }
-/*Chat - Reactions, Count */
+/*Chat - Accessory, Reactions, Count */
 .reaction .reaction-count {
     /*
     color: rgba(79,84,92,.3)
@@ -688,15 +1026,13 @@
     padding-top: 10px;
 }
 /* Section - Name */
-.containerDefault-1bbItS > * > .overflowEllipsis-2ynGQq{
+.containerDefault-1bbItS > * > .overflowEllipsis-2ynGQq {
     /*
     font-size: 12px;
     font-weight: 600;
     */
     font-size: var(--channel-section-font-size);
     font-weight: 700;
-    
-    
 }
 
 /* Channel - Wrapper*/
@@ -744,7 +1080,7 @@
     height: var(--channel-line-height);
 }
 /* VoiceChannel - Avatar */
-.avatarContainer-303pFz > *{
+.avatarContainer-303pFz > * {
     /*
     width: 20px;
     height: 20px;
@@ -960,7 +1296,7 @@
     height: var(--conv-line-height);
     margin-left: 8px;
     padding: 0px 8px;
-    
+
 }
 /* Conv - Avatar */
 .private-channels .channel .avatar-small {
@@ -1125,17 +1461,17 @@
 /* Friends - TableRow, Avatars */
 .friends-column .avatar-small {
     /*
-    background-size: contain;
     margin-right: 10px;
     margin-top: 6px;
     height: 30px;
     width: 30px;
-    */
     background-size: contain;
+    */
     margin-right: 10px;
     margin-top: 6px;
     height: var(--friends-avatar-size);
     width: var(--friends-avatar-size);
+    background-size: contain;
 }
 /* Friends - TableRow, Tags */
 #friends .friends-table .friends-row .discord-tag .discriminator {
