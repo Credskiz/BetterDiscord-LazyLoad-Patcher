@@ -13,29 +13,29 @@ var lazyload_patcher = function() {
 
 	const getInternalInstance = e => e[Object.keys(e).find(k => k.startsWith("__reactInternalInstance"))];
 	const getEventHandlers = e => e[Object.keys(e).find(k => k.startsWith("__reactEventHandlers"))];
-			
+
 	const oldEdgeCaseSize = 16;
 	const oldChannelSize = 34;
 	const oldSectionSize = 48;
 	const oldVoiceUserSize = 28;
 	const oldVoiceBottomPaddingSize = 8;
-	
+
 	var newEdgeCaseSize = 16; // Done
 	var newSectionSize = 20;
 	var newChannelSize = 20;
 	var newVoiceUserSize = 20;
 	var newVoiceBottomPaddingSize = 0;
-	
+
 	//
 	var originalGetRowHeight;
 	var originalGetSectionHeight;
-		
+
 	var wasInFriends = 0;
-	
+
 	this.load = function()	{
 		this.Log("Loaded");
 	};
-	
+
 	this.start = function() {
 		this.Log("Started");
 		//if we start up to the friends page, channels won't be loaded
@@ -59,7 +59,7 @@ var lazyload_patcher = function() {
 	this.unload = function(){	this.Log("Unloaded");	};
 
 	this.onMessage = function() {};
-	
+
 	this.onSwitch = function()  {
 		setTimeout(() => this.doUpdateVariables(), 1000);
 		// If in friends.
@@ -78,7 +78,7 @@ var lazyload_patcher = function() {
 			}
 		}
 	};
-	
+
 	this.observer = function(e) {};
 
 	this.getSettingsPanel = function () {};
@@ -86,7 +86,7 @@ var lazyload_patcher = function() {
 	this.Log = function(msg, method = "log") {
 		console[method]("%c[" + this.pluginName + "]%c " + msg, "color: #DABEEF; font-weight: bold;", "");
 	};
-	
+
 	this.doPatch = function() {
 		try {
 			this.patch();
@@ -102,63 +102,63 @@ var lazyload_patcher = function() {
 		try {
 			this.updateVariables();
 			//success
-			this.Log("Patched ");
+			//this.Log("Patched ");
 		} catch(err) {
 			//something went wrong. I should make this more verbose
 			this.Log("Failed to patch " + ": " + err.message, "error");
 		}
-		this.Log('finished doUpdateVariables');
+		//this.Log('finished doUpdateVariables');
 	};
-	
+
 	this.updateVariables = function() {
 		// Update newEdgeCaseSize from current css.
 		var container = $(".container-0");
 		if (container !== undefined && container.length > 0){
 			container = getInternalInstance(container[0]);
 			var edgeDiv = getEventHandlers(container.stateNode.firstChild);
-			
+
 			newEdgeCaseSize = edgeDiv.style.height;
 			//console.log("newEdgeCaseSize: " + newEdgeCaseSize);
 		}
-		
+
 		// Update newSectionSize from current css.
 		var section = $(".containerDefault-1bbItS");
 		if (section !== undefined && section.length > 0){
 			section = getInternalInstance(section[0]);
-			
+
 			newSectionSize = section.stateNode.clientHeight;
 			//console.log("newSectionSize: " + newSectionSize);
 		}
-		
+
 		// Update newChannelSize from current css.
 		var channel = $(".containerDefault-7RImuF");
 		if (channel !== undefined && channel.length > 1){
 			channel = getInternalInstance(channel[1]);
-			
+
 			newChannelSize = channel.stateNode.firstChild.clientHeight;
 			//console.log("newChannelSize: " + newChannelSize);
 		}
-		
+
 		// Update newVoiceUserSize from current css.
 		var voiceUser = $(".draggable-3SphXU");
 		if (voiceUser !== undefined && voiceUser.length > 0){
 			voiceUser = getInternalInstance(voiceUser[0]);
-			
+
 			newVoiceUserSize = voiceUser.stateNode.clientHeight;
 			//console.log("newVoiceUserSize: " + newVoiceUserSize);
 		}
-		
+
 		// Update newVoiceBottomPaddingSize from current css.
 		var voiceBottomPadding = $(".listCollapse-z8PceY, .listDefault-3i7eWQ");
 		if (voiceBottomPadding !== undefined && voiceBottomPadding.length > 0){
 			voiceBottomPadding = getInternalInstance(voiceBottomPadding[0]);
 			var voiceSize = voiceBottomPadding.stateNode.childElementCount * newVoiceUserSize;
-			
+
 			newVoiceBottomPaddingSize = voiceBottomPadding.stateNode.clientHeight - voiceSize;
 			//console.log("newVoiceBottomPaddingSize: " + newVoiceBottomPaddingSize);
 		}
 	};
-	
+
 	this.patch = function() {
 		// Find channel element.
 		var instList = $(".scroller-NXV0-d");
@@ -167,15 +167,15 @@ var lazyload_patcher = function() {
 		// Set important variables.
 		var inst = getInternalInstance(instList[0]);
 		var eventH = getEventHandlers(inst.stateNode.parentNode.parentNode);
-		
+
 		if(originalGetRowHeight === undefined)
 			originalGetRowHeight = eventH.children[3]._owner.stateNode.getRowHeight;
 
-		// Input to this function should be 2 variables. 
+		// Input to this function should be 2 variables.
 		// Recalculates the channel sizes.
 		var patchRows = function() {
-			var newVar = 0;			
-			
+			var newVar = 0;
+
 			let size = 0;
 			let oldSize = originalGetRowHeight(arguments[0], arguments[1]);
 			for(let i = 0; size !== oldSize && size < oldSize; i++){
@@ -184,13 +184,13 @@ var lazyload_patcher = function() {
 					newVar = newEdgeCaseSize;
 					break;
 				}
-				
+
 				size = oldChannelSize;
-				
+
 				if(i > 0){ // If in i a voice chat.
 					size +=  i * oldVoiceUserSize + oldVoiceBottomPaddingSize;
 				}
-				
+
 				//console.log("row(" + arguments[0] + ", " + arguments[1]+"): " + i + "n/o - " + size + "/" + oldSize);
 				if(size === oldSize){
 					newVar = newChannelSize;
@@ -200,23 +200,23 @@ var lazyload_patcher = function() {
 					break;
 				}
 			}
-			
+
 			return newVar;
 		};
 		eventH.children[3]._owner.stateNode.getRowHeight = patchRows;
-		
+
 		// ---Patch sections---
 		if(originalGetSectionHeight === undefined)
 			originalGetSectionHeight = eventH.children[3]._owner.stateNode.getSectionHeight;
 
-		// Input to this function should be 1 variable. 
+		// Input to this function should be 1 variable.
 		// Recalculates the section sizes.
 		var patchSections = function() {
 			var newVar = 0;
-			
+
 			let size = 0;
 			let oldSize = originalGetSectionHeight(arguments[0], arguments[1]);
-			
+
 			if(oldSize === oldEdgeCaseSize){
 				//console.log("sectionEdge(" + arguments[0] + "): " + "n/o - " + size + "/" + oldSize);
 				newVar = newEdgeCaseSize;
@@ -228,14 +228,14 @@ var lazyload_patcher = function() {
 					newVar = newSectionSize;
 				}
 			}
-			
+
 			return newVar;
 		};
 		eventH.children[3]._owner.stateNode.getSectionHeight = patchSections;
-		
+
 		// Update scroll.
 		eventH.children[3]._owner.stateNode.forceUpdate();
-		
+
 	};
-	
+
 };
