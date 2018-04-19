@@ -45,13 +45,13 @@ var lazyload_patcher = function() {
 			$('.guild').has('.avatar-small').on('click.llpPatcher', () => {
 
 				//run after 1000ms, to make sure it is loaded
-				setTimeout(() => this.updateVariables(), 5000);
-				setTimeout(() => this.doChatPatch(), 5000);
+				setTimeout(() => this.doUpdateVariables(), 5000);
+				setTimeout(() => this.doPatch(), 5000);
 				$('.guild').off('click.llpPatcher');
 			});
 		} else {
-			setTimeout(() => this.updateVariables(), 5000);
-			setTimeout(() => this.doChatPatch(), 5000);
+			setTimeout(() => this.doUpdateVariables(), 5000);
+			setTimeout(() => this.doPatch(), 5000);
 		}
 	};
 
@@ -61,7 +61,7 @@ var lazyload_patcher = function() {
 	this.onMessage = function() {};
 	
 	this.onSwitch = function()  {
-		this.updateVariables();
+		setTimeout(() => this.doUpdateVariables(), 1000);
 		// If in friends.
 		if (location.pathname.startsWith('/channels/@me')) {
 			wasInFriends = 1;
@@ -69,11 +69,11 @@ var lazyload_patcher = function() {
 		// Else in channels.
 		else {
 			// Only run patch once every time you go from friends to channels I think.
-			if ($('.containerDefault-1bbItS').height() == null && wasInFriends > 0 ) {
-				setTimeout(() => this.doChatPatch(), 1000);
+			if (wasInFriends > 0 ) {
+				setTimeout(() => this.doPatch(), 1000);
 				wasInFriends = 1;
 			} else if ($('.containerDefault-1bbItS').height() !== null && wasInFriends > 0 ) {
-				setTimeout(() => this.doChatPatch(), 1000);
+				setTimeout(() => this.doPatch(), 1000);
 				wasInFriends = 0;
 			}
 		}
@@ -87,7 +87,7 @@ var lazyload_patcher = function() {
 		console[method]("%c[" + this.pluginName + "]%c " + msg, "color: #DABEEF; font-weight: bold;", "");
 	};
 	
-	this.doChatPatch = function() {
+	this.doPatch = function() {
 		try {
 			this.patch();
 			//success
@@ -96,7 +96,18 @@ var lazyload_patcher = function() {
 			//something went wrong. I should make this more verbose
 			this.Log("Failed to patch " + ": " + err.message, "error");
 		}
-		this.Log('finished doChatPatch');
+		this.Log('finished doPatch');
+	};
+	this.doUpdateVariables = function() {
+		try {
+			this.updateVariables();
+			//success
+			this.Log("Patched ");
+		} catch(err) {
+			//something went wrong. I should make this more verbose
+			this.Log("Failed to patch " + ": " + err.message, "error");
+		}
+		this.Log('finished doUpdateVariables');
 	};
 	
 	this.updateVariables = function() {
@@ -121,13 +132,8 @@ var lazyload_patcher = function() {
 		
 		// Update newChannelSize from current css.
 		var channel = $(".containerDefault-7RImuF");
-		console.log("ch: ");
-		console.log(channel);
 		if (channel !== undefined && channel.length > 1){
-			console.log("if");
 			channel = getInternalInstance(channel[1]);
-			console.log("ch if: ");
-			console.log(channel);
 			
 			newChannelSize = channel.stateNode.firstChild.clientHeight;
 			//console.log("newChannelSize: " + newChannelSize);
@@ -201,7 +207,7 @@ var lazyload_patcher = function() {
 		
 		// ---Patch sections---
 		if(originalGetSectionHeight === undefined)
-		originalGetSectionHeight = eventH.children[3]._owner.stateNode.getSectionHeight;
+			originalGetSectionHeight = eventH.children[3]._owner.stateNode.getSectionHeight;
 
 		// Input to this function should be 1 variable. 
 		// Recalculates the section sizes.
