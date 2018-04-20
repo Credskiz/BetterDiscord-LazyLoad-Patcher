@@ -8,7 +8,7 @@ var lazyload_patcher = function() {
 
 	this.getName = 			function()	{return this.pluginName;};
 	this.getDescription = 	function()	{return 'LazyLoad Patcher - Patches Discord\'s lazy loading to allow for themes that modify channel and section heights. Credits to noodlebox#0155, Mydayyy#0344 and Kakkela#6315';};
-	this.getVersion = 		function()	{return '1.3.0.1';};
+	this.getVersion = 		function()	{return '0.0.1';};
 	this.getAuthor = 		function()	{return 'HoLLy#2750';};
 
 	const getInternalInstance = e => e[Object.keys(e).find(k => k.startsWith("__reactInternalInstance"))];
