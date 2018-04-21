@@ -1,24 +1,92 @@
 
-#bd-customcss-detach-container {
-    /*
-    width: 30%;
-    */
-    width: 30%;
-}
-#bd-customcss-editor-detached{
-    font-size: 11px!important;
-}
+/* TODO restructure the css file */
+
+/* TODO settings sidebar to be fixed in place */
+
+/* TODO fix chat name centered */
+/* TODO fix add guild plus sign centered */
+/* TODO fix settings keybinds selector wrong size */
+/* TODO fix settings keybinds input icon wrong size */
+/* TODO fix settings language header font size */
+/* TODO fix settings log out centered? */
+/* TODO fix settings footer centered? */
+
+/* TODO add popout support */
+/* TODO add popout settings support */
+/* TODO add popout server settings support */
+/* TODO add popout server settings, avatar size */
+/* TODO add popout server settings, audit log */
+/* TODO add popout server settings, role */
+/* TODO add popout server settings, integrations */
+/* TODO add popout server settings, emoji */
+/* TODO add popout server settings, widget */
+/* TODO add popout server settings, members */
+/* TODO add popout server settings, invitations */
+/* TODO add settings, authorized apps */
+/* TODO add settings, connections */
+/* TODO add settings, discord nitro */
+/* TODO add settings, video settings */
+/* TODO add settings, game activity */
+/* TODO add settings, game appearance */
+/* TODO add settings, changelog */
+/* TODO add bbd settings support */
+
 
 /* ----------- */
 /* -Variables- */
 /* ----------- */
-:root{
+:root {
+    --bdd-customcss-width: 40%;
+    --bdd-customcss-font-size: 11px;
+    
+    --dc-settings-sidebar-header-font-size: 10px;
+    --dc-settings-sidebar-header-line-height: 12px;
+    --dc-settings-sidebar-item-font-size: 14px;
+    --dc-settings-sidebar-item-line-height: 18px;
+    --dc-settings-sidebar-logout-font-size: 16px;
+    --dc-settings-sidebar-logout-line-height: 30px;
+    --dc-settings-sidebar-footer-button-size: 16px;
+	--dc-settings-main-avatar-size: 32px;
+	--dc-settings-main-font-size: 12px;
+	--dc-settings-main-line-height: 16px;
+	--dc-settings-main-close-button-size: 20px;
+	--dc-settings-main-close-button-font-size: 10px;
+	--dc-settings-main-title-font-size: 12px;
+	--dc-settings-main-title-line-height: 16px;
+	--dc-settings-main-description-font-size: 12px;
+	--dc-settings-main-description-line-height: 16px;
+	--dc-settings-main-checkbox-size: 12px;
+	--dc-settings-main-info-title-font-size: 12px;
+	--dc-settings-main-info-title-line-height: 16px;
+	--dc-settings-main-info-description-font-size: 12px;
+	--dc-settings-main-switch-height: 12px;
+	--dc-settings-main-switch-width: 32px;
+	--dc-settings-main-flag-size: 12px;
+	--dc-settings-main-slider-size: 12px;
+    --dc-settings-main-select-font-size: 12px;
+    --dc-settings-main-select-line-height: 16px;
+    
+    --bdd-settings-sidebar-header-font-size: 10px;
+    --bdd-settings-sidebar-header-line-height: 12px;
+    --bdd-settings-sidebar-item-font-size: 14px;
+    --bdd-settings-sidebar-item-line-height: 18px;
+    --bdd-settings-sidebar-versions-font-size: 10px;
+    --bdd-settings-sidebar-versions-line-height: 12px;
+    --bdd-customcss-checkbox-size: 16px;
+    --bdd-customcss-checkbox-font-size: 12px;
+    --bdd-customcss-buttons-size: 18px;
+    --bdd-customcss-buttons-font-size: 12px;
+    --bdd-notice-line-height: 24px;
+    --bdd-notice-font-size: 12px;
 
     --guilds-size: 50px;
+    --guilds-font-size: 10px;
     --guilds-avatar-size: 36px;
     --guilds-avatar-font-size: 18px;
-    --guilds-font-size: 10px;
     --guilds-hover-font-size: 14px;
+    --guilds-button-height: 18px;
+    --guilds-button-font-size: 10px;
+    --guilds-button-line-height: 18px;
 
     --left-sidebar-size: 200px;
     --left-sidebar-server-font-size: 12px;
@@ -51,16 +119,21 @@
 
     --chat-avatar-size: 16px;
     --chat-font-size: 0.9rem;
+    --chat-line-height: 0.9rem;
+    --chat-emote-size : 16px;
     --chat-embeds-avatar-size: 16px;
     --chat-user-name-font-size: 0.85rem;
     --chat-timestamp-size: 0.75rem;
+    --chat-button-size: 16px;
     --chat-reaction-emoji-size: 0.68rem;
     --chat-reaction-font-size: 0.68rem;
     --chat-reaction-line-height: 0.68rem;
     --chat-divider-font-size: 10px;
     --chat-divider-line-height: 10px;
-    --chat-p-line-size: 1rem;
     --chat-system-line-height: 1rem;
+    --chat-footer-button-size: 16px;
+    --chat-footer-input-font-size: 12px;
+    --chat-footer-input-line-height: 18px;
 
     --conv-section-font-size: 0.65rem;
     --conv-line-height: 28px;
@@ -94,11 +167,828 @@
     --call-avatar-size: 80px;
     --call-avatar-status-size: 18px;
     --call-header-line-height: 28px;
-    --call-header-user-name-font-size: 1rem;
+    --call-header-name-line-height: 18px;
+    --call-header-font-size: 0.9rem;
+    --call-header-status-size: 8px;
     --call-header-button-size: 18px;
     --call-actions-line-height: 24px;
     --call-actions-font-size: 0.7rem;
     --call-actions-button-size: 18px;
+}
+
+/* Discord, Settings, Wrapper */
+.ui-standard-sidebar-view .sidebar-region {
+    /*
+    -ms-flex: 1 0 218px;
+    flex: 1 0 10px;
+    */
+    -ms-flex: 1 0 0;
+    flex: 1 0 0;
+}
+/* Discord, Settings, Wrapper, Outer */
+.ui-standard-sidebar-view .sidebar-region .sidebar {
+    /*
+    padding: 60px 6px 60px 20px;
+    width: 218px;
+    */
+    padding: 2px;
+    width: auto;
+}
+/* Discord, Settings, Wrapper, Inner */
+.side-2nYO0F .header-1-f9X5,
+.side-2nYO0F .item-3879bf {
+    /*
+    padding: 6px 10px;
+    */
+    padding: 0;
+}
+/* Discord, Settings, Header, Text */
+.header-1-f9X5 {
+    /*
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    */
+    font-size: var(--dc-settings-sidebar-header-font-size);
+    font-weight: 700;
+    line-height: var(--dc-settings-sidebar-header-line-height);
+}
+/* Discord, Settings, Item, Wrapper */
+.side-2nYO0F .item-3879bf {
+    /*
+    border-radius: 3px;
+    margin-bottom: 2px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    */
+    border-radius: 3px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    padding: 0;
+}
+/* Discord, Settings, Item, Text */
+.item-3879bf {
+    /*
+    font-size: 16px;
+    line-height: 20px;
+    */
+    font-size: var(--dc-settings-sidebar-item-font-size);
+    line-height: var(--dc-settings-sidebar-item-line-height);
+}
+/* Discord, Settings, Seperator */
+.side-2nYO0F .separator-3z7STW {
+    /*
+    margin-left: 10px;
+    margin-right: 10px;
+    */
+    margin: 2px 2px;
+}
+/* Discord, Settings, Logout */
+.side-2nYO0F > *:nth-last-child(3) {
+    font-size: var(--dc-settings-sidebar-logout-font-size);
+    line-height: var(--dc-settings-sidebar-logout-line-height);
+    /*text-align: center;*/
+}
+/* Discord, Settings, Footer, Wrapper */
+.socialLinks-1oZoF3 {
+    /*
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px 10px;
+    */
+    line-height: var(--dc-settings-sidebar-footer-button-size);
+    padding: 0;
+    /*margin: 0 auto;*/
+}
+/* Discord, Settings, Footer, Buttons, Wrapper */
+.link-13ZMYi {
+    /*
+    margin-right: 8px;
+    padding: 0 2px;
+    */
+    margin-right: 4px;
+    padding: 0 0px;
+}
+/* Discord, Settings, Footer, Buttons, Wrapper */
+.link-13ZMYi svg {
+    /*
+    height: 16px;
+    width: 16px;
+    */
+    height: var(--dc-settings-sidebar-footer-button-size);
+    width: var(--dc-settings-sidebar-footer-button-size);
+}
+
+/* BetterDiscord, Settings, Header */
+#bd-settings-sidebar .ui-tab-bar-header {
+    /*
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    */
+    padding: 0;
+    margin: 2px 4px;
+    font-size: var(--bdd-settings-sidebar-header-font-size);
+    line-height: var(--bdd-settings-sidebar-header-line-height);
+    font-weight: 500;
+}
+/* BetterDiscord, Settings, Item */
+#bd-settings-sidebar .ui-tab-bar-item {
+    /*
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 2px;
+    padding: 6px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 3px;
+    font-weight: 500;
+    */
+    margin-bottom: 2px;
+    margin-left: 8px;
+    padding: 0;
+    font-size: var(--bdd-settings-sidebar-item-font-size);
+    line-height: var(--bdd-settings-sidebar-item-line-height);
+    border-radius: 3px;
+    font-weight: 500;
+}
+/* BetterDiscord, Settings, Seperator */
+#bd-settings-sidebar .ui-tab-bar-separator {
+    /*
+    height: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    */
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-top: 8px;
+}
+/* BetterDiscord, Settings, Versions, Wrapper */
+#bd-settings-sidebar > * > div:not(:first-child) {
+    /*
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 10px;
+    */
+    font-size: var(--bdd-settings-sidebar-versions-font-size)!important;
+    line-height: var(--bdd-settings-sidebar-versions-line-height)!important;
+    padding: 0!important;
+    padding-left: 8px!important;
+}
+
+
+
+
+
+/* Discord, Settings, Main, Title, Text, Size */
+.size16-3IvaX_ {
+    /*
+    font-size: 16px;
+    */
+    font-size: var(--dc-settings-main-title-font-size);
+}
+/* Discord, Settings, Main, Text, Size */
+.size12-1IGJl9 {
+    font-size: var(--dc-settings-main-font-size);
+}
+/* Discord, Settings, Main, Title, Text, Height */
+.height20-165WbF {
+    /*
+    line-height: 20px;
+    */
+    line-height: var(--dc-settings-main-title-line-height);
+}
+/* Discord, Settings, Main, Text, Height */
+.height16-1qXrGy {
+    /*
+    line-height: 16px;
+    */
+    line-height: var(--dc-settings-main-line-height);
+}
+/* Discord, Settings, Main, Title, Text, Bold */
+.weightSemiBold-T8sxWH {
+    /*
+    font-weight: 600;
+    */
+}
+/* Discord, Settings, Main, Group, Margin, Top */
+.margin-top-60,
+.marginTop60-10QB5x {
+    /*
+    margin-top: 60px;
+    */
+    margin-top: 8px;
+}
+/* Discord, Settings, Main, Group, Margin, Top */
+.margin-top-40,
+.marginTop40-1bNyG9 {
+    /*
+    margin-top: 40px;
+    */
+    margin-top: 4px;
+}
+/* Discord, Settings, Main, Seperator, Margin, Top */
+.margin-top-20,
+.marginTop20-3UscxH {
+    /*
+    margin-top: 20px;
+    */
+    margin-top: 2px;
+}
+/* Discord, Settings, Main, Description, Margin, Bottom */
+.margin-bottom-40,
+.marginBottom40-1zK7fE {
+    /*
+    margin-bottom: 40px;
+    */
+    margin-bottom: 8px;
+}
+/* Discord, Settings, Main, Title, Margin, Bottom */
+.margin-bottom-20,
+.marginBottom20-2Ifj-2 {
+    /*
+    margin-bottom: 20px;
+    */
+    margin-bottom: 4px;
+}
+/* Discord, Settings, Main, Group, Margin, Bottom */
+.margin-bottom-8,
+.marginBottom8-1mABJ4 {
+    /*
+    margin-bottom: 8px;
+    */
+    margin-bottom: 2px;
+}
+/* Discord, Settings, Main, Margin, Bottom */
+.margin-bottom-2,
+.marginBottom4-_yArcI {
+    /*
+    margin-bottom: 4px;
+    */
+    margin-bottom: 2px;
+}
+/* Discord, Settings, Main, UserInfo, Avatar */
+.avatar-xxlarge {
+    background-size: contain;
+    height: var(--dc-settings-main-avatar-size);
+    width: var(--dc-settings-main-avatar-size);
+}
+/* Discord, Settings, Main, Card, Wrapper, Outer */
+.cardPrimary-ZVL9Jr,
+.cardPrimaryEditable-2IQ7-V,
+.cardPrimaryOutline-2YyAz2,
+.cardPrimaryOutlineEditable-1s-Uqd,
+.userSettingsAccount-2WOnTW .userInfoEditing-1Juv0S,
+.userSettingsAccount-2WOnTW .userInfoViewing-1jbzEW{
+    /*
+    padding: 20px;
+    */
+    padding: 2px;
+}
+/* Discord, Settings, Main, Card, Group */
+.horizontalReverse-2LanvO>.flex-lFgbSz, .horizontalReverse-2LanvO>.flexChild-1KGW5q {
+    /*
+    margin-left: 10px;
+    margin-right: 10px;
+    */
+    margin: 0 2px;
+}
+/* Discord, Settings, Main, Card, Group, Paragraphs */
+.formNoticeBody-1C0wup p {
+    /*
+    letter-spacing: -.39px;
+    margin: 0 0 12px;
+    */
+    letter-spacing: -.39px;
+    margin: 0 0 6px;
+}
+/* Discord, Settings, Main, Keybinds, Description */
+.ghostPill-1yup5q {
+    /*
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 16px;
+    */
+    border-radius: 12px;
+    font-size: var(--dc-settings-main-title-font-size);
+    line-height: var(--dc-settings-main-title-line-height);
+    padding: 0px 8px;
+}
+/* Discord, Settings, Main, Keybinds */
+.keybindGroup-37VaRm {
+    /*
+    margin-top: -1px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    */
+    margin-top: -1px;
+    padding: 8px 2px;
+}
+/* Discord, Settings, Main, UserInfo, Button, Edit */
+.userSettingsAccount-2WOnTW .userInfoViewingButton-3o3aim {
+    /*
+    right: 20px;
+    top: 20px;
+    */
+    right: 2px;
+    top: 2px;
+}
+/* Discord, Settings, Main, Item */
+.item-3tXG-o {
+    /*
+    padding: 20px 0;
+    */
+    padding: 0 0;
+}
+/* Discord, Settings, Main, Wrapper, Flex */
+.ui-standard-sidebar-view .content-region {
+    /*
+    -ms-flex: 1 1 800px;
+    flex: 1 1 800px;
+    */
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+}
+/* Discord, Settings, Main, Wrapper, Outer */
+.ui-standard-sidebar-view .content-column.default {
+    /*
+    padding: 60px 40px 80px;
+    */
+    padding: 8px 8px;
+}
+/* Discord, Settings, Main, Wrapper, Inner */
+.ui-standard-sidebar-view .content-column,
+.ui-standard-sidebar-view .custom-column {
+    /*
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    max-width: 740px;
+    min-height: 100%;
+    min-width: 460px;
+    */
+    max-width: inherit;
+    min-width: auto;
+}
+/* Discord, Settings, Main, Description */
+.description-3MVziF {
+    /*
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    */
+    font-size: var(--dc-settings-main-description-font-size);
+    font-weight: 500;
+    line-height: var(--dc-settings-main-description-line-height);
+}
+/* Discord, Settings, Main, RadioGroups, Wrapper */
+.radioGroup-2P3MJo > * {
+    /*
+    padding: 10px;
+    */
+    padding: 4px!important;
+}
+/* Discord, Settings, Main, CheckBox, Wrapper, Outer */
+.checkboxWrapper-2Yvr_Y {
+    /*
+    height: 24px;
+    */
+    height: var(--dc-settings-main-checkbox-size);
+}
+/* Discord, Settings, Main, CheckBox, Wrapper, Inner */
+.checkbox-1QwaS4 {
+    /*
+    border-width: 1px;
+    height: 24px;
+    width: 24px;
+    */
+    height: var(--dc-settings-main-checkbox-size);
+    width: var(--dc-settings-main-checkbox-size);
+}
+/* Discord, Settings, Main, CheckBox, Wrapper, Checkmark */
+.checkbox-1QwaS4 > svg {
+    /*
+    border-width: 1px;
+    height: 24px;
+    width: 24px;
+    */
+    height: calc(0.8 * var(--dc-settings-main-checkbox-size));
+    width: calc(0.8 * var(--dc-settings-main-checkbox-size));
+}
+/* Discord, Settings, Main, Info, Wrapper */
+.info-1Z508c {
+    /*
+    margin: 0 8px;
+    */
+    margin: 0 2px;
+}
+/* Discord, Settings, Main, Info, Title */
+.title-1M-Ras {
+    /*
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    */
+    font-size: var(--dc-settings-main-info-title-font-size);
+    line-height: var(--dc-settings-main-info-title-line-height);
+}
+/* Discord, Settings, Main, Info, Description */
+.desc-2dKaro {
+    /*
+	font-size: 14px;
+    */
+    font-size: var(--dc-settings-main-info-description-font-size);
+}
+
+/* Discord, Settings, Main, Switch */
+.sizeDefault-rZbSBU {
+    /*
+    border-radius: 14px;
+    height: 24px;
+    width: 42px;
+    */
+    border-radius: calc(0.6 * var(--dc-settings-main-switch-height));
+    height: var(--dc-settings-main-switch-height);
+    width: var(--dc-settings-main-switch-width);
+}
+
+/* Discord, Settings, Main, Switch, Circle */
+.sizeDefault-rZbSBU:after,
+.sizeMini-1Xu3Pz {
+    /*
+    border-radius: 9px;
+    height: 18px;
+    */
+    border-radius: 50%;
+    height: calc(0.8 * var(--dc-settings-main-switch-height));
+}
+/* Discord, Settings, Main, Switch, Circle */
+.sizeDefault-rZbSBU:after {
+    /*
+    margin: 3px;
+    width: 18px;
+    */
+    margin: 2px;
+    width: calc(0.8 * var(--dc-settings-main-switch-height));
+
+}
+/* Discord, Settings, Main, Flag */
+.image-1ileLu {
+    /*
+    margin-left: 8px;
+    height: 18px;
+    width: 27px;
+    */
+    margin-left: 0;
+    height: var(--dc-settings-main-flag-size);
+    width: calc(1.6 * var(--dc-settings-main-flag-size));
+}
+/* Discord, Settings, Main, Slider */
+.slider-2e2iXJ {
+    /*
+    height: 40px;
+    width: 100%;
+    */
+    height: var(--dc-settings-main-slider-size);
+}
+/* Discord, Settings, Main, Slider, Bar */
+.bar-2cFRGz {
+    /*
+    border-radius: 4px;
+    height: 8px;
+    top: 16px;
+    */
+    height: 8px!important;
+    top: calc(50% - 4px)!important;
+}
+/* Discord, Settings, Main, Mark, Wrapper */
+.mark-1zKdAK {
+    /*
+    left: 0;
+    margin-left: -12px;
+    top: -6px;
+    width: 24px;
+    */
+    left: 0;
+    top: -6px;
+    margin-left: -12px;
+    width: 24px;
+}
+/* Discord, Settings, Main, Mark, Text */
+.markValue-235z9M {
+    /*
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    padding-left: 1px;
+    */
+    font-size: 9px;
+}
+/* Discord, Settings, Main, Mark, Dash */
+.markDash-3j1QxS {
+    /*
+    height: 24px;
+    width: 2px;
+    */
+    height: calc(0.8 * var(--dc-settings-main-slider-size));
+}
+/* Discord, Settings, Main, Slider, Grabber */
+.grabber-1TZCZi {
+    /*
+    height: 24px;
+    left: 0;
+    margin-left: -5px;
+    margin-top: -13px;
+    top: 50%;
+    width: 10px;
+    */
+    left: 0;
+    margin-left: -5px;
+    width: 10px;
+    margin-top: calc(-0.5 * 0.8 * var(--dc-settings-main-slider-size));
+    height: calc(0.8 * var(--dc-settings-main-slider-size));
+}
+/* Discord, Settings, Main, Select */
+.Select {
+    /*
+    font-size: 16px;
+    */
+    font-size: var(--dc-settings-main-select-font-size);
+}
+/* Discord, Settings, Main, Select, Wrapper, Outer */
+.Select-input {
+    /*
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    */
+    height: var(--dc-settings-main-select-line-height);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+/* Discord, Settings, Main, Select, Wrapper */
+.Select .Select-control,
+.Select .Select-option {
+    /*
+    height: 34px;
+    min-height: 40px;
+    */
+    height: var(--dc-settings-main-select-line-height);
+    min-height: var(--dc-settings-main-select-line-height);
+}
+/* Discord, Settings, Main, Select, Text */
+.Select--single>.Select-control .Select-value,
+.Select-placeholder {
+    /*
+    line-height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    */
+    line-height: var(--dc-settings-main-select-line-height);
+    padding-left: 4px;
+    padding-right: 4px;
+}
+/* Discord, Settings, Main, Select, Text, Wrapper */
+.Select .Select-control div {
+    /*
+    line-height: 34px;
+    padding-top: 2px;
+    */
+    line-height: var(--dc-settings-main-select-line-height);
+    padding-top: 0px;
+}
+/* Discord, Settings, Main, Select, Arrow */
+.Select-arrow-zone {
+    /*
+    padding-right: 5px;
+    width: 25px;
+    */
+}
+/* Discord, Settings, Main, Keybind, Wrapper */
+.container-2YgzWd {
+    /*
+    border-radius: 3px;
+    height: 40px;
+    */
+    height: var(--dc-settings-main-select-line-height);
+}
+/* Discord, Settings, Main, Keybind */
+.input-2ZbpUR {
+    /*
+    font-size: 14px;
+    font-weight: 600;
+    */
+    font-size: var(--dc-settings-main-select-font-size);
+}
+/* Discord, Settings, Main, Keybind, Side */
+.lookGhost-GyT-k0 .contents-4L4hQM {
+    /*
+    line-height: 20px;
+    */
+    line-height: var(--dc-settings-main-select-line-height);
+}
+
+/* Discord, Settings, Main, Close, Wrapper */
+.ui-standard-sidebar-view .content-region-scroller .tools {
+    /*
+    -ms-flex: 0 0 36px;
+    flex: 0 0 36px;
+    margin-right: 21px;
+    width: 60px;
+    padding-top: 60px;
+    */
+    -ms-flex: 0 0 var(--dc-settings-main-close-button-size);
+    flex: 0 0 var(--dc-settings-main-close-button-size);
+    margin-right: var(--dc-settings-main-close-button-size);
+    width: var(--dc-settings-main-close-button-size);
+    padding-top: 2px;
+}
+/* Discord, Settings, Main, Close, Button */
+.ui-standard-sidebar-view .btn-close {
+    /*
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    -ms-flex: 0 0 36px;
+    flex: 0 0 36px;
+    height: 36px;
+    width: 36px;
+    */
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    -ms-flex: 0 0 var(--dc-settings-main-close-button-size);
+    flex: 0 0 var(--dc-settings-main-close-button-size);
+    height: var(--dc-settings-main-close-button-size);
+    width: var(--dc-settings-main-close-button-size);
+}
+/* Discord, Settings, Main, Close, Text */
+.ui-standard-sidebar-view .esc-text {
+    /*
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 44px;
+    width: 32px;
+    */
+    font-size: var(--dc-settings-main-close-button-font-size);
+    font-weight: 600;
+    margin-top: calc(2px + var(--dc-settings-main-close-button-size));
+    width: var(--dc-settings-main-close-button-size);
+}
+
+
+
+
+
+
+/* BetterDiscord, Main, Wrapper */
+.bd-detached-editor .app {
+    /*
+    width: 70%;
+    */
+    width: calc(100% - var(--bdd-customcss-width))!important;
+}
+/* BetterDiscord, CustomCSS, Detached, Wrapper, Outer */
+#bd-customcss-detach-container {
+    /*
+    width: 30%;
+    */
+    width: var(--bdd-customcss-width)!important;
+}
+/* BetterDiscord, CustomCSS, Detached, Wrapper */
+#bd-customcss-detach-editor {
+    /*
+    height: calc(100% - 87px);
+    */
+    height: calc(100% - 50px);
+}
+/* BetterDiscord, CustomCSS, Detached, Editor */
+#bd-customcss-editor-detached {
+    /*
+    font-size: 16px;
+    */
+    font-size: var(--bdd-customcss-font-size)!important;
+}
+/* BetterDiscord, CustomCSS, Controls, Wrapper */
+#bd-customcss-attach-controls{
+    /*
+    height: 75px;
+    */
+    height: auto;
+}
+/* BetterDiscord, CustomCSS, Controls, Header */
+#bd-customcss-attach-controls .checkbox-group li {
+    /*
+    margin-top: 5px;
+    */
+    margin-top: 0px;
+}
+/* BetterDiscord, CustomCSS, Controls, Header, Checkbox */
+.checkbox .checkbox-inner {
+    /*
+    height: 18px;
+    width: 18px;
+    */
+    height: var(--bdd-customcss-checkbox-size);
+    width: var(--bdd-customcss-checkbox-size);
+}
+/* BetterDiscord, CustomCSS, Controls, Header, Checkbox */
+.checkbox .checkbox-inner+span {
+    /*
+    margin-left: 8px;
+    */
+    margin-left: 4px;
+    font-size: var(--bdd-customcss-checkbox-font-size);
+}
+/* BetterDiscord, CustomCSS, Detached, Buttons */
+ui-standard-sidebar-view #bd-customcss-attach-controls button,
+.bd-detached-css-editor #bd-customcss-attach-controls button {
+    /*
+    width: 100px;
+    height: 26px;
+    font-weight: 600;
+    margin-top: 5px;
+    border-radius: 3px;
+    */
+    width: calc(5 * var(--bdd-customcss-buttons-size));
+    height: var(--bdd-customcss-buttons-size);
+    font-weight: 600;
+    margin-top: 2px;
+    border-radius: calc(0.3 * var(--bdd-customcss-buttons-size))!important;
+    font-size: var(--bdd-customcss-buttons-font-size);
+}
+
+
+
+
+/* BetterDiscord, Notice */
+.DevilBro-notice {
+    /*
+    line-height: 36px;
+    font-size: 14px;
+    */
+    line-height: var(--bdd-notice-line-height);
+    font-size: var(--bdd-notice-font-size);
+}
+/* BetterDiscord, Notice, Dismiss */
+.dismiss-1QjyJW {
+    /*
+    background-position: 50% 55%;
+    background-size: 10px 10px;
+    height: 36px;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 36px;
+    */
+    background-size: calc(0.3 * var(--bdd-notice-line-height));
+    height: var(--bdd-notice-line-height);
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: var(--bdd-notice-line-height);
+}
+
+/* Chat - Emote, Text, FFZ? */
+.emote {
+    /*
+    max-height: 32px;
+    */
+    max-height: inherit!important;
+    height: var(--chat-emote-size)!important;
+}
+/* Chat - Emote, Text, BTTV? */
+.emoji {
+    
+    /*
+    min-width: 22px;
+    min-height: 22px;
+    margin: 0 .05em 0 .1em!important;
+    vertical-align: -.4em;
+    */
+    min-width: inherit;
+    min-height: inherit;
+    margin: 0 0 0 0!important;
+    vertical-align: bottom;
+}
+
+/* Kawaiiemotes - Plugin Support */
+.emoji.jumboable {
+    /*
+    width: 32px;
+    height: 32px;
+    */
+    width: var(--chat-emote-size)!important;
+    height: var(--chat-emote-size)!important;
 }
 
 /* Guilds, Wrapper, Outer */
@@ -128,7 +1018,6 @@
     padding-left: 4px;
     padding-right: 0px;
 }
-
 /* Guilds, Divider, Wrapper */
 .guilds-wrapper .dms {
     /*
@@ -209,7 +1098,7 @@
 
     margin-left: 4px;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 2px;
     /*width: calc(var(--guilds-size) - 6px);*/
 }
 /* Guilds, Avatar, Wrapper, Specific */
@@ -219,22 +1108,19 @@
     margin-top: 4px;
     */
     margin-top: 2px;
-    margin-bottom: 2px;
+    margin-bottom: 0px;
     width: var(--guilds-avatar-size);
 }
 
 /* Guilds, Avatar, Text */
 .guilds-wrapper .guilds .guild .guild-inner {
     /*
-    background: #2f3136;
     border-radius: 25px;
-    cursor: pointer;
     font-size: 18px;
     line-height: 50px;
-    overflow: hidden;
     text-align: center;
     */
-    border-radius: 50%!important;
+    border-radius: 50%;
     font-size: var(--guilds-avatar-font-size);
     line-height: var(--guilds-avatar-size);
 }
@@ -246,10 +1132,7 @@
     position: relative;
     top: 0px;
 }
-/* Guilds, Avatar */
-.guilds-wrapper .guilds .guild .guild-inner a:not(:empty) {
-    height: auto;
-}
+/* Guilds, Avatar, Images */
 .guilds-wrapper .guilds .guild .guild-inner a {
     /*
     height: 50px;
@@ -258,6 +1141,46 @@
     height: var(--guilds-avatar-size);
     width: var(--guilds-avatar-size);
     background-size: contain;
+}
+/* Guilds, Avatar, No Image */
+.guilds-wrapper .guilds .guild .guild-inner a:not(:empty) {
+    height: auto;
+}
+
+/* Guilds, Header, Buttons */
+.guild#RANbutton-frame .guild-inner > a > div,
+.guild#bd-pub-li .guild-inner > a > div {
+    /*
+    line-height: 20px;
+    font-size: 12px;
+    */
+    line-height: var(--guilds-button-line-height)!important;
+    font-size: var(--guilds-button-font-size)!important;
+
+    height: var(--guilds-button-height)!important;
+    
+}
+/* Guilds, Header, Button, Wrapper, Outer */
+.guild#RANbutton-frame,
+.guild#bd-pub-li {
+    height: var(--guilds-button-height)!important;
+    width: auto!important;
+    margin-bottom: 2px!important;
+}
+/* Guilds, Header, Button, Wrapper, Inner */
+.guild#RANbutton-frame .guild-inner,
+.guild#bd-pub-li .guild-inner {
+    height: var(--guilds-button-height)!important;
+    width: var(--guilds-avatar-size)!important;
+}
+/* Guilds, Header, Button */
+.guild .guild-inner a > div {
+    /*
+    line-height: 20px;
+    font-size: 12px;
+    */
+    line-height: var(--guilds-button-line-height)!important;
+    font-size: var(--guilds-button-font-size)!important;
 }
 /* Guilds, Notifications, Unread */
 .unread-mentions-indicator-bottom,
@@ -334,6 +1257,56 @@
     padding-right: 8px;
     */
     height: var(--call-header-line-height);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+/* Call, Header, Wrapper */
+.channelName-1G03vu,
+.titleText-2IfpkV {
+    /*
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    */
+    font-size: var(--call-header-font-size);
+    line-height: var(--call-header-name-line-height);
+}
+/* Call, Header, Name */
+.channelName-1G03vu {
+    /*
+    height: 22px;
+    margin-right: 4px;
+    */
+    height: var(--call-header-font-size);
+    margin-right: 0px;
+}
+/* Call, Header, Icon */
+.channelName-1G03vu svg {
+    /*
+    line-height: 22px;
+    height: 16px;
+    width: 16px;
+    margin-right: 3px;
+    top: 2px;
+    */
+    line-height: var(--call-header-line-height);
+    height: var(--call-header-button-size);
+    width: var(--call-header-button-size);
+    margin-right: 2px;
+    top: 0px;
+}
+/* Call, Header, Status */
+.title-qAcLxz .status, .titleCall-3X0yGQ .status {
+    /*
+    margin-left: 2px;
+    top: 2px;
+    height: 10px;
+    width: 10px
+    */
+    margin-left: 2px;
+    top: 0px;
+    height: var(--call-header-status-size);
+    width: var(--call-header-status-size);
 }
 /* Call, Header, Users, Wrapper2 */
 .titleText-2IfpkV.groupDM-3gzbyG {
@@ -361,7 +1334,7 @@
     line-height: 30px;
     padding: 0 8px;
     */
-    font-size: var(--call-header-user-name-font-size);
+    font-size: var(--call-header-font-size);
     font-weight: 600;
     height: var(--call-header-line-height);
     line-height:  var(--call-header-line-height);
@@ -529,8 +1502,8 @@
     height: 32px;
     width: auto;
     */
-    min-height: 16px;
-    min-width: 40px;
+    min-height: 12px;
+    min-width: 24px;
     height: var(--call-actions-line-height);
     width: auto;
 }
@@ -545,7 +1518,7 @@
     */
     font-size: var(--call-actions-font-size);
     line-height: var(--call-actions-line-height);
-    padding: 0px 16px;
+    padding: 0px 12px;
 }
 
 /* Left Sidebar - Wrapper */
@@ -770,7 +1743,7 @@
     */
     margin-top: 0px;
     font-size: var(--chat-font-size);
-    line-height: var(--chat-font-size);
+    line-height: var(--chat-line-size);
     padding: 2px 0;
 }
 /* Chat - Messages, Text, First */
@@ -796,6 +1769,19 @@
     color: #0096cf;
     */
     opacity: 0.9;
+}
+/* Chat - Message, Buttons */
+.message-group .btn-option,
+.message-group .btn-reaction {
+    /*
+    background-size: 16px 16px;
+    height: 16px;
+    opacity: .4;
+    width: 16px;
+    */
+    background-size: contain;
+    height: var(--chat-button-size);
+    width: var(--chat-button-size);
 }
 /* Chat - SystemMessage, Timestamp */
 .system-message {
@@ -912,7 +1898,7 @@
     min-width: 150px;
     */
     min-width: inherit;
-
+    
 }
 /*Chat - Accessory, Embeds, Header, Inner, Name */
 .embedFieldName-eYf-oY {
@@ -1012,7 +1998,124 @@
     margin-left: 1px;
     vertical-align: middle;
 }
-
+/*Chat - Footer, Wrapper, Outer */
+.chat form {
+    /*
+    margin: 0 20px;
+    */
+    margin: 0 4px;
+}
+/*Chat - Footer, Wrapper, Inner */
+.channelTextArea-os01xC {
+    /*
+    margin: 20px 0 30px;
+    */
+    margin: 8px 0;
+}
+/*Chat - Footer, Text */
+.innerEnabled-gLHeOL, .innerEnabledNoAttach-36PpAk {
+    /*
+    padding-right: 110px;
+    */
+    padding-right: 0px!important;
+}
+/*Chat - Footer, Button, Attach */
+.attachButton-Di6YUh {
+    /*
+    margin: 10px 0 10px 10px;
+    height: 24px;
+    width: 24px;
+    */
+    margin: auto 2px;
+    height: var(--chat-footer-button-size);
+    width: var(--chat-footer-button-size);
+}
+/*Chat - Footer, Divider */
+.attachButtonDivider-3tknGJ {
+    /*
+    height: calc(100% - 20px);
+    margin: 10px 12px;
+    width: 1px;
+    */
+    height: auto;
+    margin: 4px;
+    margin-left: 0px;
+    width: 1px;
+}
+/*Chat - Footer, Text, Wrapper */
+.textAreaEnabled-2vOfh8, .textAreaEnabledNoAttach-1zE_2h {
+    /*
+    padding: 10px 38px 10px 0;
+    */
+    padding: 0;
+}
+.textArea-20yzAH {
+    /*
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    line-height: 1.25rem;
+    margin: 2px 2px 2px 0;
+    max-height: 144px;
+    min-height: 20px;
+    width: 100%;
+    */
+    font-size: var(--chat-footer-input-font-size);
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    line-height: var(--chat-footer-input-line-height);
+    margin: 2px 0;
+    max-height: 144px;
+    min-height: 10px;
+}
+/*Chat - Footer, Button, Translate */
+.translate-button {
+    /*
+    margin-right: 40px;
+    height: 30px;
+    width: 22px;
+    right: 46px;
+    top: 11px;
+    */
+    margin-right: 0px!important;
+    height: var(--chat-footer-button-size)!important;
+    width: var(--chat-footer-button-size)!important;
+    right: calc(2 * (2px + var(--chat-footer-button-size)))!important;
+    top: 4px;
+}
+/*Chat - Footer, Button, Emoji, Wrapper */
+.emojiButton-38mF6t {
+    /*
+    right: 12px;
+    top: 11px;
+    margin-right: 40px;
+    */
+    right: calc(2px + var(--chat-footer-button-size));
+    top: 4px;
+    margin-right: 0px!important;
+}
+/*Chat - Footer, Button, Emoji, Image */
+.sprite-3pvJkd {
+    /*
+    background-position: -220px -44px;
+    background-size: 242px 110px;
+    height: 22px;
+    width: 22px;
+    */
+    height: var(--chat-footer-button-size);
+    width: var(--chat-footer-button-size);
+}
+/*Chat - Footer, Button, Send */
+.send-button {
+    /*
+    width: 30px;
+    right: 12px;
+    top: 8px;
+    */
+    width: var(--chat-footer-button-size);
+    right: 0px;
+    top: 4px;
+}
 
 
 /* ---------------- */
