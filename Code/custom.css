@@ -11,11 +11,9 @@
 /* TODO fix - chat, header, name not centered */
 /* TODO fix - chat, text, emote, not centered on line
                 with text */
-/* TODO fix - chat, footer, input, going behind chat
-                buttons */
-/* TODO fix - chat, footer, left, buttons, resizing */
-/* TODO fix - chat, footer, left, buttons, auto centering
-                on input, line-height change */
+/* TODO fix - chat, footer, left, buttons, resizing not working correctly */
+/* TODO fix - chat, footer, left, buttons, not auto centering
+                on input/line-height change */
 /* TODO fix - guilds, guild adder, plus sign not centered */
 /* TODO fix - settings, sidebar, not fixed in size */
 /* TODO fix - settings, keybinds, selector, wrong size */
@@ -153,9 +151,10 @@
     --chat-divider-font-size: 10px;
     --chat-divider-line-height: 10px;
     --chat-system-line-height: 1rem;
+    --chat-footer-height: 30px;
     --chat-footer-button-size: 26px;
-    --chat-footer-input-font-size: 12px;
-    --chat-footer-input-line-height: 28px;
+    --chat-footer-input-font-size: 14px;
+    --chat-footer-input-line-height: 18px;
 
     --conv-section-font-size: 0.65rem;
     --conv-line-height: 28px;
@@ -2075,14 +2074,14 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     /*
     margin: 20px 0 30px;
     */
-    margin: 8px 0;
+    margin: 4px 0;
 }
 /*Chat - Footer, Text */
 .innerEnabled-gLHeOL, .innerEnabledNoAttach-36PpAk {
     /*
     padding-right: 110px;
     */
-    padding-right: 0px!important;
+    padding-right: calc(2px + 3 *(2px + var(--chat-footer-button-size)) )!important;
 }
 /*Chat - Footer, Button, Attach */
 .attachButton-Di6YUh {
@@ -2112,7 +2111,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     /*
     padding: 10px 38px 10px 0;
     */
-    padding: 0;
+    padding: calc(0.5 * ( var(--chat-footer-input-line-height) - var(--chat-footer-input-font-size)) ) 0;
+    /*min-height: var(--chat-footer-text-padding);*/
 }
 .textArea-20yzAH {
     /*
@@ -2125,13 +2125,12 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     min-height: 20px;
     width: 100%;
     */
-    font-size: var(--chat-footer-input-font-size);
     font-weight: 400;
     letter-spacing: -0.025rem;
-    line-height: var(--chat-footer-input-line-height);
     margin: 2px 0;
-    max-height: 144px;
-    min-height: 10px;
+    font-size: var(--chat-footer-input-font-size);
+    line-height: calc(1.3 * var(--chat-footer-input-font-size));
+    
 }
 /*Chat - Footer, Button, Translate */
 .translate-button {
