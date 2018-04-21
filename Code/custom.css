@@ -27,6 +27,7 @@
 /* TODO fix - settings, log out, centered? */
 /* TODO fix - settings, footer, centered? */
 /* TODO fix - checkbox, check, size, not correct */
+/* TODO fix - settings, main, switch, circle not correct position*/
 
 /* TODO add - guild, number of unread messages */
 
@@ -86,7 +87,7 @@
 	--dc-settings-main-flag-size: 12px;
 	--dc-settings-main-slider-size: 12px;
     --dc-settings-main-select-font-size: 12px;
-    --dc-settings-main-select-line-height: 16px;
+    --dc-settings-main-select-line-height: 24px;
     
     --bdd-settings-sidebar-header-font-size: 10px;
     --bdd-settings-sidebar-header-line-height: 12px;
