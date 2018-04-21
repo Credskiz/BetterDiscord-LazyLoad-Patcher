@@ -8,7 +8,6 @@
                 of global chat size */
 /* TODO fix - call, wrapper, height, change with avatar
                 resize */
-/* TODO fix - chat, header, name not centered */
 /* TODO fix - chat, text, emote, not centered on line
                 with text */
 /* TODO fix - chat, text, embeds have some kind of
@@ -1324,7 +1323,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: 22px;
     margin-right: 4px;
     */
-    height: var(--call-header-font-size);
+    /*height: var(--call-header-line-height);*/
+    display: flex;
+    height: auto;
     margin-right: 0px;
 }
 /* Call, Header, AKA, Wrapper */
