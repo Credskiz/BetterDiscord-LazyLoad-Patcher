@@ -1,28 +1,30 @@
 
 /* TODO restructure the css file */
 
-/* TODO settings sidebar to be fixed in place */
 
-/* TODO fix chat name centered */
-/* TODO fix chat input going behind chat buttons */
-/* TODO fix add guild plus sign centered */
-/* TODO fix settings keybinds selector wrong size */
-/* TODO fix settings keybinds input icon wrong size */
-/* TODO fix settings language header font size */
-/* TODO fix settings log out centered? */
-/* TODO fix settings footer centered? */
+/* TODO settings, sidebar, to be fixed in place */
+
+/* TODO fix chat, header, name centered */
+/* TODO fix chat, text, emote not centered on line with text */
+/* TODO fix chat, input, going behind chat buttons */
+/* TODO fix guilds, guild adder, plus sign not centered */
+/* TODO fix settings, keybinds, selector wrong size */
+/* TODO fix settings, keybinds, input icon wrong size */
+/* TODO fix settings, language, header font size */
+/* TODO fix settings, log out, centered? */
+/* TODO fix settings, footer, centered? */
 
 /* TODO add popout support */
-/* TODO add popout settings support */
-/* TODO add popout server settings support */
-/* TODO add popout server settings, avatar size */
-/* TODO add popout server settings, audit log */
-/* TODO add popout server settings, role */
-/* TODO add popout server settings, integrations */
-/* TODO add popout server settings, emoji */
-/* TODO add popout server settings, widget */
-/* TODO add popout server settings, members */
-/* TODO add popout server settings, invitations */
+/* TODO add popout, settings support */
+/* TODO add popout, server settings support */
+/* TODO add popout, server settings, avatar size */
+/* TODO add popout, server settings, audit log */
+/* TODO add popout, server settings, role */
+/* TODO add popout, server settings, integrations */
+/* TODO add popout, server settings, emoji */
+/* TODO add popout, server settings, widget */
+/* TODO add popout, server settings, members */
+/* TODO add popout, server settings, invitations */
 /* TODO add settings, authorized apps */
 /* TODO add settings, connections */
 /* TODO add settings, discord nitro */
@@ -30,6 +32,7 @@
 /* TODO add settings, game activity */
 /* TODO add settings, game appearance */
 /* TODO add settings, changelog */
+
 /* TODO add bbd settings support */
 
 
@@ -100,11 +103,11 @@
     --left-sidebar-settings-name-font-size: 10px;
     --left-sidebar-settings-avatar-size: 28px;
 
-    --channel-section-font-size: 0.8rem;
+    --channel-section-font-size: 0.75rem;
     --channel-symbol-size: 12px;
-    --channel-line-height: 24px;
+    --channel-line-height: 20px;
+    --channel-name-font-size: 0.95rem;
     --channel-avatar-size: 16px;
-    --channel-user-name-font-size: 0.95rem;
     --channel-voice-user-name-font-size: 0.9rem;
 
     --members-width: 150px;
@@ -123,8 +126,8 @@
     --chat-line-height: 0.9rem;
     --chat-emote-size : 16px;
     --chat-embeds-avatar-size: 16px;
-    --chat-user-name-font-size: 0.85rem;
-    --chat-timestamp-size: 0.75rem;
+    --chat-user-name-font-size: 0.8rem;
+    --chat-timestamp-size: 0.7rem;
     --chat-button-size: 16px;
     --chat-reaction-emoji-size: 0.68rem;
     --chat-reaction-font-size: 0.68rem;
@@ -1665,8 +1668,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-left: 20px;
     margin-right: 20px;
     */
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 /* Chat - Message, Wrapper */
 .message-group {
@@ -1677,7 +1680,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     */
     margin-left: 0px;
     margin-right: 0px;
-    padding: 10px 10px;
+    padding: 8px 4px;
 }
 /* Chat - Avatar */
 .message-group .avatar-large {
@@ -1693,7 +1696,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: var(--chat-avatar-size);
     height: var(--chat-avatar-size);
 
-    margin-right: 5px;
+    margin-right: 4px;
     margin-top: 0px;
     opacity: 0.6;
 }
@@ -1703,7 +1706,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 {
     opacity: 1;
 }
-/* Chat - User name */
+/* Chat - User, name */
 .message-group h2 strong {
     /*
     font-size: 0.95rem;
@@ -1713,13 +1716,30 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     font-weight: 500;
     opacity: 0.95;
 }
+/* SUPPORT: KAwaii-tag */
+/* Chat - User, name, tag */
+.kawaii-tag {
+    /*
+    font-size: 10px;
+    font-weight: 500;
+    margin-left: 6px;
+    padding: 1px 2px;
+    border-radius: 3px;
+    line-height: 16px;
+    */
+    font-size: calc(0.7 * var(--chat-user-name-font-size));
+    margin-left: 4px;
+    line-height: var(--chat-line-height);
+}
 /* Chat - Timestamp */
 .message-group h2 .timestamp {
     /*
     font-size: 0.75rem;
-    word-wrap: break-word;
+    font-weight: 400;
+    margin-left: 6px;
     */
     font-size: var(--chat-timestamp-size);
+    margin-left: 4px;
 }
 /* Chat - Divider */
 .message-group .chat .divider {
@@ -1743,9 +1763,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     line-height: 1.1em
     */
     margin-top: 0px;
+    margin-bottom: 4px;
     font-size: var(--chat-font-size);
     line-height: var(--chat-line-size);
-    padding: 2px 0;
 }
 /* Chat - Messages, Text, First */
 .comment .message.first .message-text {
@@ -1808,7 +1828,6 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     */
     font-size: var(--chat-timestamp-size);
 }
-
 /*Chat - Mention, Command*/
 .theme-dark .message-group .comment .markup .mention {
     /*
@@ -1999,6 +2018,33 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-left: 1px;
     vertical-align: middle;
 }
+/*Chat - Message, Quotebox, Wrapper, Outer */
+.message-group .comment .markup pre {
+    /*
+    border: 2px solid #f3f3f3;
+    border-radius: 5px;
+    margin-top: 6px;
+    max-width: 90%;
+    */
+    margin-top: 2px;
+}
+/*Chat - Message, Quotebox, Wrapper, Inner */
+.message-group .comment .markup pre code {
+    /*
+    font-size: 0.875rem;
+    line-height: 1rem;
+    */
+    font-size: calc(0.8 * var(--chat-font-size));
+    line-height: var(--chat-line-height);
+}
+.hljs,
+.theme-dark .hljs {
+    /*
+    padding: .5em;
+    */
+    padding: 4px;
+}
+
 /*Chat - Footer, Wrapper, Outer */
 .chat form {
     /*
@@ -2127,7 +2173,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     /*
     padding-top: 28px;
     */
-    padding-top: 10px;
+    padding-top: 8px;
 }
 /* Section - Name */
 .containerDefault-1bbItS > * > .overflowEllipsis-2ynGQq {
@@ -2172,7 +2218,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     font-size: 16px;
     line-height: 32px;
     */
-    font-size: var(--channel-user-name-font-size);
+    font-size: var(--channel-name-font-size);
     line-height: var(--channel-line-height);
 }
 
