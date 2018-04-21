@@ -2,19 +2,28 @@
 /* TODO restructure the css file */
 
 
-/* TODO fix - chat, header, name centered */
-/* TODO fix - chat, text, emote, not centered on line with text */
-/* TODO fix - chat, footer, input, going behind chat buttons */
+/* TODO fix - members, status, icon, wrong position */
+/* TODO fix - members, kawaii-tag, scale of
+                members-username-size instead
+                of global chat size */
+/* TODO fix - call, wrapper, height, change with avatar
+                resize */
+/* TODO fix - chat, header, name not centered */
+/* TODO fix - chat, text, emote, not centered on line
+                with text */
+/* TODO fix - chat, footer, input, going behind chat
+                buttons */
 /* TODO fix - chat, footer, left, buttons, resizing */
-/* TODO fix - chat, footer, left, buttons, auto centering on input, line-height change */
+/* TODO fix - chat, footer, left, buttons, auto centering
+                on input, line-height change */
 /* TODO fix - guilds, guild adder, plus sign not centered */
-/* TODO fix - settings, sidebar, to be fixed in size */
-/* TODO fix - settings, keybinds, selector wrong size */
-/* TODO fix - settings, keybinds, input icon wrong size */
-/* TODO fix - settings, language, header font size */
+/* TODO fix - settings, sidebar, not fixed in size */
+/* TODO fix - settings, keybinds, selector, wrong size */
+/* TODO fix - settings, keybinds, input icon, wrong size */
+/* TODO fix - settings, language, header, wrong font size */
 /* TODO fix - settings, log out, centered? */
 /* TODO fix - settings, footer, centered? */
-/* TODO fix - checkbox, check size */
+/* TODO fix - checkbox, check, size, not correct */
 
 /* TODO add - guild, number of unread messages */
 
@@ -176,8 +185,8 @@
     --friends-tablerow-status-width: 150px;
     --friends-tablerow-guilds-width: 150px;
 
-    --call-height: 200px;
-    --call-avatar-size: 80px;
+    --call-height: 170px;
+    --call-avatar-size: 60px;
     --call-avatar-status-size: 18px;
     --call-header-line-height: 28px;
     --call-header-name-line-height: 18px;
