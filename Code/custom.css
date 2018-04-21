@@ -2,42 +2,47 @@
 /* TODO restructure the css file */
 
 
-/* TODO settings, sidebar, to be fixed in place */
+/* TODO fix - chat, header, name centered */
+/* TODO fix - chat, text, emote, not centered on line with text */
+/* TODO fix - chat, footer, input, going behind chat buttons */
+/* TODO fix - chat, footer, left, buttons, resizing */
+/* TODO fix - chat, footer, left, buttons, auto centering on input, line-height change */
+/* TODO fix - guilds, guild adder, plus sign not centered */
+/* TODO fix - settings, sidebar, to be fixed in size */
+/* TODO fix - settings, keybinds, selector wrong size */
+/* TODO fix - settings, keybinds, input icon wrong size */
+/* TODO fix - settings, language, header font size */
+/* TODO fix - settings, log out, centered? */
+/* TODO fix - settings, footer, centered? */
+/* TODO fix - checkbox, check size */
 
-/* TODO fix chat, header, name centered */
-/* TODO fix chat, text, emote not centered on line with text */
-/* TODO fix chat, input, going behind chat buttons */
-/* TODO fix guilds, guild adder, plus sign not centered */
-/* TODO fix settings, keybinds, selector wrong size */
-/* TODO fix settings, keybinds, input icon wrong size */
-/* TODO fix settings, language, header font size */
-/* TODO fix settings, log out, centered? */
-/* TODO fix settings, footer, centered? */
+/* TODO add - guild, number of unread messages */
 
-/* TODO add guild, number of unread messages */
+/* TODO add - chat, text, icon, "Pennyworth started a call." */
+/* TODO add - chat, text, embeded, files */
 
-/* TODO add popout support */
-/* TODO add popout, chat, viewing older messages */
-/* TODO add popout, settings support */
-/* TODO add popout, server settings support */
-/* TODO add popout, server settings, avatar size */
-/* TODO add popout, server settings, audit log */
-/* TODO add popout, server settings, role */
-/* TODO add popout, server settings, integrations */
-/* TODO add popout, server settings, emoji */
-/* TODO add popout, server settings, widget */
-/* TODO add popout, server settings, members */
-/* TODO add popout, server settings, invitations */
+/* TODO add - popout support */
+/* TODO add - popout, chat, viewing older messages */
+/* TODO add - popout, settings support */
+/* TODO add - popout, server settings support */
+/* TODO add - popout, server settings, avatar size */
+/* TODO add - popout, server settings, audit log */
+/* TODO add - popout, server settings, role */
+/* TODO add - popout, server settings, integrations */
+/* TODO add - popout, server settings, emoji */
+/* TODO add - popout, server settings, widget */
+/* TODO add - popout, server settings, members */
+/* TODO add - popout, server settings, invitations */
 
-/* TODO add settings, authorized apps */
-/* TODO add settings, connections */
-/* TODO add settings, discord nitro */
-/* TODO add settings, video settings */
-/* TODO add settings, game activity */
-/* TODO add settings, game appearance */
-/* TODO add settings, changelog */
+/* TODO add - settings, authorized apps */
+/* TODO add - settings, connections */
+/* TODO add - settings, discord nitro */
+/* TODO add - settings, video settings */
+/* TODO add - settings, game activity */
+/* TODO add - settings, game appearance */
+/* TODO add - settings, changelog */
 
-/* TODO add bbd settings support */
+/* TODO add - bbd, settings support */
 
 
 /* ----------- */
@@ -139,9 +144,9 @@
     --chat-divider-font-size: 10px;
     --chat-divider-line-height: 10px;
     --chat-system-line-height: 1rem;
-    --chat-footer-button-size: 16px;
+    --chat-footer-button-size: 26px;
     --chat-footer-input-font-size: 12px;
-    --chat-footer-input-line-height: 18px;
+    --chat-footer-input-line-height: 28px;
 
     --conv-section-font-size: 0.65rem;
     --conv-line-height: 28px;
@@ -2128,21 +2133,22 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 46px;
     top: 11px;
     */
-    margin-right: 0px!important;
     height: var(--chat-footer-button-size)!important;
     width: var(--chat-footer-button-size)!important;
-    right: calc(2 * (2px + var(--chat-footer-button-size)))!important;
+    
     top: 4px;
+    right: calc(2 * (2px + var(--chat-footer-button-size)))!important;
+    margin-right: 0px!important;
 }
 /*Chat - Footer, Button, Emoji, Wrapper */
 .emojiButton-38mF6t {
     /*
-    right: 12px;
     top: 11px;
+    right: 12px;
     margin-right: 40px;
     */
-    right: calc(2px + var(--chat-footer-button-size));
     top: 4px;
+    right: calc(2px + var(--chat-footer-button-size));
     margin-right: 0px!important;
 }
 /*Chat - Footer, Button, Emoji, Image */
