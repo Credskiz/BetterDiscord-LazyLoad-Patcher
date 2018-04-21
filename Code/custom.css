@@ -190,12 +190,14 @@
 
     --call-height: 170px;
     --call-avatar-size: 60px;
-    --call-avatar-status-size: 18px;
-    --call-header-line-height: 28px;
-    --call-header-name-line-height: 18px;
+    --call-avatar-status-size: 14px;
     --call-header-font-size: 0.9rem;
+    --call-header-line-height: 28px;
     --call-header-status-size: 8px;
     --call-header-button-size: 18px;
+    --call-header-name-line-height: 18px;
+    --call-header-aka-font-size: 10px;
+    --call-header-aka-line-height: 16px;
     --call-actions-line-height: 24px;
     --call-actions-font-size: 0.7rem;
     --call-actions-button-size: 18px;
@@ -1315,7 +1317,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     font-size: var(--call-header-font-size);
     line-height: var(--call-header-name-line-height);
 }
-/* Call, Header, Name */
+/* Call, Header, NAME */
 .channelName-1G03vu {
     /*
     height: 22px;
@@ -1323,6 +1325,42 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     */
     height: var(--call-header-font-size);
     margin-right: 0px;
+}
+/* Call, Header, AKA, Wrapper */
+.topic-1KFf6J {
+    /*
+    font-size: 14px;
+    font-weight: 500;
+    height: 22px;
+    line-height: 22px;
+    margin-left: 8px;
+    padding-left: 12px;
+    top: 1px;
+    width: 100%;
+    */
+    font-size: var(--call-header-font-size);
+    font-weight: 500;
+    height: var(--call-header-line-height);
+    line-height: var(--call-header-line-height);
+    margin-left: 2px;
+    padding-left: 4px;
+    top: 0;
+    width: 100%;
+}
+/* Call, Header, AKA, Box */
+.aka-2Ba14Z {
+    /*
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-right: 8px;
+    padding: 1px 3px;
+    top: 2px;
+    */
+    font-size: var(--call-header-aka-font-size);
+    line-height: var(--call-header-aka-line-height);
+    margin-right: 2px;
+    top: 6px;
 }
 /* Call, Header, Icon */
 .channelName-1G03vu svg {
