@@ -11,9 +11,14 @@
 /* TODO fix - chat, header, name not centered */
 /* TODO fix - chat, text, emote, not centered on line
                 with text */
-/* TODO fix - chat, footer, left, buttons, resizing not working correctly */
-/* TODO fix - chat, footer, left, buttons, not auto centering
-                on input/line-height change */
+/* TODO fix - chat, text, embeds have some kind of
+                margin right 50px or something. */
+/* TODO fix - chat, footer, input, going behind chat
+                buttons */
+/* TODO fix - chat, footer, left, buttons, resizing, at
+                all and centering */
+/* TODO fix - chat, footer, left, buttons, auto centering
+                on input, line-height change */
 /* TODO fix - guilds, guild adder, plus sign not centered */
 /* TODO fix - settings, sidebar, not fixed in size */
 /* TODO fix - settings, keybinds, selector, wrong size */
@@ -24,9 +29,6 @@
 /* TODO fix - checkbox, check, size, not correct */
 
 /* TODO add - guild, number of unread messages */
-
-/* TODO add - chat, text, icon, "Pennyworth started a call." */
-/* TODO add - chat, text, embeded, files */
 
 /* TODO add - popout support */
 /* TODO add - popout, chat, viewing older messages */
@@ -67,7 +69,7 @@
     --dc-settings-sidebar-logout-line-height: 30px;
     --dc-settings-sidebar-footer-button-size: 16px;
 	--dc-settings-main-avatar-size: 32px;
-	--dc-settings-main-font-size: 12px;
+	--dc-settings-main-font-size: 10px;
 	--dc-settings-main-line-height: 16px;
 	--dc-settings-main-close-button-size: 20px;
 	--dc-settings-main-close-button-font-size: 10px;
@@ -102,6 +104,7 @@
     --guilds-size: 50px;
     --guilds-font-size: 10px;
     --guilds-avatar-size: 36px;
+    --guilds-avatar-status-size: 16px;
     --guilds-avatar-font-size: 18px;
     --guilds-hover-font-size: 14px;
     --guilds-button-height: 18px;
@@ -138,10 +141,11 @@
     --members-user-activity-line-height: 14px;
 
     --chat-avatar-size: 16px;
-    --chat-font-size: 0.9rem;
-    --chat-line-height: 0.9rem;
+    --chat-font-size: 0.8rem;
+    --chat-line-height: 0.8rem;
     --chat-emote-size : 16px;
     --chat-embeds-avatar-size: 16px;
+    --chat-embeds-icon-size: 26px;
     --chat-user-name-font-size: 0.8rem;
     --chat-timestamp-size: 0.7rem;
     --chat-button-size: 16px;
@@ -152,8 +156,8 @@
     --chat-divider-line-height: 10px;
     --chat-system-line-height: 1rem;
     --chat-footer-height: 30px;
-    --chat-footer-button-size: 26px;
-    --chat-footer-input-font-size: 14px;
+    --chat-footer-button-size: 18px;
+    --chat-footer-input-font-size: 12px;
     --chat-footer-input-line-height: 18px;
 
     --conv-section-font-size: 0.65rem;
@@ -196,6 +200,7 @@
     --call-actions-font-size: 0.7rem;
     --call-actions-button-size: 18px;
 }
+
 
 /* Discord, Settings, Wrapper */
 .ui-standard-sidebar-view .sidebar-region {
@@ -1167,6 +1172,24 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 .guilds-wrapper .guilds .guild .guild-inner a:not(:empty) {
     height: auto;
 }
+/* Guilds, Avatar, Status */
+.guilds-wrapper .guilds .guild.audio .guild-inner:after,
+.guilds-wrapper .guilds .guild.video .guild-inner:after {
+    /*
+    background-size: 16px;
+    border-radius: 12px;
+    height: 24px;
+    right: -6px;
+    top: -6px;
+    width: 24px;
+    */
+    border-radius: 50%;
+    background-size: calc(0.75 * var(--guilds-avatar-status-size));
+    height: var(--guilds-avatar-status-size);
+    width: var(--guilds-avatar-status-size);
+    right: calc(2px + -0.5 * 0.75 * var(--guilds-avatar-status-size));
+    top: calc(2px + -0.5 * 0.75 * var(--guilds-avatar-status-size));
+}
 
 /* Guilds, Header, Buttons */
 .guild#RANbutton-frame .guild-inner > a > div,
@@ -1698,6 +1721,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-left: 0px;
     margin-right: 0px;
     padding: 8px 4px;
+    font-size: var(--chat-font-size);
 }
 /* Chat - Avatar */
 .message-group .avatar-large {
@@ -1782,14 +1806,14 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-top: 0px;
     margin-bottom: 4px;
     font-size: var(--chat-font-size);
-    line-height: var(--chat-line-size);
+    line-height: var(--chat-line-height);
 }
 /* Chat - Messages, Text, First */
 .comment .message.first .message-text {
     /*
     margin-top: 6px;
     */
-    margin-top: 0px;
+    margin-top: 2px;
 }
 /* Chat - Messages, Text */
 .comment .message .message-text {
@@ -1821,7 +1845,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: var(--chat-button-size);
     width: var(--chat-button-size);
 }
-/* Chat - SystemMessage, Timestamp */
+/* Chat - SystemMessage, Wrapper */
 .system-message {
     /*
     color: rgba(47,49,54,.6);
@@ -1831,6 +1855,30 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     font-size: var(--chat-font-size);
     line-height: var(--chat-system-line-height);
     /*margin: 2px 0px;*/
+}
+
+/* Chat - SystemMessage, Icon */
+.system-message .system-message-icon {
+    /*
+    background-size: 1rem 1rem;
+    margin-right: .5rem;
+    margin-top: -.55rem;
+    top: 50%;
+    width: 1rem;
+    height: 1rem;
+    */
+    background-size: contain;
+    margin: 0;
+    top: calc(0.1 * var(--chat-avatar-size));
+    height: calc(0.9 * var(--chat-avatar-size));
+    width: calc(0.9 * var(--chat-avatar-size));
+}
+/* Chat - SystemMessage, Text */
+.system-message .system-message-content {
+    /*
+    margin-left: 1.5rem;
+    */
+    margin-left: calc(4px + 0.9 * var(--chat-avatar-size));
 }
 
 /* Chat - SystemMessage, timestamp */
@@ -1886,12 +1934,57 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding-right: 0px;
 }
 /*Chat - Accessory, Wrapper2 */
-.message-group .accessory>* {
+.message-group .accessory > * {
     /*
     margin-top: 8px;
     */
     margin-top: 2px;
 }
+/*Chat - Accessory, Attachment, Wrapper */
+.attachment-1Vom9D {
+    /*
+    border: 1px solid transparent;
+    border-radius: 3px;
+    max-width: 520px;
+    padding: 10px;
+    width: 100%;
+    */
+    max-width: inherit;
+    padding: 2px;
+}
+
+/*Chat - Accessory, Attachment, Icon */
+.icon-3cn2VC {
+    /*
+    height: 40px;
+    margin-right: 8px;
+    width: 30px;
+    */
+    height: var(--chat-embeds-icon-size);
+    margin-right: 2px;
+    width: calc( * var(--chat-embeds-icon-size));
+}
+
+/*Chat - Accessory, Attachment, Download, Wrapper */
+.cancelButton-W6qpE3,
+.downloadButton-NPl2PI,
+.size-22vab7 {
+    /*
+    margin-left: 4px;
+    */
+    margin-left: 0px;
+}
+
+/*Chat - Accessory, Attachment, Download */
+.downloadButton-NPl2PI {
+    /*
+    height: 24px;
+    width: 24px;
+    */
+    height: var(--chat-button-size)!important;
+    width: var(--chat-button-size)!important;
+}
+
 /*Chat - Accessory, Embeds, Wrapper, Outer */
 .message-group .accessory > .embed {
     /*
@@ -2043,7 +2136,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-top: 6px;
     max-width: 90%;
     */
-    margin-top: 2px;
+    
+    /*margin-top: 2px;*/
 }
 /*Chat - Message, Quotebox, Wrapper, Inner */
 .message-group .comment .markup pre code {
@@ -2051,9 +2145,11 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     font-size: 0.875rem;
     line-height: 1rem;
     */
-    font-size: calc(0.8 * var(--chat-font-size));
-    line-height: var(--chat-line-height);
+    
+    /*font-size: calc(0.8 * var(--chat-font-size));*/
+    /*line-height: var(--chat-line-height);*/
 }
+
 .hljs,
 .theme-dark .hljs {
     /*
@@ -2082,6 +2178,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding-right: 110px;
     */
     padding-right: calc(2px + 3 *(2px + var(--chat-footer-button-size)) )!important;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding: calc(0.5 * ( var(--chat-footer-input-line-height) - var(--chat-footer-input-font-size)) ) 0;
 }
 /*Chat - Footer, Button, Attach */
 .attachButton-Di6YUh {
@@ -2112,8 +2211,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding: 10px 38px 10px 0;
     */
     padding: calc(0.5 * ( var(--chat-footer-input-line-height) - var(--chat-footer-input-font-size)) ) 0;
-    /*min-height: var(--chat-footer-text-padding);*/
 }
+/*Chat - Footer, Input, Text */
 .textArea-20yzAH {
     /*
     font-size: 0.9375rem;
@@ -2127,10 +2226,10 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     */
     font-weight: 400;
     letter-spacing: -0.025rem;
-    margin: 2px 0;
+    margin: 0;
+    padding: 0;
     font-size: var(--chat-footer-input-font-size);
     line-height: calc(1.3 * var(--chat-footer-input-font-size));
-    
 }
 /*Chat - Footer, Button, Translate */
 .translate-button {
@@ -2421,6 +2520,18 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 /* --------------------- */
 /* --- CONVERSATIONS --- */
 /* --------------------- */
+/* Conv - Top, Wrapper */
+.scroller-fzNley > div:first-child {
+    /*
+    width: 100%;
+    height: 20px;
+    */
+    /*height: 0px!important;*/
+}
+/* Conv - Friends, Wrapper */
+.scroller-fzNley > div:nth-child(2) {
+    /*margin-top: 2px;*/
+}
 /* Conv - Header */
 .private-channels header {
     /*
@@ -2432,12 +2543,12 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     */
     font-size: var(--conv-section-font-size);
     font-weight: 500;
-    margin-top: 12px;
+    padding: 0;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    margin-right: 8px;
     opacity: .3;
-    padding-top: 9px;
-    padding-bottom: 2px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 /* Conv - User, Wrapper */
 .private-channels .channel {
