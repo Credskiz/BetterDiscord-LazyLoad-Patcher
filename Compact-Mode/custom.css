@@ -211,8 +211,8 @@
     -ms-flex: 1 0 218px;
     flex: 1 0 10px;
     */
-    -ms-flex: 1 0 0;
-    flex: 1 0 0;
+    -ms-flex: none;
+    flex: none;
 }
 /* Discord, Settings, Wrapper, Outer */
 .ui-standard-sidebar-view .sidebar-region .sidebar {
