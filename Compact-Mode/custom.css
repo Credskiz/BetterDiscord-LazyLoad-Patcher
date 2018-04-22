@@ -128,7 +128,7 @@
 
     --channel-section-font-size: 0.75rem;
     --channel-symbol-size: 12px;
-    --channel-line-height: 20px;
+    --channel-line-height: 32px;
     --channel-name-font-size: 0.95rem;
     --channel-avatar-size: 16px;
     --channel-voice-user-name-font-size: 0.9rem;
@@ -163,6 +163,8 @@
     --chat-footer-button-size: 18px;
     --chat-footer-input-font-size: 12px;
     --chat-footer-input-line-height: 18px;
+    --chat-footer-typing-font-size: 12px;
+    --chat-footer-typing-line-height: 14px;
 
     --conv-section-font-size: 0.65rem;
     --conv-line-height: 28px;
@@ -2306,7 +2308,28 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin: 20px 0 30px;
     */
     margin: 4px 0;
+    /*margin: calc(4px + var(--chat-footer-input-font-size)) 0;*/
+    margin-bottom: calc(4px + var(--chat-footer-typing-line-height));
+    font-size: var(--chat-footer-input-font-size);
 }
+
+/* SUPPORT: Charcounter */
+/*Chat - Footer, Charcounter, Wrapper */
+#charcounter {
+    /*
+    display: block;
+    position: absolute;
+    opacity: .5;*/
+    display: block;
+    position: absolute;
+    opacity: .5;
+}
+/*Chat - Footer, Charcounter, Wrapper */
+#charcounter.normal {
+    right: 0;
+    bottom: calc(-2px - var(--chat-footer-typing-font-size));
+}
+
 /*Chat - Footer, Text */
 .innerEnabled-gLHeOL, .innerEnabledNoAttach-36PpAk {
     /*
@@ -2365,6 +2388,41 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding: 0;
     font-size: var(--chat-footer-input-font-size);
     line-height: calc(1.3 * var(--chat-footer-input-font-size));
+}
+/*Chat - Footer, Typing */
+.typing-3eiiL_ {
+    /*
+    bottom: 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 13px;
+    font-weight: 400;
+    height: 26px;
+    left: 0;
+    line-height: 24px;
+    position: absolute;
+    width: 100%;
+    */
+    bottom: calc(2px + var(--chat-footer-typing-line-height) - var(--chat-footer-typing-font-size));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: var(--chat-footer-typing-font-size);
+    font-weight: 400;
+    height: var(--chat-footer-typing-font-size);
+    line-height: var(--chat-footer-typing-font-size);
+    width: auto;
+    max-width: 80%;
+    left: 0;
+    
+    text-align: top;
+    overflow: hidden;
+    padding: 0 4px;
+    border-radius: 6px;
+    border-width: 0px;
+    border-color: hsla(218,5%,47%,.3);
+    border-style: solid;
 }
 /*Chat - Footer, Button, Translate */
 .translate-button {
