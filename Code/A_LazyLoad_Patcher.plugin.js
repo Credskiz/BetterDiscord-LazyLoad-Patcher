@@ -210,41 +210,42 @@ var a_lazyload_patcher = function() {
 				console.log("Could not find selector.");
 				throw "Could not find selector.";
 			}
+			for(var i  = 0; i < instList.length; i++){
+				// Set important variables.
+				var inst = getInternalInstance(instList[i]);
+				var eventH = getEventHandlers(inst.stateNode.parentNode.parentNode);
 
-			// Set important variables.
-			var inst = getInternalInstance(instList[0]);
-			var eventH = getEventHandlers(inst.stateNode.parentNode.parentNode);
-
-			// Patch getRowHeight
-			try{
-				// Check so we don't overwrite the reference to the old function.
-				if(originalGetRowHeight === undefined) {
-					originalGetRowHeight = eventH.children[3]._owner.stateNode.getRowHeight;
+				// Patch getRowHeight
+				try{
+					// Check so we don't overwrite the reference to the old function.
+					if(originalGetRowHeight === undefined) {
+						originalGetRowHeight = eventH.children[3]._owner.stateNode.getRowHeight;
+					}
+					// Overwrite discords function to getRowHeight.
+					eventH.children[3]._owner.stateNode.getRowHeight = this.updatedGetRowsHeight;
+				} catch(err) {
+					console.error("Couldn't patch getRowHeight: " + err.message);
 				}
-				// Overwrite discords function to getRowHeight.
-				eventH.children[3]._owner.stateNode.getRowHeight = this.updatedGetRowsHeight;
-			} catch(err) {
-				console.error("Couldn't patch getRowHeight: " + err.message);
-			}
-			
-			// Patch getSectionHeight
-			try{
-				// Check so we don't overwrite the reference to the old function.
-				if(originalGetSectionHeight === undefined) {
-					originalGetSectionHeight = eventH.children[3]._owner.stateNode.getSectionHeight;
-				}
+				
+				// Patch getSectionHeight
+				try{
+					// Check so we don't overwrite the reference to the old function.
+					if(originalGetSectionHeight === undefined) {
+						originalGetSectionHeight = eventH.children[3]._owner.stateNode.getSectionHeight;
+					}
 
-				// Overwrite discords function to getSectionHeight.
-				eventH.children[3]._owner.stateNode.getSectionHeight = this.updatedGetSectionHeight;
-			} catch(err) {
-				console.error("Couldn't patch getSectionHeight: " + err.message);
-			}
-			
-			try{
-				// Update.
-				eventH.children[3]._owner.stateNode.forceUpdate();
-			} catch(err) {
-				console.error("Couldn't update: " + err.message);
+					// Overwrite discords function to getSectionHeight.
+					eventH.children[3]._owner.stateNode.getSectionHeight = this.updatedGetSectionHeight;
+				} catch(err) {
+					console.error("Couldn't patch getSectionHeight: " + err.message);
+				}
+				
+				try{
+					// Update.
+					eventH.children[3]._owner.stateNode.forceUpdate();
+				} catch(err) {
+					console.error("Couldn't update: " + err.message);
+				}
 			}
 		} catch(err) {
 			console.error("Couldn't init instlist: " + err.message);
