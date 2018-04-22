@@ -8,7 +8,6 @@
                 of global chat size */
 /* TODO fix - call, wrapper, height, change with avatar
                 resize */
-/* TODO fix - chat, header, name not centered */
 /* TODO fix - chat, text, emote, not centered on line
                 with text */
 /* TODO fix - chat, text, embeds have some kind of
@@ -107,6 +106,7 @@
     --guilds-avatar-size: 36px;
     --guilds-avatar-status-size: 16px;
     --guilds-avatar-font-size: 18px;
+    --guilds-avatar-line-height: 36px;
     --guilds-hover-font-size: 14px;
     --guilds-button-height: 18px;
     --guilds-button-font-size: 10px;
@@ -157,7 +157,7 @@
     --chat-divider-line-height: 10px;
     --chat-system-line-height: 1rem;
     --chat-footer-height: 30px;
-    --chat-footer-button-size: 18px;
+    --chat-footer-button-size: 50px;
     --chat-footer-input-font-size: 12px;
     --chat-footer-input-line-height: 18px;
 
@@ -1025,6 +1025,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     /*
     width: 70px;
     */
+    cursor: w-resize;
     width: var(--guilds-size);
 }
 /* Guilds, Wrapper, Scroll */
@@ -1129,6 +1130,24 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-top: 0px;
     margin-bottom: 2px;
     /*width: calc(var(--guilds-size) - 6px);*/
+}
+/* Guilds, Guilds-error,  */
+.guilds-wrapper .guilds-error {
+    /*
+    border: 2px solid #f04747;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    height: 50px;
+    line-height: 46px;
+    padding: 0;
+    width: 50px;
+    */
+    border-radius: 50%;
+    font-size: var(--guilds-avatar-font-size);
+    height: var(--guilds-avatar-size);
+    line-height: var(--guilds-avatar-line-height);
+    width: var(--guilds-avatar-size);
 }
 /* Guilds, Avatar, Wrapper, Specific */
 .guilds-wrapper .guilds .guild-separator + .guild,
@@ -1324,7 +1343,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: 22px;
     margin-right: 4px;
     */
-    height: var(--call-header-font-size);
+    /*height: var(--call-header-line-height);*/
+    display: flex;
+    height: auto;
     margin-right: 0px;
 }
 /* Call, Header, AKA, Wrapper */
@@ -2279,12 +2300,14 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 46px;
     top: 11px;
     */
-    height: var(--chat-footer-button-size)!important;
-    width: var(--chat-footer-button-size)!important;
+    /*height: var(--chat-footer-button-size)!important;*/
+    /*width: var(--chat-footer-button-size)!important;*/
     
-    top: 4px;
-    right: calc(2 * (2px + var(--chat-footer-button-size)))!important;
+    top: calc(50% - 0.5 * var(--chat-footer-button-size));
+    /*top: calc(0.5 * (var(--chat-footer-input-height) - var(--chat-footer-button-size)));*/
+    right: calc(-11px + 2.5 * (2px + var(--chat-footer-button-size)))!important;
     margin-right: 0px!important;
+    -webkit-transform:scale(0.8);
 }
 /*Chat - Footer, Button, Emoji, Wrapper */
 .emojiButton-38mF6t {
@@ -2293,9 +2316,15 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 12px;
     margin-right: 40px;
     */
-    top: 4px;
-    right: calc(2px + var(--chat-footer-button-size));
+    /*height: var(--chat-footer-button-size);*/
+    /*width: var(--chat-footer-button-size);*/
+    
+    top: calc(50% - 0.5 * var(--chat-footer-button-size));
+    margin:0 auto;!important;
+    /*top: calc(0.5 * (var(--chat-footer-input-height) - var(--chat-footer-button-size)));*/
+    right: calc(-11px + 2px + var(--chat-footer-button-size)*1.5);
     margin-right: 0px!important;
+    -webkit-transform:scale(0.8);
 }
 /*Chat - Footer, Button, Emoji, Image */
 .sprite-3pvJkd {
@@ -2305,8 +2334,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: 22px;
     width: 22px;
     */
-    height: var(--chat-footer-button-size);
-    width: var(--chat-footer-button-size);
+    
 }
 /*Chat - Footer, Button, Send */
 .send-button {
@@ -2315,9 +2343,10 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 12px;
     top: 8px;
     */
+    height: var(--chat-footer-button-size);
     width: var(--chat-footer-button-size);
     right: 0px;
-    top: 4px;
+    top: calc(50% - 0.5 * var(--chat-footer-button-size));
 }
 
 
