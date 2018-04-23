@@ -8,7 +8,6 @@ var Resizables = function () {
 
 		if(guildsWrapper !== undefined && guildsWrapper.length > 0){
 			guildsWrapper.mousedown(function(event){
-				event.preventDefault();
 				initialMouseX = event.pageX;
 				console.log("GWW Before if initialMouseX: " + guildsWrapper.css("width"))
 				 if(event.pageX >= (guildsWrapper.css("width").replace("px", "") - 5) && (event.pageX <= guildsWrapper.css("width").replace("px","") + 5)){
