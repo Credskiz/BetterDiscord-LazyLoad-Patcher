@@ -160,6 +160,7 @@
     --chat-divider-line-height: 10px;
     --chat-system-line-height: 1rem;
     --chat-footer-height: 20px;
+    --chat-footer-button-size-raw: 18;
     --chat-footer-button-size: 18px;
     --chat-footer-input-font-size: 12px;
     --chat-footer-input-line-height: 18px;
@@ -2530,9 +2531,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     /*
     padding-right: 110px;
     */
-    padding-right: calc(2px + 3 *(2px + var(--chat-footer-button-size)) )!important;
-    padding-top: calc( 0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) );
-    padding-bottom: calc( 0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) );
+    padding-right: calc(2px + 3 *(2px + calc(var(--chat-footer-button-size-raw) * 1px)) )!important;
+    padding-top: calc( 0.5 * (var(--chat-footer-height) - calc(var(--chat-footer-button-size-raw) * 1px)) );
+    padding-bottom: calc( 0.5 * (var(--chat-footer-height) - calc(var(--chat-footer-button-size-raw) * 1px)) );
     padding: calc(0.5 * ( var(--chat-footer-input-line-height) - var(--chat-footer-input-font-size)) ) 0;
 }
 /*Chat - Footer, Button, Attach */
@@ -2543,8 +2544,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: 24px;
     */
     margin: auto 2px;
-    height: var(--chat-footer-button-size);
-    width: var(--chat-footer-button-size);
+    height: calc(var(--chat-footer-button-size-raw) * 1px);
+    width: calc(var(--chat-footer-button-size-raw) * 1px);
 }
 /*Chat - Footer, Divider */
 .attachButtonDivider-3tknGJ {
@@ -2631,11 +2632,14 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 46px;
     top: 11px;
     */
-    height: var(--chat-footer-button-size)!important;
-    width: var(--chat-footer-button-size)!important;
+    /*top: calc(2px + 0.5 * (var(--chat-footer-height) - calc(var(--chat-footer-button-size-raw) * 1px)) )!important;*/
+    /*right: calc(2px + calc(-22px + 3 * var(--chat-footer-button-size-raw) * 1px));*/
     
-    top: calc(2px +  0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) )!important;
-    right: calc(2 * (2px + var(--chat-footer-button-size)))!important;
+    height: 22px;
+    transform: scale(calc(var(--chat-footer-button-size-raw) / 22));
+    
+    top: calc(2px + 0.5 * (var(--chat-footer-height) - 22px) );
+    right: calc(-22px + 3 * (2px + var(--chat-footer-button-size-raw) * 1px));
     margin-right: 0px!important;
 }
 /*Chat - Footer, Button, Emoji, Wrapper */
@@ -2645,8 +2649,12 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 12px;
     margin-right: 40px;
     */
-    top: calc(2px +  0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) );
-    right: calc(2px + var(--chat-footer-button-size));
+    /*top: calc(2px +  0.5 * (var(--chat-footer-height) - calc(var(--chat-footer-button-size-raw) * 1px)) );*/
+    /*right: calc(2px + calc(var(--chat-footer-button-size-raw) * 1px));*/
+    max-height: inherit;
+    
+    top: calc(2px + 0.5 * (var(--chat-footer-height) - 22px));
+    right: calc(-22px + 2 * (2px + var(--chat-footer-button-size-raw) * 1px));
     margin-right: 0px!important;
 }
 /*Chat - Footer, Button, Emoji, Image */
@@ -2657,8 +2665,10 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: 22px;
     width: 22px;
     */
-    height: var(--chat-footer-button-size);
-    width: var(--chat-footer-button-size);
+    /*height: calc(var(--chat-footer-button-size-raw) * 1px);*/
+    /*width: calc(var(--chat-footer-button-size-raw) * 1px);*/
+    transform: scale(calc(var(--chat-footer-button-size-raw) / 22));
+    /*transform: scale(2);*/
 }
 /*Chat - Footer, Button, Send */
 .send-button {
@@ -2667,9 +2677,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 12px;
     top: 8px;
     */
-    width: var(--chat-footer-button-size)!important;
+    width: calc(var(--chat-footer-button-size-raw) * 1px)!important;
     right: 0px!important;
-    top: calc(2px + 0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)))!important;
+    top: calc(2px + 0.5 * (var(--chat-footer-height) - calc(var(--chat-footer-button-size-raw) * 1px)))!important;
 }
 
 
