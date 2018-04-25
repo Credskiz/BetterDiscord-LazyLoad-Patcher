@@ -2634,7 +2634,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: var(--chat-footer-button-size)!important;
     width: var(--chat-footer-button-size)!important;
     
-    top: calc(2px +  0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) );
+    top: calc(2px +  0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) )!important;
     right: calc(2 * (2px + var(--chat-footer-button-size)))!important;
     margin-right: 0px!important;
 }
