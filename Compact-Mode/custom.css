@@ -2639,7 +2639,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     transform: scale(calc(var(--chat-footer-button-size-raw) / 22));
     
     top: calc(2px + 0.5 * (var(--chat-footer-height) - 22px) );
-    right: calc(-22px + 3 * (2px + var(--chat-footer-button-size-raw) * 1px));
+    right: calc(2px - 22px + 3 * (2px + var(--chat-footer-button-size-raw) * 1px));
     margin-right: 0px!important;
 }
 /*Chat - Footer, Button, Emoji, Wrapper */
@@ -2652,9 +2652,10 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     /*top: calc(2px +  0.5 * (var(--chat-footer-height) - calc(var(--chat-footer-button-size-raw) * 1px)) );*/
     /*right: calc(2px + calc(var(--chat-footer-button-size-raw) * 1px));*/
     max-height: inherit;
-    
+    transform: scale(calc(var(--chat-footer-button-size-raw) / 22));
+
     top: calc(2px + 0.5 * (var(--chat-footer-height) - 22px));
-    right: calc(-22px + 2 * (2px + var(--chat-footer-button-size-raw) * 1px));
+    right: calc(2px - 22px + 2 * (2px + var(--chat-footer-button-size-raw) * 1px));
     margin-right: 0px!important;
 }
 /*Chat - Footer, Button, Emoji, Image */
@@ -2665,10 +2666,6 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: 22px;
     width: 22px;
     */
-    /*height: calc(var(--chat-footer-button-size-raw) * 1px);*/
-    /*width: calc(var(--chat-footer-button-size-raw) * 1px);*/
-    transform: scale(calc(var(--chat-footer-button-size-raw) / 22));
-    /*transform: scale(2);*/
 }
 /*Chat - Footer, Button, Send */
 .send-button {
@@ -2677,11 +2674,17 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 12px;
     top: 8px;
     */
+    overflow: hidden;
+    height: calc(var(--chat-footer-button-size-raw) * 1px)!important;
     width: calc(var(--chat-footer-button-size-raw) * 1px)!important;
-    right: 0px!important;
+    right: 2px!important;
     top: calc(2px + 0.5 * (var(--chat-footer-height) - calc(var(--chat-footer-button-size-raw) * 1px)))!important;
 }
 
+.send-button img {
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+}
 
 /* ---------------- */
 /* --- CHANNELS --- */
