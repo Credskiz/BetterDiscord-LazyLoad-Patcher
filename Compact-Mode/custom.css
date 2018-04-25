@@ -98,6 +98,14 @@
     --bdd-settings-sidebar-item-line-height: 18px;
     --bdd-settings-sidebar-versions-font-size: 10px;
     --bdd-settings-sidebar-versions-line-height: 12px;
+    --bdd-settings-plugins-buttons-size: 17px;
+    --bdd-settings-plugins-buttons-font-size: 12px;
+    --bdd-settings-plugins-header-height: 16px;
+    --bdd-settings-plugins-header-font-size: 10px;
+    --bdd-settings-plugins-item-height: 100px;
+    --bdd-settings-plugins-item-header-height: 16px;
+    --bdd-settings-plugins-item-header-font-size: 12px;
+    --bdd-settings-plugins-item-description-font-size: 14px;
     --bdd-customcss-checkbox-size: 16px;
     --bdd-customcss-checkbox-font-size: 12px;
     --bdd-customcss-buttons-size: 18px;
@@ -209,7 +217,7 @@
     --call-actions-font-size: 0.7rem;
     --call-actions-button-size: 18px;
     
-    --forsenCD: 0.3;
+    --forsenCD: 1;
 }
 
 
@@ -630,6 +638,13 @@ body {
     */
     margin-top: 2px;
 }
+/* Discord, Settings, Main, Seperator, Margin, Top */
+.margin-top-4 {
+    /*
+    margin-top: 20px;
+    */
+    margin-top: 2px;
+}
 /* Discord, Settings, Main, Description, Margin, Bottom */
 .margin-bottom-40,
 .marginBottom40-1zK7fE {
@@ -750,7 +765,8 @@ body {
     /*
     padding: 60px 40px 80px;
     */
-    padding: 8px 8px;
+    padding: 4px 4px!important;
+    min-height: calc(100vh - 18px - 8px);
 }
 /* Discord, Settings, Main, Wrapper, Inner */
 .ui-standard-sidebar-view .content-column,
@@ -1078,6 +1094,22 @@ body {
 
 
 
+/* BetterDiscord, CustomCSS, Detached, Editor */
+#bd-customcss-editor {
+    /*
+    font-size: 16px;
+    */
+    font-size: var(--bdd-customcss-font-size)!important;
+}
+.line-numbers,
+.editor {
+    /*
+    height: calc(100vh - 250px);
+    */
+    height: calc(100vh - 18px - 8px - 8px - 20px - 60px);
+    padding: 0;
+}
+
 /* BetterDiscord, Main, Wrapper */
 .bd-detached-editor .app {
     /*
@@ -1187,6 +1219,208 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     top: 0;
     width: var(--bdd-notice-line-height);
 }
+
+
+
+
+/* BetterDiscord, Settings, Plugins, Buttons */
+#bd-settingspane-container .bd-pfbtn {
+    /*
+    padding: 1px 6px;
+    border-radius: 5px;
+    margin-left: 10px;
+    */
+    padding: 0px 4px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
+/* BetterDiscord, Settings, Plugins, Buttons, Check */
+.cap-check {
+    /*
+    height: 19px;
+    width: auto;
+    margin-bottom: 19px;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 1px 6px;
+    */
+    height: var(--bdd-settings-plugins-buttons-size);
+    font-size: var(--bdd-settings-plugins-buttons-font-size);
+    margin-bottom: 4px;
+}
+/* BetterDiscord, Settings, Plugins, Buttons, UnCheck */
+.cap-uncheck {
+    /*
+    height: 19px;
+    width: auto;
+    margin-bottom: 19px;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    */
+    height: var(--bdd-settings-plugins-buttons-size);
+    font-size: var(--bdd-settings-plugins-buttons-font-size);
+    margin-bottom: 4px;
+    margin-left: 2px;
+}
+
+/* BetterDiscord, Settings, Item, Header */
+#bd-settingspane-container .ui-switch-item h3 {
+    /*
+    font-weight: 500;
+    line-height: 24px;
+    */
+    line-height: var(--bdd-settings-item-header-height);
+}
+/* BetterDiscord, Settings, Item, Description */
+#bd-settingspane-container .ui-switch-item .style-description {
+    /*
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 30px;
+    border-bottom: 1px solid hsla(218,5%,47%,.3);
+    */
+    font-weight: 500;
+    line-height: var(--bdd-settings-item-description-font-size);
+    font-size: var(--bdd-settings-item-description-font-size);
+    
+    padding-bottom: 2px;
+    padding-left: 3px;
+    margin-bottom: 4px;
+}
+
+/* BetterDiscord, Settings, Plugins, Header, Search */
+.searchBar-YMJBu9 {
+    /*
+    border-radius: 3px;
+    height: 28px;
+    width: 186px;
+    */
+    height: var(--bdd-settings-plugins-header-height);
+    width: auto;
+}
+/* BetterDiscord, Settings, Plugins, Header, Text */
+.quickSelect-2sgeoi {
+    /*
+    font-size: 13px;
+    */
+    font-size: var(--bdd-settings-plugins-header-font-size);
+}
+/* BetterDiscord, Settings, Plugins, Item */
+.bda-slist li {
+    /*
+    border: 1px solid #202225;
+    border-radius: 5px;
+    padding: 5px 7px;
+    max-height: 175px;
+    margin-bottom: 20px;
+    */
+    padding: 0px 2px;
+    max-height: var(--bdd-settings-plugins-item-height);
+    margin-bottom: 4px;
+}
+/* BetterDiscord, Settings, Plugins, Item, Header */
+.bda-slist .bda-header {
+    /*
+    font-weight: 700;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 5px;
+    */
+    font-weight: 700;
+    font-size: var(--bdd-settings-plugins-item-header-font-size);
+    padding-bottom: 0px;
+    height: calc(1px + var(--bdd-settings-plugins-item-header-height));
+}
+/* BetterDiscord, Settings, Plugins, Item, Header, Switch */
+#bd-settingspane-container .ui-switch-item .ui-switch-wrapper {
+    /*
+    width: 44px;
+    height: 24px;
+    */
+    width: calc(1.8 * var(--bdd-settings-plugins-item-header-height));
+    height: var(--bdd-settings-plugins-item-header-height);
+}
+#bd-settingspane-container .ui-switch-item .ui-switch-wrapper input {
+    /*
+    margin: 3px 3px 3px 4px;
+    */
+    margin: 0;
+}
+/* BetterDiscord, Settings, Plugins, Item, Header, Switch, Check */
+#bd-settingspane-container .ui-switch-item .ui-switch-wrapper .ui-switch:before {
+    /*
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    left: 3px;
+    bottom: 3px;
+    border-radius: 10px;
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,.05), 0 2px 2px 0 rgba(0,0,0,.1), 0 3px 3px 0 rgba(0,0,0,.05);
+    */
+    border-radius: 50%;
+    width: calc(0.9 * var(--bdd-settings-plugins-item-header-height));
+    height: calc(0.9 * var(--bdd-settings-plugins-item-header-height));
+    bottom: auto;
+    top: calc(0.05 * var(--bdd-settings-plugins-item-header-height));
+    left: 2px;
+}
+#bd-settingspane-container .ui-switch-item .ui-switch-wrapper .ui-switch.checked:before {
+    /*
+    transform: translateX(20px);
+    */
+    transform: translateX(calc(-4px + 1.8 * var(--bdd-settings-plugins-item-header-height) - 0.9 * var(--bdd-settings-plugins-item-header-height)));
+}
+/* BetterDiscord, Settings, Plugins, Item, Header, Trash */
+#bd-settingspane-container .bda-right .trashIcon,
+#bd-settingspane-container .bda-header .trashIcon {
+    /*
+    width: 20px;
+    height: 20px;
+    right: 50px;
+    */
+    width: calc(-4px + var(--bdd-settings-plugins-item-header-height));
+    height: calc(-4px + var(--bdd-settings-plugins-item-header-height));
+    right: calc(2px + 1.8 * var(--bdd-settings-plugins-item-header-height));
+}
+/* BetterDiscord, Settings, Plugins, Item, Description */
+.bda-slist .bda-description {
+    /*
+    max-height: 100px;
+    margin: 5px 0;
+    padding: 5px 0;
+    */
+    max-height: calc(-26px - 4px - 1px + var(--bdd-settings-plugins-item-height) - var(--bdd-settings-plugins-item-header-height));
+    margin: 2px 8px;
+    padding: 0 0;
+    font-size: var(--bdd-settings-plugins-item-description-font-size);
+}
+/* BetterDiscord, Settings, Plugins, Item, Footer */
+.bda-slist .bda-footer {
+    /*
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: var(--bdd-settings-plugins-buttons-font-size);
+}
+/* BetterDiscord, Settings, Plugins, Item, Footer, Button */
+.bda-slist .bda-footer button {
+    /*
+    border-radius: 5px;
+    padding: 2px 16px;
+    */
+    padding: 0px 6px;
+    font-size: var(--bdd-settings-plugins-item-description-font-size);
+}
+
+
+
 
 /* Chat - Emote, Text, FFZ? */
 .emote {
