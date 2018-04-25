@@ -207,7 +207,202 @@
     --call-actions-line-height: 24px;
     --call-actions-font-size: 0.7rem;
     --call-actions-button-size: 18px;
+    
+    --forsenCD: 0.3;
 }
+
+
+
+
+
+
+
+/* ------------------------- */
+/* --- TRANSPARENT BEGIN --- */
+/* ------------------------- */
+/*standard 50% transparency on everything, change to your liking.*/
+body {
+    background-color: rgba(0,0,0, var(--forsenCD));
+}
+.appMount-14L89u {
+    /*
+	background-color: #202225;
+	*/
+	background-color: rgba(32, 34, 37, var(--forsenCD));
+}
+
+.theme-dark .layer-kosS71, .theme-dark .layers-20RVFW {
+    /*
+	background: #36393f;
+	*/
+	background-color: rgba(54, 57, 63, var(--forsenCD));
+}
+.theme-dark .layer-kosS71, .theme-dark .layers-20RVFW {
+    /*
+	background: #36393f;
+	*/
+	background-color: rgba(54, 57, 63, var(--forsenCD));
+}
+.container-2OU7Cz {
+    /*
+	background-color: #202225;
+	*/
+	background-color: rgba(32, 34, 37, var(--forsenCD));
+}
+
+
+.uploadArea-23on8q {
+    /*
+    background: rgba(0,0,0,.8);
+	*/
+}
+
+.channels-3g2vYe {
+    /*
+    background-color: #2f3136;
+	*/
+	background-color: rgba(47, 49, 54, var(--forsenCD));
+}
+.container-RYiLUQ {
+    /*
+    background-color: #2f3136;
+	*/
+	background-color: rgba(47, 49, 54, var(--forsenCD));
+}
+
+.scrollerThemed-19vinI.themeDark-BdSAwu .scroller-fzNley::-webkit-scrollbar-thumb,
+.theme-dark .scrollerWrap-2uBjct .scroller-fzNley::-webkit-scrollbar-thumb,
+.theme-light .scrollerThemed-19vinI.themeDark-BdSAwu .scroller-fzNley::-webkit-scrollbar-thumb {
+    /*
+	background-color: #202225;
+	*/
+	background-color: rgba(32, 34, 37, var(--forsenCD));
+}
+
+.guilds-wrapper {
+    /*
+	background-color: #202225;
+	*/
+	background-color: rgba(32, 34, 37, var(--forsenCD));
+}
+.theme-dark .headerBar-cxbhPD {
+    /*
+	background: #36393f;
+	*/
+	background-color: rgba(54, 57, 63, var(--forsenCD));
+}
+.theme-dark .chat {
+    /*
+    background-color: #36393e;
+	*/
+	background-color: rgba(54, 57, 62, var(--forsenCD));
+}
+
+.theme-dark .chat>.content {
+    /*
+    background-color: #36393e;
+	*/
+	background-color: rgba(54, 57, 62, var(--forsenCD));
+}
+.theme-dark .message-group .comment .markup pre {
+    /*
+    background-color: #2f3136;
+	*/
+	background-color: rgba(47, 49, 54, var(--forsenCD));
+}
+.theme-dark .message-group .comment .markup code.inline, .theme-dark .message-group .comment .markup pre code {
+    /*
+    background-color: #2f3136;
+	*/
+	background-color: rgba(47, 49, 54, 0.4);
+}
+.theme-dark .chat form {
+    /*
+	background: #36393f;
+	*/
+	background-color: rgba(54, 57, 63, var(--forsenCD));
+}
+.theme-dark #friends {
+    /*
+    background-color: #36393e;
+	*/
+	background-color: rgba(54, 57, 62, var(--forsenCD));
+}
+
+.theme-dark .friends-table, .theme-dark .messages-wrapper {
+    /*
+    background-color: #36393e;
+	*/
+	background-color: rgba(54, 57, 62, var(--forsenCD));
+}
+
+.theme-dark .title-qAcLxz {
+    /*
+    background: #36393f;
+	*/
+	background-color: rgba(54, 57, 63, var(--forsenCD));
+}
+.theme-dark .members-1bid1J {
+    /*
+    background-color: #2f3136;
+	*/
+	background-color: rgba(47, 49, 54, var(--forsenCD));
+}
+.theme-dark .message-group a {
+    color: rgb(36, 194, 255)!important;
+    opacity: 1!important;
+}
+.bd-blue .mention {
+    color: rgb(36, 194, 255);
+}
+
+
+
+#bd-customcss-detach-container {
+    /*
+    background-color: #36393e;
+	*/
+	background-color: rgba(54, 57, 62, 0.8);
+}
+.editor {
+    /*
+    background: #292b2f;
+	*/
+	background-color: rgba(41, 43, 47, 0.1);
+}
+.ace-monokai {
+    /*
+    background-color: #272822;
+	*/
+	background-color: rgba(39, 40, 34, 0.2);
+}
+.ace-monokai .ace_gutter {
+    /*
+    background: #2F3129;
+	*/
+	background-color: rgba(47, 49, 41, 0.2);
+}
+.content-region #bd-customcss-attach-controls, #bd-customcss-detach-container #bd-customcss-attach-controls {
+    /*
+    background-color: #272822;
+	*/
+	background-color: rgba(39, 40, 34, 0.2);
+}
+/* ------------------------- */
+/* ---- TRANSPARENT END ---- */
+/* ------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Discord, Settings, Wrapper */
@@ -2336,8 +2531,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding-right: 110px;
     */
     padding-right: calc(2px + 3 *(2px + var(--chat-footer-button-size)) )!important;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: calc( 0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) );
+    padding-bottom: calc( 0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) );
     padding: calc(0.5 * ( var(--chat-footer-input-line-height) - var(--chat-footer-input-font-size)) ) 0;
 }
 /*Chat - Footer, Button, Attach */
@@ -2388,6 +2583,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding: 0;
     font-size: var(--chat-footer-input-font-size);
     line-height: calc(1.3 * var(--chat-footer-input-font-size));
+    
+    min-height: var(--chat-footer-height);
+    
 }
 /*Chat - Footer, Typing */
 .typing-3eiiL_ {
@@ -2436,7 +2634,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: var(--chat-footer-button-size)!important;
     width: var(--chat-footer-button-size)!important;
     
-    top: 4px;
+    top: calc(2px +  0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) );
     right: calc(2 * (2px + var(--chat-footer-button-size)))!important;
     margin-right: 0px!important;
 }
@@ -2447,7 +2645,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 12px;
     margin-right: 40px;
     */
-    top: 4px;
+    top: calc(2px +  0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)) );
     right: calc(2px + var(--chat-footer-button-size));
     margin-right: 0px!important;
 }
@@ -2469,9 +2667,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 12px;
     top: 8px;
     */
-    width: var(--chat-footer-button-size);
-    right: 0px;
-    top: 4px;
+    width: var(--chat-footer-button-size)!important;
+    right: 0px!important;
+    top: calc(2px + 0.5 * (var(--chat-footer-height) - var(--chat-footer-button-size)))!important;
 }
 
 
