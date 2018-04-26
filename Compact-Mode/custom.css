@@ -2876,6 +2876,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: calc(2px - 22px + 3 * (2px + var(--chat-footer-button-size-raw) * 1px))!important;
     margin-right: 0px!important;
 }
+.translate-button:hover {
+    transform: scale(1.2 * calc(var(--chat-footer-button-size-raw) / 22))!important;
+}
 /*Chat - Footer, Button, Emoji, Wrapper */
 .emojiButton-38mF6t {
     /*
