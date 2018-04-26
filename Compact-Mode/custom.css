@@ -2869,11 +2869,11 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     /*top: calc(2px + 0.5 * (var(--chat-footer-height) - calc(var(--chat-footer-button-size-raw) * 1px)) )!important;*/
     /*right: calc(2px + calc(-22px + 3 * var(--chat-footer-button-size-raw) * 1px));*/
     
-    height: 22px;
-    transform: scale(calc(var(--chat-footer-button-size-raw) / 22));
+    height: 22px!important;
+    transform: scale(calc(var(--chat-footer-button-size-raw) / 22))!important;
     
-    top: calc(2px + 0.5 * (var(--chat-footer-height) - 22px) );
-    right: calc(2px - 22px + 3 * (2px + var(--chat-footer-button-size-raw) * 1px));
+    top: calc(2px + 0.5 * (var(--chat-footer-height) - 22px) )!important;
+    right: calc(2px - 22px + 3 * (2px + var(--chat-footer-button-size-raw) * 1px))!important;
     margin-right: 0px!important;
 }
 /*Chat - Footer, Button, Emoji, Wrapper */
