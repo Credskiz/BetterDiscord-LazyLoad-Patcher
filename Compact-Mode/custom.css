@@ -1615,13 +1615,29 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     font-size: var(--guilds-avatar-font-size);
     line-height: var(--guilds-avatar-size);
 }
+/* Guilds, Avatar, Text, Add */
+.guilds-wrapper .guilds-add {
+    /*
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    */
+    font-weight: 400;
+    font-size: calc(-2px + var(--guilds-avatar-size));
+}
 .guilds-wrapper .guilds-add-inner {
     /*
     position: relative;
     top: -1px;
     */
-    position: relative;
     top: 0px;
+    display: block;
 }
 /* Guilds, Avatar, Images */
 .guilds-wrapper .guilds .guild .guild-inner a {
