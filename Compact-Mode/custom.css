@@ -98,12 +98,15 @@
     --bdd-settings-sidebar-item-line-height: 18px;
     --bdd-settings-sidebar-versions-font-size: 10px;
     --bdd-settings-sidebar-versions-line-height: 12px;
+    --bdd-settings-item-header-height: 13px;
+    --bdd-settings-item-header-font-size: 13px;
+    --bdd-settings-item-description-font-size: 14px;
     --bdd-settings-plugins-buttons-size: 17px;
     --bdd-settings-plugins-buttons-font-size: 12px;
     --bdd-settings-plugins-header-height: 16px;
     --bdd-settings-plugins-header-font-size: 10px;
     --bdd-settings-plugins-item-height: 100px;
-    --bdd-settings-plugins-item-header-height: 16px;
+    --bdd-settings-plugins-item-header-height: 18px;
     --bdd-settings-plugins-item-header-font-size: 12px;
     --bdd-settings-plugins-item-description-font-size: 14px;
     --bdd-customcss-checkbox-size: 16px;
@@ -765,7 +768,7 @@ body {
     /*
     padding: 60px 40px 80px;
     */
-    padding: 4px 4px!important;
+    padding: 8px 8px!important;
     min-height: calc(100vh - 18px - 8px);
 }
 /* Discord, Settings, Main, Wrapper, Inner */
@@ -1220,9 +1223,6 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: var(--bdd-notice-line-height);
 }
 
-
-
-
 /* BetterDiscord, Settings, Plugins, Buttons */
 #bd-settingspane-container .bd-pfbtn {
     /*
@@ -1264,14 +1264,25 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-bottom: 4px;
     margin-left: 2px;
 }
-
+/* BetterDiscord, Settings, Title */
+#bd-settingspane-container h2.ui-form-title {
+    /*
+    margin-bottom: 4px;
+    */
+    /*margin-top: 4px;'*/
+    /*margin-bottom: 8px;'*/
+}
+    
 /* BetterDiscord, Settings, Item, Header */
 #bd-settingspane-container .ui-switch-item h3 {
     /*
     font-weight: 500;
     line-height: 24px;
     */
+    font-weight: 500;
     line-height: var(--bdd-settings-item-header-height);
+    font-size: var(--bdd-settings-item-header-font-size);
+    margin-left: 4px;
 }
 /* BetterDiscord, Settings, Item, Description */
 #bd-settingspane-container .ui-switch-item .style-description {
@@ -1286,8 +1297,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     line-height: var(--bdd-settings-item-description-font-size);
     font-size: var(--bdd-settings-item-description-font-size);
     
-    padding-bottom: 2px;
-    padding-left: 3px;
+    padding-bottom: 4px;
+    margin-left: 4px;
     margin-bottom: 4px;
 }
 
@@ -1300,6 +1311,21 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     */
     height: var(--bdd-settings-plugins-header-height);
     width: auto;
+}
+/* BetterDiscord, Settings, Plugins, Search, Button */
+.searchBarIcon-vCfmUl .icon-11Zny- {
+    /*
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    right: 6px;
+    top: 5px;
+    */
+    background-size: contain;
+    height: calc(0.9 * var(--bdd-settings-plugins-header-height));
+    width: calc(0.9 * var(--bdd-settings-plugins-header-height));
+    right: 4px;
+    top: calc(0.05 * var(--bdd-settings-plugins-header-height));
 }
 /* BetterDiscord, Settings, Plugins, Header, Text */
 .quickSelect-2sgeoi {
@@ -1329,8 +1355,9 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     border-bottom: 1px solid rgba(255,255,255,0.1);
     padding-bottom: 5px;
     */
-    font-weight: 700;
+    font-weight: 600;
     font-size: var(--bdd-settings-plugins-item-header-font-size);
+    margin-left: 2px;
     padding-bottom: 0px;
     height: calc(1px + var(--bdd-settings-plugins-item-header-height));
 }
