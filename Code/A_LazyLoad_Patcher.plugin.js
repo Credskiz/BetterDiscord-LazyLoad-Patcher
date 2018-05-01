@@ -68,7 +68,7 @@ var a_lazyload_patcher = function() {
 				// TODO find a way to not use timeout here.
 				setTimeout(() => this.doPatchFunctions(), 1000);
 				wasInFriends = 1;
-			} else if ($('.containerDefault-1bbItS').height() !== null && wasInFriends > 0 ) {
+			} else if ($('.containerDefault-3GGEv_').height() !== null && wasInFriends > 0 ) {
 				
 				// TODO find a way to not use timeout here.
 				setTimeout(() => this.doPatchFunctions(), 1000);
@@ -151,7 +151,7 @@ var a_lazyload_patcher = function() {
 	};
 	this.updateSectionSize = function() {
 		// Update newSectionSize from current css.
-		var section = $(".containerDefault-1bbItS");
+		var section = $(".containerDefault-3GGEv_");
 		if (section !== undefined && section.length > 0){
 			section = getInternalInstance(section[0]);
 
@@ -164,7 +164,7 @@ var a_lazyload_patcher = function() {
 	};
 	this.updateChannel = function() {
 		// Update newChannelSize from current css.
-		var channel = $(".containerDefault-7RImuF");
+		var channel = $(".containerDefault-1ZnADq");
 		if (channel !== undefined && channel.length > 1){
 			channel = getInternalInstance(channel[1]);
 			
@@ -177,7 +177,7 @@ var a_lazyload_patcher = function() {
 	};
 	this.updateVoiceUser = function() {
 		// Update newVoiceUserSize from current css.
-		var voiceUser = $(".draggable-3SphXU");
+		var voiceUser = $(".draggable-1KoBzC");
 		if (voiceUser !== undefined && voiceUser.length > 0){
 			voiceUser = getInternalInstance(voiceUser[0]);
 
@@ -190,7 +190,7 @@ var a_lazyload_patcher = function() {
 	};
 	this.updateVoicePaddingBottom = function() {
 		// Update newVoicePaddingBottomSize from current css.
-		var voicePaddingBottom = $(".listCollapse-z8PceY, .listDefault-3i7eWQ");
+		var voicePaddingBottom = $(".listDefault-36Sktb");
 		if (voicePaddingBottom !== undefined && voicePaddingBottom.length > 0){
 			voicePaddingBottom = getInternalInstance(voicePaddingBottom[0]);
 			var voiceSize = voicePaddingBottom.stateNode.childElementCount * newVoiceUserSize;
@@ -205,7 +205,7 @@ var a_lazyload_patcher = function() {
 
 	this.patchFunctions = function() {
 		try{
-			var instList = $(".scroller-NXV0-d");
+			var instList = $(".scroller-2v3d_F");
 			if (instList.length === 0){
 				console.log("Could not find selector.");
 				throw "Could not find selector.";

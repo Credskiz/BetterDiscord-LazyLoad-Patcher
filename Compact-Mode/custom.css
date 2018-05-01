@@ -34,7 +34,7 @@
 
 /* TODO add - guild, number of unread messages */
 
-/* TODO add - popout support */
+/* TODO add - popout  support */
 /* TODO add - popout, chat, viewing older messages */
 /* TODO add - popout, settings support */
 /* TODO add - popout, server settings support */
@@ -236,7 +236,7 @@
 body {
     background-color: rgba(0,0,0, var(--forsenCD));
 }
-.appMount-14L89u {
+.appMount-3VJmYg {
     /*
 	background-color: #202225;
 	*/
@@ -269,7 +269,7 @@ body {
 	*/
 }
 
-.channels-3g2vYe {
+.channels-Ie2l6A {
     /*
     background-color: #2f3136;
 	*/
@@ -282,9 +282,9 @@ body {
 	background-color: rgba(47, 49, 54, var(--forsenCD));
 }
 
-.scrollerThemed-19vinI.themeDark-BdSAwu .scroller-fzNley::-webkit-scrollbar-thumb,
-.theme-dark .scrollerWrap-2uBjct .scroller-fzNley::-webkit-scrollbar-thumb,
-.theme-light .scrollerThemed-19vinI.themeDark-BdSAwu .scroller-fzNley::-webkit-scrollbar-thumb {
+.scrollerThemed-19vinI.themeDark-BdSAwu .scroller-2v3d_F::-webkit-scrollbar-thumb,
+.theme-dark .scrollerWrap-2uBjct .scroller-2v3d_F::-webkit-scrollbar-thumb,
+.theme-light .scrollerThemed-19vinI.themeDark-BdSAwu .scroller-2v3d_F::-webkit-scrollbar-thumb {
     /*
 	background-color: #202225;
 	*/
@@ -348,7 +348,7 @@ body {
 	background-color: rgba(54, 57, 62, var(--forsenCD));
 }
 
-.theme-dark .title-qAcLxz {
+.theme-dark .title-3qD0b- {
     /*
     background: #36393f;
 	*/
@@ -436,15 +436,15 @@ body {
     width: auto;
 }
 /* Discord, Settings, Wrapper, Inner */
-.side-2nYO0F .header-1-f9X5,
-.side-2nYO0F .item-3879bf {
+.side-8zPYf6 .header-2RyJ0Y,
+.side-8zPYf6 .item-PXvHYJ {
     /*
     padding: 6px 10px;
     */
     padding: 0;
 }
 /* Discord, Settings, Header, Text */
-.header-1-f9X5 {
+.header-2RyJ0Y {
     /*
     font-size: 12px;
     font-weight: 700;
@@ -456,7 +456,7 @@ body {
     line-height: var(--dc-settings-sidebar-header-line-height);
 }
 /* Discord, Settings, Item, Wrapper */
-.side-2nYO0F .item-3879bf {
+.side-8zPYf6 .item-PXvHYJ {
     /*
     border-radius: 3px;
     margin-bottom: 2px;
@@ -469,7 +469,7 @@ body {
     padding: 0;
 }
 /* Discord, Settings, Item, Text */
-.item-3879bf {
+.item-PXvHYJ {
     /*
     font-size: 16px;
     line-height: 20px;
@@ -478,7 +478,7 @@ body {
     line-height: var(--dc-settings-sidebar-item-line-height);
 }
 /* Discord, Settings, Seperator */
-.side-2nYO0F .separator-3z7STW {
+.side-8zPYf6 .separator-3z7STW {
     /*
     margin-left: 10px;
     margin-right: 10px;
@@ -486,7 +486,7 @@ body {
     margin: 2px 2px;
 }
 /* Discord, Settings, Logout */
-.side-2nYO0F > *:nth-last-child(3) {
+.side-8zPYf6 > *:nth-last-child(3) {
     font-size: var(--dc-settings-sidebar-logout-font-size);
     line-height: var(--dc-settings-sidebar-logout-line-height);
     /*text-align: center;*/
@@ -699,7 +699,7 @@ body {
     padding: 2px;
 }
 /* Discord, Settings, Main, Card, Group */
-.horizontalReverse-2LanvO>.flex-lFgbSz, .horizontalReverse-2LanvO>.flexChild-1KGW5q {
+.horizontalReverse-2LanvO>.flex-1xMQg5, .horizontalReverse-2LanvO>.flexChild-faoVW3 {
     /*
     margin-left: 10px;
     margin-right: 10px;
@@ -1767,14 +1767,14 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 
 
 /* Members - Wrapper */
-.membersWrap-3wRngy {
+.membersWrap-2h-GB4 {
     /*
     min-width: 240px;
     */
     min-width: 150px;
 }
 /* Members - Name, Wrapper */
-.memberInner-3XUq9K {
+.memberInner-2CPc3V {
     width: var(--members-width);
 }
 
@@ -1790,8 +1790,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     min-height: var(--call-height);
 }
 /* Call, Header */
-.title-qAcLxz,
-.titleCall-3X0yGQ {
+.title-3qD0b-,
+.titleCall-_b9o8P {
     /*
     height: 48px;
     padding-top: 0px;
@@ -1805,7 +1805,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 /* Call, Header, Wrapper */
 .channelName-1G03vu,
-.titleText-2IfpkV {
+.titleText-3X-zRE {
     /*
     font-size: 18px;
     font-weight: 600;
@@ -1877,7 +1877,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     top: 0px;
 }
 /* Call, Header, Status */
-.title-qAcLxz .status, .titleCall-3X0yGQ .status {
+.title-3qD0b- .status,
+.titleCall-_b9o8P .status {
     /*
     margin-left: 2px;
     top: 2px;
@@ -1890,7 +1891,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: var(--call-header-status-size);
 }
 /* Call, Header, Users, Wrapper2 */
-.titleText-2IfpkV.groupDM-3gzbyG {
+.titleText-3X-zRE.groupDM-3gzbyG {
     /*
     margin-left: -4px;
     */
@@ -1906,8 +1907,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-right: 0px;
 }
 /* Call, Header, Users, Names */
-.title-qAcLxz .input-autosize-input,
-.titleCall-3X0yGQ .input-autosize-input {
+.title-3qD0b- .input-autosize-input,
+.titleCall-_b9o8P .input-autosize-input {
     /*
     font-size: 18px;
     font-weight: 600;
@@ -1922,8 +1923,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding: 0 8px;
 }
 /* Call, Header, Wrapper */
-.horizontal-2BEEBe>.flex-lFgbSz,
-.horizontal-2BEEBe>.flexChild-1KGW5q {
+.horizontal-1ae9ci>.flex-1xMQg5,
+.horizontal-1ae9ci>.flexChild-faoVW3 {
     /*
     margin-left: 10px;
     margin-right: 10px;
@@ -1932,7 +1933,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-right: 0px;
 }
 /* Call, Header, Icons */
-.icon-mr9wAc {
+.icon-1R19_H {
     /*
     height: 24px;
     width: 24px;
@@ -1940,8 +1941,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: var(--call-header-button-size);
     width: var(--call-header-button-size);
 }
-/* Call, Header, Search */
-.search-2--6aU {
+/* Call, Header, Search, Wrapper, Outer */
+.search-l1Wz-Q {
     /*
     margin-top: 0px;
     margin-bottom: 0px;
@@ -1951,8 +1952,21 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-left: 4px;
     margin-right: 4px;
 }
+/* Call, Header, Search, Wrapper, Inner */
+.search .DraftEditor-root .public-DraftEditor-content {
+    /*
+    padding: 3px 6px 20px;
+    */
+    padding: 0;
+}
+.search .DraftEditor-root .public-DraftEditorPlaceholder-root {
+    /*
+    padding: 3px 6px 20px;
+    */
+    padding: 2px 8px;
+}
 /* Call, Header, Divider */
-.divider-1GKkV3 {
+.divider-2PMBlV {
     /*
     height: 22px;
     margin: 0 4px;
@@ -2176,14 +2190,14 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /* Left Sidebar - Wrapper */
-.channels-3g2vYe {
+.channels-Ie2l6A {
     /*
     width: 240px;
     */
     width: var(--left-sidebar-size);
 }
 /* Left Sidebar - Server, Wrapper */
-.header-1tSljs {
+.header-2o-2hj {
     /*
     font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 500;
@@ -2194,7 +2208,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 
 }
 /* Left Sidebar - Server, Text */
-.name-3gtcmp {
+.name-3YKhmS {
     /*
     font-size: 16px;
     line-height: 48px;
@@ -2203,7 +2217,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     line-height: var(--left-sidebar-server-line-height);
 }
 /* Left Sidebar - Info, Server */
-.container-3lnMWU {
+.container-1UB9sr {
     /*
     font-size: 14px;
     font-weight: 500;
@@ -2212,7 +2226,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     font-size: var(--left-sidebar-connection-font-size);
     padding: 5px 10px;
 }
-.inner-ptMwR- .rtc-connection-status .ping {
+.container-1UB9sr > div:first-child .rtc-connection-status .ping {
     /*
     height: 12px;
     width: 11px;
@@ -2229,7 +2243,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-left: 0px;
 }
 /* Left Sidebar - Info, Server, Users */
-.inner-ptMwR- .channel-3YGMy1 {
+.container-1UB9sr > div:first-child .channel-3YGMy1 {
     /*
     font-size: 10px;
     font-weight: 400;
@@ -2244,7 +2258,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     opacity: .4;
 }
 /* Left Sidebar - Info, Settings */
-.container-iksrDt {
+.container-2Thooq {
     /*
     font-size: 14px;
     font-weight: 400;
@@ -2259,7 +2273,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding: 0 10px;
 }
 /* Left Sidebar - Info, Settings, Avatar */
-.container-iksrDt .avatar-small {
+.container-2Thooq .avatar-small {
     width: var(--left-sidebar-settings-avatar-size);
     height: var(--left-sidebar-settings-avatar-size);
     background-repeat: no-repeat;
@@ -2268,7 +2282,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin: 0 10px 0 0;
 }
 /* Left Sidebar - Info, Settings, Tag */
-.accountDetails-15i-_e .discriminator {
+.accountDetails-3k9g4n .discriminator {
     /*
     font-size: 10px;
     margin-top: 4px;
@@ -2279,7 +2293,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     opacity: .4;
 }
 /* Left Sidebar - Buttons */
-.button-3WJ5FX, .button-1aU9q1 {
+.button-2KyEfG, .button-2b6hmh {
     /*
     height: 32px;
     width: 32px;
@@ -2776,7 +2790,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin: 0 4px;
 }
 /*Chat - Footer, Wrapper, Inner */
-.channelTextArea-os01xC {
+.channelTextArea-rNsIhG {
     /*
     margin: 20px 0 30px;
     */
@@ -2804,7 +2818,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /*Chat - Footer, Text */
-.innerEnabled-gLHeOL, .innerEnabledNoAttach-36PpAk {
+.innerEnabled-3g80kR,
+.innerEnabledNoAttach-NE9K7P {
     /*
     padding-right: 110px;
     */
@@ -2814,7 +2829,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding: calc(0.5 * ( var(--chat-footer-input-line-height) - var(--chat-footer-input-font-size)) ) 0;
 }
 /*Chat - Footer, Button, Attach */
-.attachButton-Di6YUh {
+.attachButton-1UjEWA {
     /*
     margin: 10px 0 10px 10px;
     height: 24px;
@@ -2825,7 +2840,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: calc(var(--chat-footer-button-size-raw) * 1px);
 }
 /*Chat - Footer, Divider */
-.attachButtonDivider-3tknGJ {
+.attachButtonDivider-3Glu60 {
     /*
     height: calc(100% - 20px);
     margin: 10px 12px;
@@ -2837,14 +2852,15 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: 1px;
 }
 /*Chat - Footer, Text, Wrapper */
-.textAreaEnabled-2vOfh8, .textAreaEnabledNoAttach-1zE_2h {
+.textAreaEnabled-3vQ5WZ,
+.textAreaEnabledNoAttach-1zE_2h {
     /*
     padding: 10px 38px 10px 0;
     */
     padding: calc(0.5 * ( var(--chat-footer-input-line-height) - var(--chat-footer-input-font-size)) ) 0;
 }
 /*Chat - Footer, Input, Text */
-.textArea-20yzAH {
+.textArea-2Spzkt {
     /*
     font-size: 0.9375rem;
     font-weight: 400;
@@ -2923,7 +2939,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     transform: scale(1.2 * calc(var(--chat-footer-button-size-raw) / 22))!important;
 }
 /*Chat - Footer, Button, Emoji, Wrapper */
-.emojiButton-38mF6t {
+.emojiButton-2wRZts {
     /*
     top: 11px;
     right: 12px;
@@ -2939,7 +2955,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-right: 0px!important;
 }
 /*Chat - Footer, Button, Emoji, Image */
-.sprite-3pvJkd {
+.sprite-2iCowe {
     /*
     background-position: -220px -44px;
     background-size: 242px 110px;
@@ -2970,14 +2986,14 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 /* --- CHANNELS --- */
 /* ---------------- */
 /* Section - Wrapper */
-.containerDefault-1bbItS {
+.containerDefault-3GGEv_ {
     /*
     padding-top: 28px;
     */
     padding-top: 8px;
 }
 /* Section - Name */
-.containerDefault-1bbItS > * > .overflowEllipsis-2ynGQq {
+.containerDefault-3GGEv_ > * > .overflowEllipsis-2JOaZ6 {
     /*
     font-size: 12px;
     font-weight: 600;
@@ -2987,14 +3003,14 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /* Channel - Wrapper*/
-.wrapper-fDmxzK {
+.wrapper-KpKNwI {
     /*
     height: 34px;
     */
     height: var(--channel-line-height);
 }
 /* Channel - Wrapper2*/
-.wrapper-fDmxzK .content-2mSKOj {
+.content-20Aix8 {
     /*
     height: 32px;
     margin-top: 1px;
@@ -3014,7 +3030,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: var(--channel-symbol-size);
 }
 /* Channel - Name */
-.name-2SL4ev {
+.name-3M0b8v {
     /*
     font-size: 16px;
     line-height: 32px;
@@ -3024,14 +3040,14 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /* VoiceChannel - Wrapper */
-.draggable-3SphXU > * {
+.draggable-1KoBzC > * {
     /*
     height: 28px;
     */
     height: var(--channel-line-height);
 }
 /* VoiceChannel - Avatar */
-.avatarContainer-303pFz > * {
+.avatarContainer-72bSfM > * {
     /*
     width: 20px;
     height: 20px;
@@ -3043,7 +3059,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     background-size: contain;
 }
 /* VoiceChannel - Name */
-.nameDefault-1I0lx8, .nameHovered-28u_Fz, .nameSpeaking-3ROx9q {
+.nameDefault-2s3kbY, .nameHovered-21k1eo, .nameSpeaking-3UhoEZ {
     /*
     font-size: 14px;
     line-height: 28px;
@@ -3052,7 +3068,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     line-height: var(--channel-line-height);
 }
 /* Voice Channel - Bottom */
-.listDefault-3i7eWQ {
+.listDefault-36Sktb {
     /*
     padding-bottom: 8px;
     */
@@ -3075,7 +3091,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: var(--channel-symbol-size);
 }
 /* VoiceChannel - Collapsed, Avatar */
-.container-3IULEB > .avatar-1BXaQj {
+.container-3IULEB > .avatar-16XVId {
     /*
     width: 20px;
     height: 20px;
@@ -3090,7 +3106,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 /* --- MEMBERS --- */
 /* --------------- */
 /* Members - Section */
-.membersWrap-3wRngy .membersGroup-3_dP5E {
+.membersWrap-2h-GB4 .membersGroup-v9BXpm {
     /*
     font-size: 12px;
     height: 40px;
@@ -3108,7 +3124,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /* Members - User, Wrapper */
-.membersWrap-3wRngy .member-2FrNV0 {
+.membersWrap-2h-GB4 .member-3W1lQa {
     /*
     height: 40px;
     margin-top: 1px;
@@ -3124,7 +3140,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /* Members - User, Wrapper2 */
-.member-2FrNV0 .content-3JzEqq {
+.member-3W1lQa .content-OzHfo4 {
     /*
     padding-top: 8px;
     padding-bottom: 8px;
@@ -3138,7 +3154,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /* Members - Avatar Image */
-.membersWrap-3wRngy .avatar-1BXaQj {
+.membersWrap-2h-GB4 .avatar-16XVId {
     /*
     height: 30px;
     width: 30px;
@@ -3149,7 +3165,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     background-size: contain;
 }
 /* Members - Status Icon */
-.membersWrap-3wRngy .status-2Devx1 {
+.membersWrap-2h-GB4 .status-2s6iDp {
     /*
     bottom: 4px;
     right: 2px;
@@ -3164,21 +3180,21 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: var(--members-status-size)!important;
 }
 /* Members - Name, Wrapper */
-.memberInner-3XUq9K > .nameTag-3F0z_i {
+.memberInner-2CPc3V > .nameTag-3F0z_i {
     /*
     line-height: 17px;
     */
     line-height: var(--members-user-name-line-height);
 }
 /* Members - Name */
-.username-MwOsla {
+.username-1cB_5E {
     /*
     font-size: 16px;
     */
     font-size: var(--members-user-name-font-size);
 }
 /* Members - Activity Text */
-.activity-1PAe08 {
+.activity-1IYsbk {
     /*
     font-size: 11px;
     line-height: 13px;
@@ -3187,7 +3203,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     line-height: var(--members-user-activity-line-height);
 }
 /* Members - Activity Text */
-.activityIcon-3-h2jl {
+.activityIcon-S3CciC {
     /*
     min-height: 16px;
     min-width: 16px;
@@ -3205,7 +3221,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 /* --- CONVERSATIONS --- */
 /* --------------------- */
 /* Conv - Top, Wrapper */
-.scroller-fzNley > div:first-child {
+.scroller-2v3d_F > div:first-child {
     /*
     width: 100%;
     height: 20px;
@@ -3213,7 +3229,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     /*height: 0px!important;*/
 }
 /* Conv - Friends, Wrapper */
-.scroller-fzNley > div:nth-child(2) {
+.scroller-2v3d_F > div:nth-child(2) {
     /*margin-top: 2px;*/
 }
 /* Conv - Header */
