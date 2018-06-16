@@ -1649,6 +1649,15 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: var(--guilds-avatar-size);
     background-size: contain;
 }
+/* Guilds, Avatar, Images2 */
+.iconSizeLarge-161qtT {
+    /*
+    height: 50px;
+    width: 50px;
+    */
+    height: var(--guilds-avatar-size);
+    width: var(--guilds-avatar-size);
+}
 /* Guilds, Avatar, No Image */
 .guilds-wrapper .guilds .guild .guild-inner a:not(:empty) {
     height: auto;
