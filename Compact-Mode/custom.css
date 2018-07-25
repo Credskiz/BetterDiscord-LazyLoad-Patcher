@@ -2359,7 +2359,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     */
     margin-left: 0px;
     margin-right: 0px;
-    padding: 8px 4px;
+    padding: 0px 2px;
     font-size: var(--chat-font-size);
 }
 /* Chat - Avatar */
@@ -2856,6 +2856,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin: auto 2px;
     height: calc(var(--chat-footer-button-size-raw) * 1px);
     width: calc(var(--chat-footer-button-size-raw) * 1px);
+    padding: 0px;
 }
 /*Chat - Footer, Divider */
 .attachButtonDivider-3Glu60 {
@@ -3494,3 +3495,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     height: var(--friends-user-status-icon-size);
     width: var(--friends-user-status-icon-size);
 }
+/* Friends - Chat, Fonts*/
+.content-2M3n_H {
+    font-size:0.87rem;
+}
+
