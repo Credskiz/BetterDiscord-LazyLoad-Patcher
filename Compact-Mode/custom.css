@@ -2322,9 +2322,10 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding: 0;
 }
 
-/* ------------ */
-/* --- CHAT --- /*
-/* ------------ */
+
+/* ---------------------- */
+/* -------- CHAT -------- */
+/* ---------------------- */
 
 /* Chat - Welcome, Wrapper */
 .base-2KDOo9 {
@@ -2344,8 +2345,13 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-left: 4px;
     margin-right: 4px;
 }
+
+.da-content .contentCozy-3XX413 {
+    margin-left: 42px;
+}
+
 /* Chat - Message, Wrapper */
-.message-group {
+.da-message {
     /*
     margin-left: 20px;
     margin-right: 6px;
@@ -2357,7 +2363,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     font-size: var(--chat-font-size);
 }
 /* Chat - Avatar */
-.message-group .avatar-large {
+.da-message .large-3ChYtB {
     /*
     width: 40px;
     height: 40px;
@@ -2375,13 +2381,13 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     opacity: 0.6;
 }
 /* Chat - Avatar:hover */
-.message-group:hover .avatar-large,
-.message-group:hover h2 strong
+.da-message :hover .avatar-large,
+.da-message :hover h2 strong
 {
     opacity: 1;
 }
 /* Chat - User, name */
-.message-group h2 strong {
+.da-message h2 strong {
     /*
     font-size: 0.95rem;
     font-weight: 500;
@@ -2406,7 +2412,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     line-height: var(--chat-line-height);
 }
 /* Chat - Timestamp */
-.message-group h2 .timestamp {
+.da-message h2 .timestamp {
     /*
     font-size: 0.75rem;
     font-weight: 400;
@@ -2416,8 +2422,11 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-left: 4px;
 }
 /* Chat - Divider */
-.message-group .chat .divider {
+.containerCozy-jafyvG .divider-32i8lo {
     opacity: 0.3;
+    border: none;
+    border-bottom: 1px solid transparent;
+    margin: 10px 10px -33px;
 }/* Chat - Divider, Text */
 .chat .divider>span {
     font-size: var(--chat-divider-font-size);
@@ -2430,7 +2439,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     border-bottom-color: hsla(0,0%,100%,.03);
 }
 /* Chat - Paragraphs Text */
-.message-group .comment .markup {
+.da-message  .markup-2BOw-j {
     /*
     margin-top: 6px;
     font-size: 0.9375rem
