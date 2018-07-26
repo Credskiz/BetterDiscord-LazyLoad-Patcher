@@ -2430,7 +2430,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     opacity: 0.3;
     border: none;
     border-bottom: 1px solid transparent;
-    margin: 17px 5px -10px 5px;
+    margin: 0px 5px -10px 5px;
 }/* Chat - Divider, Text */
 .chat .divider>span {
     font-size: var(--chat-divider-font-size);
