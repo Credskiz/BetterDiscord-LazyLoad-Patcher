@@ -2414,9 +2414,10 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 /* Chat - text container */
 .containerCozy-jafyvG {
     padding:0px 0px 0px 0px;
+    margin-bottom: 4px;
 }
 /* Chat - Timestamp */
-.da-message h2 .timestamp {
+.timestampCozy-2hLAPV {
     /*
     font-size: 0.75rem;
     font-weight: 400;
@@ -2430,7 +2431,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     opacity: 0.3;
     border: none;
     border-bottom: 1px solid transparent;
-    margin: 0px 5px -10px 5px;
+    margin: 0px 5px 2px 5px;
 }/* Chat - Divider, Text */
 .chat .divider>span {
     font-size: var(--chat-divider-font-size);
@@ -2438,7 +2439,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     line-height: var(--chat-divider-line-height);
 }
 .da-divider {
-    margin-bottom:10px;
+    margin-bottom: 8px;
 }
 /* Chat - Divider, Bottom */
 .theme-dark .message-group:not(.has-divider) {
