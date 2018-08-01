@@ -291,7 +291,7 @@ body {
 	background-color: rgba(32, 34, 37, var(--forsenCD));
 }
 
-.guilds-wrapper {
+.guildsWrapper-5TJh6A {
     /*
 	background-color: #202225;
 	*/
@@ -1483,21 +1483,21 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /* Guilds, Wrapper, Outer */
-.guilds-wrapper {
+.guildsWrapper-5TJh6A {
     /*
     width: 70px;
     */
     width: var(--guilds-size);
 }
 /* Guilds, Wrapper, Scroll */
-.guilds-wrapper .scroller-wrap {
+.guildsWrapper-5TJh6A .scroller-wrap {
     /*
     width: 88px;
     */
     width: calc(18px + var(--guilds-size));
 }
 /* Guilds, Wrapper, Inner */
-.guilds-wrapper .guilds {
+.guildsWrapper-5TJh6A .da-guilds{
     /*
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1510,7 +1510,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     padding-right: 0px;
 }
 /* Guilds, Divider, Wrapper */
-.guilds-wrapper .dms {
+.guildsWrapper-5TJh6A .dms {
     /*
     margin-bottom: 10px;
     margin-top: 10px;
@@ -1519,7 +1519,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-bottom: 0px;
 }
 /* Guilds, Divider, Wrapper */
-.guilds-wrapper .guild-separator {
+.guildsWrapper-5TJh6A .guildSeparator-1X4GQ1 {
     /*
     height: 2px;
     margin-bottom: 10px;
@@ -1531,7 +1531,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 
 }
 /* Guilds, Divider */
-.guilds-wrapper .guild-separator:after {
+.guildsWrapper-5TJh6A .guildSeparator-1X4GQ1:after {
     /*
     height: 2px;
     left: 20%;
@@ -1545,7 +1545,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     right: 15%;
 }
 /* Guilds, Header, Icon */
-.guilds-wrapper .guilds .friends-icon {
+.guildsWrapper-5TJh6A .da-guilds .friends-icon {
     /*
     background-size: 32px 28px;
     height: 50px;
@@ -1556,7 +1556,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: var(--guilds-avatar-size);
 }
 /* Guilds, Header, Text */
-.guilds-wrapper .guilds .friends-online {
+.guildsWrapper-5TJh6A .da-guilds .da-friendsOnline {
     /*
     font-size: 10px;
     font-weight: 500;
@@ -1578,7 +1578,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     text-align: left;
     width: var(--guilds-font-size);
 }
-.guilds-wrapper .guilds .guild {
+.guildsWrapper-5TJh6A .da-guilds .guild-1EfMGQ{
     /*
     height: 50px;
     width: 50px;
@@ -1593,18 +1593,18 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     /*width: calc(var(--guilds-size) - 6px);*/
 }
 /* Guilds, Avatar, Wrapper, Specific */
-.guilds-wrapper .guilds .guild-separator + .guild,
-.guilds-wrapper .guilds .guild + .guild {
+.guildsWrapper-5TJh6A .da-guilds .guildSeparator-1X4GQ1 + .guild-1EfMGQ,
+.guildsWrapper-5TJh6A .da-guilds .guild-1EfMGQ + .guild-1EfMGQ{
     /*
     margin-top: 4px;
     */
-    margin-top: 2px;
+    margin-top: 3px;
     margin-bottom: 0px;
     width: var(--guilds-avatar-size);
 }
 
 /* Guilds, Avatar, Text */
-.guilds-wrapper .guilds .guild .guild-inner {
+.guildInner-3DSoA4 .da-guildInner {
     /*
     border-radius: 25px;
     font-size: 18px;
@@ -1616,7 +1616,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     line-height: var(--guilds-avatar-size);
 }
 /* Guilds, Avatar, Text, Add */
-.guilds-wrapper .guilds-add {
+.guildsWrapper-5TJh6A .guilds-add {
     /*
     font-weight: 300;
     font-size: 40px;
@@ -1631,7 +1631,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     font-weight: 400;
     font-size: calc(-2px + var(--guilds-avatar-size));
 }
-.guilds-wrapper .guilds-add-inner {
+.guildsWrapper-5TJh6A .guilds-add-inner {
     /*
     position: relative;
     top: -1px;
@@ -1640,7 +1640,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     display: block;
 }
 /* Guilds, Avatar, Images */
-.guilds-wrapper .guilds .guild .guild-inner a {
+.guildsWrapper-5TJh6A .da-guilds .guild-1EfMGQ .guildInner-3DSoA4 a {
     /*
     height: 50px;
     width: 50px;
@@ -1659,12 +1659,12 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     width: var(--guilds-avatar-size);
 }
 /* Guilds, Avatar, No Image */
-.guilds-wrapper .guilds .guild .guild-inner a:not(:empty) {
+.guildsWrapper-5TJh6A .da-guilds.guild-1EfMGQ .guildInner-3DSoA4 a:not(:empty) {
     height: auto;
 }
 /* Guilds, Avatar, Status */
-.guilds-wrapper .guilds .guild.audio .guild-inner:after,
-.guilds-wrapper .guilds .guild.video .guild-inner:after {
+.guildsWrapper-5TJh6A .da-guilds.guild-1EfMGQ.audio .guildInner-3DSoA4:after,
+.guildsWrapper-5TJh6A .da-guilds.guild-1EfMGQ.video .guildInner-3DSoA4:after {
     /*
     background-size: 16px;
     border-radius: 12px;
@@ -1681,7 +1681,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     top: calc(2px + -0.5 * 0.75 * var(--guilds-avatar-status-size));
 }
 /* Guilds, Guilds-error,  */
-.guilds-wrapper .guilds-error {
+.guildsWrapper-5TJh6A .guilds-error {
     /*
     border: 2px solid #f04747;
     border-radius: 25px;
@@ -1700,8 +1700,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /* Guilds, Header, Buttons */
-.guild#RANbutton-frame .guild-inner > a > div,
-.guild#bd-pub-li .guild-inner > a > div {
+.guild#RANbutton-frame .guildInner-3DSoA4 > a > div,
+.guild#bd-pub-li .guildInner-3DSoA4 > a > div {
     /*
     line-height: 20px;
     font-size: 12px;
@@ -1720,13 +1720,13 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-bottom: 2px!important;
 }
 /* Guilds, Header, Button, Wrapper, Inner */
-.guild#RANbutton-frame .guild-inner,
-.guild#bd-pub-li .guild-inner {
+.guild#RANbutton-frame .guildInner-3DSoA4,
+.guild#bd-pub-li .guildInner-3DSoA4 {
     height: var(--guilds-button-height)!important;
     width: var(--guilds-avatar-size)!important;
 }
 /* Guilds, Header, Button */
-.guild .guild-inner a > div {
+.guild-1EfMGQ .guildInner-3DSoA4 a > div {
     /*
     line-height: 20px;
     font-size: 12px;
@@ -1743,8 +1743,8 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     */
 }
 /* Guilds, Indicator, Unread, Both */
-.guilds-wrapper .guilds .guild.selected:before,
-.guilds-wrapper .guilds .guild.unread:before {
+.guildsWrapper-5TJh6A .da-guilds.guild.selected:before,
+.guildsWrapper-5TJh6A .da-guilds.guild.unread:before {
     /*
     position: absolute;
     border-radius: 20px;
@@ -1756,7 +1756,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     left: calc(-10px / 2 - 4px - 4px);
 }
 /* Guilds, Indicator, Unread, notSelected */
-.guilds-wrapper .guilds .guild.unread:before {
+.guildsWrapper-5TJh6A .da-guilds .guild.unread:before {
     /*
     height: 10px;
     margin-top: -5px;
@@ -1765,7 +1765,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     margin-top: -5px;
 }
 /* Guilds, Indicator, Unread, Selected */
-.guilds-wrapper .guilds .guild.selected:before {
+.guildsWrapper-5TJh6A .da-guilds .guild-1EfMGQ .selected-ML3OIq:before {
     /*
     height: 40px;
     margin-top: -20px;
@@ -1788,7 +1788,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 }
 
 /* Call, Wrapper, Chat */
-.videoHeight-iWOJGF.minimum-Eac95h {
+.videoHeight-iWOJGF .minimum-Eac95h {
     height: var(--call-height);
 }
 /* Call, Wrapper */
@@ -2414,9 +2414,10 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 /* Chat - text container */
 .containerCozy-jafyvG {
     padding:0px 0px 0px 0px;
+    margin-bottom: 4px;
 }
 /* Chat - Timestamp */
-.da-message h2 .timestamp {
+.timestampCozy-2hLAPV {
     /*
     font-size: 0.75rem;
     font-weight: 400;
@@ -2430,7 +2431,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     opacity: 0.3;
     border: none;
     border-bottom: 1px solid transparent;
-    margin: 0px 5px -10px 5px;
+    margin: 0px 5px 2px 5px;
 }/* Chat - Divider, Text */
 .chat .divider>span {
     font-size: var(--chat-divider-font-size);
@@ -2438,7 +2439,7 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
     line-height: var(--chat-divider-line-height);
 }
 .da-divider {
-    margin-bottom:10px;
+    margin-bottom: 8px;
 }
 /* Chat - Divider, Bottom */
 .theme-dark .message-group:not(.has-divider) {
@@ -3505,4 +3506,3 @@ ui-standard-sidebar-view #bd-customcss-attach-controls button,
 .content-2M3n_H {
     font-size:0.87rem;
 }
-
