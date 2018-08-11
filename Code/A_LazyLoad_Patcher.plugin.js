@@ -51,7 +51,6 @@ var a_lazyload_patcher = function() {
 	};
 	this.onMessage = function() { };
 	this.onSwitch = function() {
-		
 		// TODO find a way to not use timeout here.
 		setTimeout(() => this.doUpdateVariables(), 3000);
 		// If in friends.
@@ -66,12 +65,12 @@ var a_lazyload_patcher = function() {
 			if (wasInFriends > 0 ) {
 				
 				// TODO find a way to not use timeout here.
-				setTimeout(() => this.doPatchFunctions(), 1000);
-				wasInFriends = 1;
+				setTimeout(() => this.doPatchFunctions(), 3000);
+				wasInFriends = 0;
 			} else if ($('.containerDefault-3GGEv_').height() !== null && wasInFriends > 0 ) {
 				
 				// TODO find a way to not use timeout here.
-				setTimeout(() => this.doPatchFunctions(), 1000);
+				setTimeout(() => this.doPatchFunctions(), 3000);
 				wasInFriends = 0;
 			}
 		}
@@ -104,7 +103,7 @@ var a_lazyload_patcher = function() {
 
 	var wasInFriends = 0;
 	
-	var DEBUG = false;
+	var DEBUG = true;
 	
 	this.doUpdateVariables = function() {
 		try {
@@ -142,7 +141,8 @@ var a_lazyload_patcher = function() {
 			container = getInternalInstance(container[0]);
 			var edgeDiv = getEventHandlers(container.stateNode.firstChild);
 
-			newEdgeCaseSize = edgeDiv.style.height;
+			if(edgeDiv.style.height > 0)
+				newEdgeCaseSize = edgeDiv.style.height;
 			
 			// DEBUG: newEdgeCaseSize.
 			if(DEBUG)
@@ -155,7 +155,8 @@ var a_lazyload_patcher = function() {
 		if (section !== undefined && section.length > 0){
 			section = getInternalInstance(section[0]);
 
-			newSectionSize = section.stateNode.clientHeight;
+			if(section.stateNode.clientHeight > 0)
+				newSectionSize = section.stateNode.clientHeight;
 			
 			// DEBUG: newSectionSize
 			if(DEBUG)
@@ -168,7 +169,8 @@ var a_lazyload_patcher = function() {
 		if (channel !== undefined && channel.length > 1){
 			channel = getInternalInstance(channel[1]);
 			
-			newChannelSize = channel.stateNode.firstChild.clientHeight;
+			if(channel.stateNode.firstChild.clientHeight > 0)
+				newChannelSize = channel.stateNode.firstChild.clientHeight;
 			
 			// DEBUG: newChannelSize
 			if(DEBUG)
@@ -177,11 +179,12 @@ var a_lazyload_patcher = function() {
 	};
 	this.updateVoiceUser = function() {
 		// Update newVoiceUserSize from current css.
-		var voiceUser = $(".draggable-1KoBzC");
+		var voiceUser = $(".da-draggable"); //draggable-1KoBzC
 		if (voiceUser !== undefined && voiceUser.length > 0){
 			voiceUser = getInternalInstance(voiceUser[0]);
 
-			newVoiceUserSize = voiceUser.stateNode.clientHeight;
+			if(voiceUser.stateNode.clientHeight > 0)
+				newVoiceUserSize = voiceUser.stateNode.clientHeight;
 			
 			// DEBUG: newVoiceUserSize
 			if(DEBUG)
@@ -190,12 +193,13 @@ var a_lazyload_patcher = function() {
 	};
 	this.updateVoicePaddingBottom = function() {
 		// Update newVoicePaddingBottomSize from current css.
-		var voicePaddingBottom = $(".listDefault-36Sktb");
+		var voicePaddingBottom = $(".da-listDefault"); //.listDefault-36Sktb
 		if (voicePaddingBottom !== undefined && voicePaddingBottom.length > 0){
 			voicePaddingBottom = getInternalInstance(voicePaddingBottom[0]);
 			var voiceSize = voicePaddingBottom.stateNode.childElementCount * newVoiceUserSize;
-
-			newVoicePaddingBottomSize = voicePaddingBottom.stateNode.clientHeight - voiceSize;
+			
+			if(voiceSize > 0)
+				newVoicePaddingBottomSize = voicePaddingBottom.stateNode.clientHeight - voiceSize;
 			
 			// DEBUG: newVoicePaddingBottomSize
 			if(DEBUG)
@@ -205,24 +209,24 @@ var a_lazyload_patcher = function() {
 
 	this.patchFunctions = function() {
 		try{
-			var instList = $(".scroller-2v3d_F");
+			var instList = $(".da-scroller");
 			if (instList.length === 0){
 				console.log("Could not find selector.");
 				throw "Could not find selector.";
 			}
 			for(var i  = 0; i < instList.length; i++){
 				// Set important variables.
-				var inst = getInternalInstance(instList[i]);
+				var inst = getInternalInstance(instList[1]);
 				var eventH = getEventHandlers(inst.stateNode.parentNode.parentNode);
 
 				// Patch getRowHeight
 				try{
 					// Check so we don't overwrite the reference to the old function.
 					if(originalGetRowHeight === undefined) {
-						originalGetRowHeight = eventH.children[3]._owner.stateNode.getRowHeight;
+						originalGetRowHeight = eventH.children[1]._owner.stateNode.getRowHeight;
 					}
 					// Overwrite discords function to getRowHeight.
-					eventH.children[3]._owner.stateNode.getRowHeight = this.updatedGetRowsHeight;
+					eventH.children[1]._owner.stateNode.getRowHeight = this.updatedGetRowsHeight;
 				} catch(err) {
 					console.error("Couldn't patch getRowHeight: " + err.message);
 				}
@@ -231,18 +235,18 @@ var a_lazyload_patcher = function() {
 				try{
 					// Check so we don't overwrite the reference to the old function.
 					if(originalGetSectionHeight === undefined) {
-						originalGetSectionHeight = eventH.children[3]._owner.stateNode.getSectionHeight;
+						originalGetSectionHeight = eventH.children[1]._owner.stateNode.getSectionHeight;
 					}
 
 					// Overwrite discords function to getSectionHeight.
-					eventH.children[3]._owner.stateNode.getSectionHeight = this.updatedGetSectionHeight;
+					eventH.children[1]._owner.stateNode.getSectionHeight = this.updatedGetSectionHeight;
 				} catch(err) {
 					console.error("Couldn't patch getSectionHeight: " + err.message);
 				}
 				
 				try{
 					// Update.
-					eventH.children[3]._owner.stateNode.forceUpdate();
+					eventH.children[1]._owner.stateNode.forceUpdate();
 				} catch(err) {
 					console.error("Couldn't update: " + err.message);
 				}
@@ -318,7 +322,7 @@ var a_lazyload_patcher = function() {
 		
 		// DEBUG: print rowHeight;
 		if(DEBUG)
-			console.log(newVar);
+			console.log("rowHeight.newVar" + newVar);
 		return newVar;
 	};
 
@@ -367,7 +371,7 @@ var a_lazyload_patcher = function() {
 		
 		// DEBUG: print sectionHeight;
 		if(DEBUG)
-			console.log(newVar);
+			console.log("sectionHeight.newVar:" + newVar);
 		return newVar;
 	};
 
